@@ -7,18 +7,24 @@ import 'chartjs-plugin-labels';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+  // store canvas
   canvas: any;
+  // define canvas Context Type
   ctx: any;
+
   constructor() {}
 
   ngOnInit(): void {}
 
+  /*
+   * Chart will render after the View is loaded.
+   */
   ngAfterViewInit() {
     this.canvas = document.getElementById('myChart');
     this.ctx = this.canvas.getContext('2d');
-
+    // Initialize Chart
     const myChart = new Chart(this.ctx, {
-      type: 'doughnut',
+      type: 'doughnut', // Type Of Chart
       data: {
         labels: ['Phone Bills', 'Grocery Expenses', 'Car Fuel', 'House Expenses'],
         datasets: [
@@ -37,6 +43,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
       options: {
         legend: {
           display: false,
+        },
+        tooltips: {
+          callbacks: {
+            title: function (tooltipItem, data) {
+              return data['labels'][tooltipItem[0]['index']];
+            },
+            label: (item, data) => {
+              return ' £' + data['datasets'][0]['data'][item['index']];
+            },
+          },
         },
         responsive: false,
         display: true,
