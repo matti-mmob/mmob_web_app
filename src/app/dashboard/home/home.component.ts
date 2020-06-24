@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as Chart from 'chart.js';
 import 'chartjs-plugin-labels';
 import { AssetsPathPipe } from 'src/app/shared/pipes/assets-path.pipe';
+import { Constant } from 'src/app/shared/constant/constant';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   // store canvas
   canvas: any;
   // define canvas Context Type
-  ctx: any;
+  canvasContextType: any;
 
   constructor(private assetsPipe: AssetsPathPipe) {}
 
@@ -22,9 +23,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
    */
   ngAfterViewInit() {
     this.canvas = document.getElementById('myChart');
-    this.ctx = this.canvas.getContext('2d');
+    this.canvasContextType = this.canvas.getContext('2d');
     // Initialize Chart
-    const myChart = new Chart(this.ctx, {
+    const myChart = new Chart(this.canvasContextType, {
       type: 'doughnut', // Type Of Chart
       data: {
         labels: ['Phone Bills', 'Grocery Expenses', 'Car Fuel', 'House Expenses'],
@@ -51,24 +52,40 @@ export class HomeComponent implements OnInit, AfterViewInit {
               return data['labels'][tooltipItem[0]['index']];
             },
             label: (item, data) => {
-              return ' £' + data['datasets'][0]['data'][item['index']];
+              return '£' + data['datasets'][0]['data'][item['index']];
             },
           },
         },
         responsive: false,
         display: true,
-        cutoutPercentage: 80,
+        cutoutPercentage: Constant.CHART_CUTOFF_PERCENTAGE,
         plugins: {
           labels: {
             render: 'image',
             position: 'outside',
             images: [
-              { src: this.assetsPipe.transform('/Phone-icon.png', 'img'), width: 22, height: 22 },
-              { src: this.assetsPipe.transform('/cart.png', 'img'), width: 25, height: 25 },
-              { src: this.assetsPipe.transform('/Car-icon.png', 'img'), width: 25, height: 25 },
-              { src: this.assetsPipe.transform('/Home.png', 'img'), width: 25, height: 25 },
+              {
+                src: this.assetsPipe.transform('/Phone-icon.png', 'img'),
+                width: Constant.CHART_ICON_WIDTH,
+                height: Constant.CHART_ICON_HEIGHT,
+              },
+              {
+                src: this.assetsPipe.transform('/cart.png', 'img'),
+                width: Constant.CHART_ICON_WIDTH,
+                height: Constant.CHART_ICON_HEIGHT,
+              },
+              {
+                src: this.assetsPipe.transform('/Car-icon.png', 'img'),
+                width: Constant.CHART_ICON_WIDTH,
+                height: Constant.CHART_ICON_HEIGHT,
+              },
+              {
+                src: this.assetsPipe.transform('/Home.png', 'img'),
+                width: Constant.CHART_ICON_WIDTH,
+                height: Constant.CHART_ICON_HEIGHT,
+              },
             ],
-            textMargin: 10,
+            textMargin: Constant.CHART_ICON_MARGIN,
           },
         },
       },
