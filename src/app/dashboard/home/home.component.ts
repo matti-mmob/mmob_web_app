@@ -1,8 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import * as Chart from 'chart.js';
-import 'chartjs-plugin-labels';
 import { AssetsPathPipe } from 'src/app/shared/pipes/assets-path.pipe';
 import { Constant } from 'src/app/shared/constant/constant';
+import * as Highcharts from 'highcharts';
+import { ChartLabels } from 'src/app/shared/enum/chart-labels.enum';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   canvas: any;
   // define canvas Context Type
   canvasContextType: any;
+  // Chart Enum Label
+  chartLabelEnum = ChartLabels;
 
   constructor(private assetsPipe: AssetsPathPipe) {}
 
@@ -22,73 +24,85 @@ export class HomeComponent implements OnInit, AfterViewInit {
    * Chart will render after the View is loaded.
    */
   ngAfterViewInit() {
-    this.canvas = document.getElementById('myChart');
-    this.canvasContextType = this.canvas.getContext('2d');
-    // Initialize Chart
-    const myChart = new Chart(this.canvasContextType, {
-      type: 'doughnut', // Type Of Chart
-      data: {
-        labels: ['Phone Bills', 'Grocery Expenses', 'Car Fuel', 'House Expenses'],
-        datasets: [
-          {
-            data: [5550.97, 12394.34, 6823.83, 23617.23],
-            backgroundColor: [
-              'rgba(176,193,191, 1)',
-              'rgba(250,185,162, 1)',
-              'rgba(174,150,210,1)',
-              'rgba(189,220,203, 1)',
-            ],
-            borderWidth: 1,
-          },
-        ],
+    // Generate the chart
+    const __this = this;
+    Highcharts.chart({
+      chart: {
+        renderTo: 'container',
+        plotShadow: false,
       },
-      options: {
-        legend: {
-          display: false,
-        },
-        tooltips: {
-          callbacks: {
-            title: function (tooltipItem, data) {
-              return data['labels'][tooltipItem[0]['index']];
+      legend: {
+        enabled: false,
+      },
+      tooltip: {
+        animation: false,
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          dataLabels: {
+            enabled: true,
+            useHTML: true,
+            formatter: function (this) {
+              let labelImage;
+              if (this.key) {
+                switch (this.key) {
+                  case ChartLabels.CIMB_Bank_LABEL:
+                    labelImage = __this.assetsPipe.transform('cart.png', 'img');
+                    break;
+                  case ChartLabels.SANTANDER_LABEL:
+                    labelImage = __this.assetsPipe.transform('Phone-icon.png', 'img');
+                    break;
+                  case ChartLabels.HSBC_LABEL:
+                    labelImage = __this.assetsPipe.transform('Home.png', 'img');
+                    break;
+                  case ChartLabels.BARCLAYS_LABEL:
+                    labelImage = __this.assetsPipe.transform('Car-icon.png', 'img');
+                    break;
+                }
+              }
+              return '<img  src="' + labelImage + '" style="vertical-align: middle; margin: 0 10px;">';
             },
-            label: (item, data) => {
-              return '£' + data['datasets'][0]['data'][item['index']];
+            style: {
+              fontSize: '14px',
             },
-          },
-        },
-        responsive: false,
-        display: true,
-        cutoutPercentage: Constant.CHART_CUTOFF_PERCENTAGE,
-        plugins: {
-          labels: {
-            render: 'image',
-            position: 'outside',
-            images: [
-              {
-                src: this.assetsPipe.transform('/Phone-icon.png', 'img'),
-                width: Constant.CHART_ICON_WIDTH,
-                height: Constant.CHART_ICON_HEIGHT,
-              },
-              {
-                src: this.assetsPipe.transform('/cart.png', 'img'),
-                width: Constant.CHART_ICON_WIDTH,
-                height: Constant.CHART_ICON_HEIGHT,
-              },
-              {
-                src: this.assetsPipe.transform('/Car-icon.png', 'img'),
-                width: Constant.CHART_ICON_WIDTH,
-                height: Constant.CHART_ICON_HEIGHT,
-              },
-              {
-                src: this.assetsPipe.transform('/Home.png', 'img'),
-                width: Constant.CHART_ICON_WIDTH,
-                height: Constant.CHART_ICON_HEIGHT,
-              },
-            ],
-            textMargin: Constant.CHART_ICON_MARGIN,
           },
         },
       },
+      series: [
+        {
+          type: 'pie',
+          size: '100%',
+          innerSize: '75%',
+          states: {
+            inactive: {
+              opacity: 1,
+            },
+          },
+          data: [
+            {
+              name: this.chartLabelEnum.CIMB_Bank_LABEL,
+              y: 12394.34,
+              color: '#fab9a2', //cart-icon
+            },
+            {
+              name: this.chartLabelEnum.SANTANDER_LABEL,
+              y: 5550.97,
+              color: '#b0c1bf', // phone-icon
+            },
+            {
+              name: this.chartLabelEnum.HSBC_LABEL,
+              y: 23617.23,
+              color: '#bddccb', // home-icon
+            },
+            {
+              name: this.chartLabelEnum.BARCLAYS_LABEL,
+              y: 6823.83,
+              color: '#ae96d2', // car-icon
+            },
+          ],
+        },
+      ],
     });
   }
 }
