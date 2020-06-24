@@ -1,49 +1,49 @@
 <!-- Sidebar -->
 <nav class="sidebar" data-toggle="pill">
   <div class="logo">
-    <a href="javascript:;"><img src="../../../assets/images/logo.png" alt="logo"></a>
+    <a href="javascript:;"><img src="{{'images/logo.png' | assetsPath}}" alt="logo"></a>
   </div>
   <ul class="nav flex-column">
     <li class="nav-header active">Menu</li>
     <li class="nav-item">
       <a class="nav-link active" href="#">
-        <figure><img src="../../../assets/images/star.svg" alt="nav-icon"></figure>Home
+        <figure><img src="{{'images/star.svg' | assetsPath}}" alt="nav-icon"></figure>Home
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">
-        <figure><img src="../../../assets/images/spending.svg" alt="nav-icon"></figure>Spending
+        <figure><img src="{{'images/spending.svg' | assetsPath}}" alt="nav-icon"></figure>Spending
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">
-        <figure><img src="../../../assets/images/accounts.svg" alt="nav-icon"></figure>Accounts
+        <figure><img src="{{'images/accounts.svg' | assetsPath}}" alt="nav-icon"></figure>Accounts
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">
-        <figure><img src="../../../assets/images/marketplace.svg" alt="nav-icon"></figure>Market Place
+        <figure><img src="{{'images/marketplace.svg' | assetsPath}}" alt="nav-icon"></figure>Market Place
       </a>
     </li>
     <div [ngClass]="{'more-items' : !showMoreMenu}">
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <figure><img src="../../../assets/images/accounts.svg" alt="nav-icon"></figure>Lorem Ipsum
+          <figure><img src="{{'images/accounts.svg' | assetsPath}}" alt="nav-icon"></figure>Lorem Ipsum
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <figure><img src="../../../assets/images/marketplace.svg" alt="nav-icon"></figure>Lorem Ipsum
+          <figure><img src="{{'images/marketplace.svg' | assetsPath}}" alt="nav-icon"></figure>Lorem Ipsum
         </a>
       </li>
     </div>
     <li class="nav-item">
-      <a (click)="toggleMenu()" class="nav-link show-hide-btn" href="#">
-        <figure><img src="../../../assets/images/more.svg" alt="nav-icon"></figure>{{buttonLabel}}
+      <a (click)="toggleMenu()" class="nav-link show-hide-btn" href="javascript:void(0)">
+        <figure><img src="{{'images/more.svg' | assetsPath}}" alt="nav-icon"></figure>{{buttonLabel}}
       </a>
     </li>
   </ul>
-  <a class="setting-button" href="#">
+  <a class="setting-button" href="javascript:void(0)">
     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
       y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
       <g>

@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as Chart from 'chart.js';
 import 'chartjs-plugin-labels';
+import { AssetsPathPipe } from 'src/app/shared/pipes/assets-path.pipe';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   // define canvas Context Type
   ctx: any;
 
-  constructor() {}
+  constructor(private assetsPipe: AssetsPathPipe) {}
 
   ngOnInit(): void {}
 
@@ -62,10 +63,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
             render: 'image',
             position: 'outside',
             images: [
-              { src: '../assets/images/Phone-icon.png', width: 22, height: 22 },
-              { src: '../assets/images/cart.png', width: 25, height: 25 },
-              { src: '../assets/images/Car-icon.png', width: 25, height: 25 },
-              { src: '../assets/images/Home.png', width: 25, height: 25 },
+              { src: this.assetsPipe.transform('/Phone-icon.png', 'img'), width: 22, height: 22 },
+              { src: this.assetsPipe.transform('/cart.png', 'img'), width: 25, height: 25 },
+              { src: this.assetsPipe.transform('/Car-icon.png', 'img'), width: 25, height: 25 },
+              { src: this.assetsPipe.transform('/Home.png', 'img'), width: 25, height: 25 },
             ],
             textMargin: 10,
           },
