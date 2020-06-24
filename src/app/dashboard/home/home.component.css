@@ -1,0 +1,75 @@
+.main {
+  position: relative;
+  margin-left: 220px;
+}
+.wrapper {
+  padding: 15px;
+}
+.money-analysis-widget {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  width: 100%;
+}
+.widget-header .widget-img {
+  width: 100px;
+  margin: auto;
+}
+.widget-header h1 {
+  font-weight: 700;
+  margin: 10px 0;
+}
+.widget-chart {
+  position: relative;
+  text-align: center;
+}
+canvas#myChart {
+  margin: auto;
+}
+.chart-content {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: translateY(-50%);
+  -webkit-ransform: translateY(-50%);
+}
+.chart-content h6 {
+  font-weight: 600;
+}
+.chart-content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+.spent-amount-breakdown {
+  margin: 30px 0 0;
+}
+.spent-amount-breakdown table figure {
+  width: 30px;
+}
+.spent-amount-breakdown table td h3 {
+  font-size: 16px;
+  text-align: left;
+  color: #000;
+  font-weight: 600;
+}
+.spent-amount-breakdown table td p {
+  font-size: 13px;
+  text-align: left;
+  color: #b5b3b3;
+}
+.spent-amount-breakdown table td:last-child {
+  font-weight: 600;
+}
+.table td {
+  vertical-align: middle;
+}
+.table tr {
+  border-bottom: 1px solid #cecfd0;
+}
+.table td {
+  border: 0;
+}
