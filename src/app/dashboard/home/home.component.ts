@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
             render: 'image',
             position: 'outside',
             images: [
-              { src: '../assets/images/Phone-icon.png', width: 25, height: 25 },
+              { src: '../assets/images/Phone-icon.png', width: 22, height: 22 },
               { src: '../assets/images/cart.png', width: 25, height: 25 },
               { src: '../assets/images/Car-icon.png', width: 25, height: 25 },
               { src: '../assets/images/Home.png', width: 25, height: 25 },
