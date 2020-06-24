@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Constant } from 'src/app/shared/constant/constant';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   // Default Menu Status
-  public showMoreMenu: boolean = false;
+  showMoreMenu: boolean = false;
   // Default Button Label
-  public buttonLabel: any = 'More';
+  buttonLabel: any = Constant.TOGGLE_TEXT_MORE;
 
   constructor() {}
 
@@ -19,6 +20,6 @@ export class SidebarComponent implements OnInit {
    */
   toggleMenu() {
     this.showMoreMenu = !this.showMoreMenu;
-    this.buttonLabel = this.showMoreMenu ? 'Less' : 'More';
+    this.buttonLabel = this.showMoreMenu ? Constant.TOGGLE_TEXT_LESS : Constant.TOGGLE_TEXT_MORE;
   }
 }
