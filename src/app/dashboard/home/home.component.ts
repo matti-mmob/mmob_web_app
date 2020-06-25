@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
    */
   ngAfterViewInit() {
     // Generate the chart
-    const __this = this;
+    const _this = this;
     Highcharts.chart({
       chart: {
         renderTo: 'container',
@@ -47,24 +47,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
             enabled: true,
             useHTML: true,
             formatter: function (this) {
-              let labelImage;
               if (this.key) {
-                switch (this.key) {
-                  case ChartLabels.CIMB_Bank_LABEL:
-                    labelImage = __this.assetsPipe.transform('cart.png', 'img');
-                    break;
-                  case ChartLabels.SANTANDER_LABEL:
-                    labelImage = __this.assetsPipe.transform('Phone-icon.png', 'img');
-                    break;
-                  case ChartLabels.HSBC_LABEL:
-                    labelImage = __this.assetsPipe.transform('Home.png', 'img');
-                    break;
-                  case ChartLabels.BARCLAYS_LABEL:
-                    labelImage = __this.assetsPipe.transform('Car-icon.png', 'img');
-                    break;
-                }
+                return _this.createIconImages(this.key);
               }
-              return '<img  src="' + labelImage + '" style="vertical-align: middle; margin: 0 10px;">';
             },
             style: {
               fontSize: '14px',
@@ -84,28 +69,54 @@ export class HomeComponent implements OnInit, AfterViewInit {
           },
           data: [
             {
-              name: this.chartLabelEnum.CIMB_Bank_LABEL,
+              name: this.chartLabelEnum.CIMB_BANK_LABEL,
               y: 12394.34,
-              color: '#fab9a2', //cart-icon
+              color: '#fab9a2',
             },
             {
               name: this.chartLabelEnum.SANTANDER_LABEL,
               y: 5550.97,
-              color: '#b0c1bf', // phone-icon
+              color: '#b0c1bf',
             },
             {
               name: this.chartLabelEnum.HSBC_LABEL,
               y: 23617.23,
-              color: '#bddccb', // home-icon
+              color: '#bddccb',
             },
             {
               name: this.chartLabelEnum.BARCLAYS_LABEL,
               y: 6823.83,
-              color: '#ae96d2', // car-icon
+              color: '#ae96d2',
             },
           ],
         },
       ],
     });
+  }
+
+  /**
+   * This function we return Icon Image
+   * @param iconKey
+   */
+  private createIconImages(iconKey: string) {
+    const iconImage = {
+      HSBC:
+        '<img  src="' +
+        this.assetsPipe.transform('home.png', 'img') +
+        '" style="vertical-align: middle; margin: 0 10px;">',
+      Barclays:
+        '<img  src="' +
+        this.assetsPipe.transform('car-icon.png', 'img') +
+        '" style="vertical-align: middle; margin: 0 10px;">',
+      Santander:
+        '<img  src="' +
+        this.assetsPipe.transform('phone-icon.png', 'img') +
+        '" style="vertical-align: middle; margin: 0 10px;">',
+      'CIMB Bank':
+        '<img  src="' +
+        this.assetsPipe.transform('cart.png', 'img') +
+        '" style="vertical-align: middle; margin: 0 10px;">',
+    };
+    return iconImage[iconKey];
   }
 }
