@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       tooltip: {
         animation: false,
         formatter: function () {
-          return this.point.name + '<br> £' + this.y;
+          return this.point.name + '<br>£' + this.y;
         },
       },
       plotOptions: {
