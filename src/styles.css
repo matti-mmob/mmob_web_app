@@ -99,6 +99,29 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
 }
 
 @media (max-width: 767px) {
+.highcharts-data-label-color-0 {
+    left: 306px !important;
+}
+.highcharts-data-label-color-1 {
+    left: 326px !important;
+}
+.highcharts-data-label-color-2 {
+    left: 109px !important;
+}
+.highcharts-data-label-color-3 {
+    left: 152px !important;
+}
+g.highcharts-label.highcharts-tooltip.highcharts-color-0 {
+    transform: translate(360px, 44px) !important;
+}
+g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
+    transform: translate(372px, 127px) !important;
+}
+.highcharts-data-label-color-1 span{overflow:visible;}
+}
+
+
+@media (max-width: 479px) {
 .highcharts-data-label-color-2 {
     left: 32px !important;
 }
@@ -112,4 +135,10 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
     left: 250px !important;
 }
 .highcharts-data-label-color-1 span{overflow:vidible !important;}
+g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
+    transform: translate(265px, 127px) !important;
+}
+g.highcharts-label.highcharts-tooltip.highcharts-color-0 {
+    transform: translate(260px, 44px) !important;
+}
 }
