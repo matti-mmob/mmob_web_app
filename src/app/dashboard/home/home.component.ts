@@ -36,6 +36,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
       },
       tooltip: {
         animation: false,
+		
+		
+		
 		positioner: function () {
           return { x: 80, y: 50 };
         },
