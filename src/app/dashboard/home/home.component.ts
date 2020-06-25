@@ -39,6 +39,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
         formatter: function () {
           return this.point.name + '<br>£' + this.y;
         },
+        positioner: function () {
+          return { x: 80, y: 50 };
+        },
       },
       plotOptions: {
         pie: {
@@ -103,19 +106,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
       HSBC:
         '<img  src="' +
         this.assetsPipe.transform('home.png', 'img') +
-        '" style="vertical-align: middle; margin: 0 10px;">',
+        '" alt="HSBC" style="vertical-align: middle; margin: 0 10px;">',
       Barclays:
         '<img  src="' +
         this.assetsPipe.transform('car-icon.png', 'img') +
-        '" style="vertical-align: middle; margin: 0 10px;">',
+        '" alt="Barclays" style="vertical-align: middle; margin: 0 10px;">',
       Santander:
         '<img  src="' +
         this.assetsPipe.transform('phone-icon.png', 'img') +
-        '" style="vertical-align: middle; margin: 0 10px;">',
+        '" alt="Santander" style="vertical-align: middle; margin: 0 10px;">',
       'CIMB Bank':
         '<img  src="' +
         this.assetsPipe.transform('cart.png', 'img') +
-        '" style="vertical-align: middle; margin: 0 10px;">',
+        '" alt="CIMB Bank" style="vertical-align: middle; margin: 0 10px;">',
     };
     return iconImage[iconKey];
   }
