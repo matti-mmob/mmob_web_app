@@ -36,6 +36,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
       },
       tooltip: {
         animation: false,
+        formatter: function () {
+          return this.point.name + '<br> £' + this.y;
+        },
       },
       plotOptions: {
         pie: {
@@ -73,7 +76,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         {
           type: 'pie',
           size: '100%',
-          innerSize: '75%',
+          innerSize: '80%',
           states: {
             inactive: {
               opacity: 1,
