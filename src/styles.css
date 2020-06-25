@@ -97,3 +97,19 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-3 {
 g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
   transform: translate(380px, 127px) !important;
 }
+
+@media (max-width: 767px) {
+.highcharts-data-label-color-2 {
+    left: 32px !important;
+}
+.highcharts-data-label-color-3 {
+    left: 70px !important;
+}
+.highcharts-data-label-color-0 {
+    left: 233px !important;
+}
+.highcharts-data-label-color-1 {
+    left: 250px !important;
+}
+.highcharts-data-label-color-1 span{overflow:vidible !important;}
+}

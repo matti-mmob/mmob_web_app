@@ -72,3 +72,12 @@ canvas#myChart {
   width: 85%;
   margin: auto;
 }
+
+@media (max-width: 767px) {
+.spent-amount-breakdown .table {
+    width: 100%;
+    margin: auto;
+}
+
+.chart-content{width:130px;margin:auto;}
+}
