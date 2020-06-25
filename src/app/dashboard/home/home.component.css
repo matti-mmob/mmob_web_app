@@ -22,19 +22,20 @@
 .widget-chart {
   position: relative;
   text-align: center;
+  margin: 25px 0 0;
 }
 canvas#myChart {
   margin: auto;
 }
 .chart-content {
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   top: 50%;
   left: 0;
   right: 0;
   text-align: center;
   transform: translateY(-50%);
-  -webkit-ransform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
 .chart-content h6 {
   font-weight: 600;

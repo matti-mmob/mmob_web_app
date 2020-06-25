@@ -59,10 +59,41 @@ body {
   overflow-x: hidden;
   font-family: Roboto, sans-serif;
 }
-
+/*************************Highchart css**********************/
 g.highcharts-data-labels.highcharts-series-0.highcharts-pie-series.highcharts-tracker {
   display: none;
 }
 .highcharts-credits {
   display: none;
+}
+.highcharts-data-label-color-1 {
+    left: 326px !important;
+    top: 135px !important;
+}
+.highcharts-data-label-color-0 {
+    left: 303px !important;
+}
+.highcharts-data-label-color-3 {
+    left: 160px !important;
+    top: -15px !important;
+}
+.highcharts-data-label-color-2 {
+    top: 145px !important;
+    left: 112px !important;
+}
+text.highcharts-title {
+    display: none;
+}
+/*****Tooltip postion css**************/
+g.highcharts-label.highcharts-tooltip.highcharts-color-2 {
+    transform: translate(10px, 85px) !important;
+}
+g.highcharts-label.highcharts-tooltip.highcharts-color-0 {
+    transform: translate(334px, 44px) !important;
+}
+g.highcharts-label.highcharts-tooltip.highcharts-color-3 {
+    transform: translate(62px, 4px) !important;
+}
+g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
+    transform: translate(334px, 127px) !important;
 }
