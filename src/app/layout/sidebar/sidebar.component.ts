@@ -11,7 +11,9 @@ export class SidebarComponent implements OnInit {
   showMoreMenu: boolean = false;
   // Default Button Label
   buttonLabel: any = Constant.TOGGLE_TEXT_MORE;
-
+  menuToggleClass: any = '';
+  menuToggle: boolean = false;
+  menuToggleIconeClass: any = '';
   constructor() {}
 
   ngOnInit(): void {}
@@ -21,5 +23,14 @@ export class SidebarComponent implements OnInit {
   toggleMenu() {
     this.showMoreMenu = !this.showMoreMenu;
     this.buttonLabel = this.showMoreMenu ? Constant.TOGGLE_TEXT_LESS : Constant.TOGGLE_TEXT_MORE;
+  }
+
+   /* 
+   * This function is used to show/hide More menu for mobile
+   */
+   mobileToggleMenu() {
+    this.menuToggle = !this.menuToggle;
+    this.menuToggleClass = this.menuToggle ? Constant.MENU_TOGGLE_CLASS : '';
+    this.menuToggleIconeClass = this.menuToggle ? Constant.MENU_TOGGLE_ICONE : '';
   }
 }

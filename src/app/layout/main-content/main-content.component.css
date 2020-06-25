@@ -5,3 +5,13 @@
 .wrapper {
   padding: 15px;
 }
+
+@media (max-width: 767px) {
+.main {
+    position: relative;
+    margin-left: 0;
+}
+app-footer {
+    display: none;
+}
+}

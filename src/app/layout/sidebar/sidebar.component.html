@@ -2,8 +2,13 @@
 <nav class="sidebar" data-toggle="pill">
   <div class="logo">
     <a href="javascript:;"><img src="{{'images/logo.png' | assetsPath}}" alt="logo"></a>
+	<div class="rmm-button {{menuToggleIconeClass}}" (click)="mobileToggleMenu()">
+		<span>&nbsp;</span>
+		<span>&nbsp;</span>
+		<span>&nbsp;</span>
+	</div>
   </div>
-  <ul class="nav flex-column">
+  <ul class="nav flex-column {{menuToggleClass}}">
     <li class="nav-header active">Menu</li>
     <li class="nav-item">
       <a class="nav-link active" href="#">

@@ -4,3 +4,5 @@ jQuery(document).ready(function(){
 	jQuery(this).text( jQuery(this).text() == 'More' ? "Show Less" : "More"); // using ternary operator.
   });
 });
+
+
