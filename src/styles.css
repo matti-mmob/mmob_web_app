@@ -136,9 +136,9 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
 }
 .highcharts-data-label-color-1 span{overflow:vidible !important;}
 g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
-    transform: translate(265px, 127px) !important;
+    transform: translate(230px, 127px) !important;
 }
 g.highcharts-label.highcharts-tooltip.highcharts-color-0 {
-    transform: translate(260px, 44px) !important;
+    transform: translate(230px, 44px) !important;
 }
 }
