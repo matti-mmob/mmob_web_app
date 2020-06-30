@@ -72,24 +72,24 @@ export class HomeComponent implements OnInit, AfterViewInit {
           },
           data: [
             {
-              name: this.chartLabelEnum.CIMB_BANK_LABEL,
-              y: 12394.34,
-              color: '#fab9a2',
-            },
-            {
               name: this.chartLabelEnum.SANTANDER_LABEL,
               y: 5550.97,
-              color: '#b0c1bf',
+              color: '#ff4f00',
             },
             {
               name: this.chartLabelEnum.HSBC_LABEL,
               y: 23617.23,
-              color: '#bddccb',
+              color: '#00008b',
             },
             {
               name: this.chartLabelEnum.BARCLAYS_LABEL,
+              y: 12394.34,
+              color: '#9400d3',
+            },
+            {
+              name: this.chartLabelEnum.CIMB_BANK_LABEL,
               y: 6823.83,
-              color: '#ae96d2',
+              color: '#ea4c89',
             },
           ],
         },
