@@ -85,12 +85,15 @@ g.highcharts-data-labels.highcharts-series-0.highcharts-pie-series.highcharts-tr
 text.highcharts-title {
   display: none;
 }
+.highcharts-label span {
+    overflow: visible !important;
+}
 /*****Tooltip postion css**************/
 g.highcharts-label.highcharts-tooltip.highcharts-color-2 {
-  transform: translate(50px, 85px) !important;
+  transform: translate(40px, 85px) !important;
 }
 g.highcharts-label.highcharts-tooltip.highcharts-color-0 {
-  transform: translate(360px, 44px) !important;
+  transform: translate(330px, 0px) !important;
 }
 g.highcharts-label.highcharts-tooltip.highcharts-color-3 {
   transform: translate(80px, 4px) !important;
@@ -101,19 +104,19 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
 
 @media (max-width: 767px) {
   .highcharts-data-label-color-0 {
-    left: 306px !important;
+    left: 265px !important;
   }
   .highcharts-data-label-color-1 {
-    left: 326px !important;
+    left: 320px !important;
   }
   .highcharts-data-label-color-2 {
-    left: 109px !important;
+    left: 100px !important;
   }
   .highcharts-data-label-color-3 {
     left: 152px !important;
   }
   g.highcharts-label.highcharts-tooltip.highcharts-color-0 {
-    transform: translate(360px, 44px) !important;
+    transform: translate(330px, 0) !important;
   }
   g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
     transform: translate(372px, 127px) !important;
@@ -125,13 +128,13 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
 
 @media (max-width: 479px) {
   .highcharts-data-label-color-2 {
-    left: 32px !important;
+    left: 20px !important;
   }
   .highcharts-data-label-color-3 {
-    left: 70px !important;
+    left: 78px !important;
   }
   .highcharts-data-label-color-0 {
-    left: 233px !important;
+    left: 190px !important;
   }
   .highcharts-data-label-color-1 {
     left: 250px !important;
