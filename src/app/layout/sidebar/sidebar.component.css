@@ -20,8 +20,9 @@
   display: block;
   width: 100%;
   padding: 24px 10px;
-  border-bottom: 1px solid rgba(129, 112, 154, 0.56);
+  border-bottom: 1px solid #fff;
   text-align: center;
+  margin: 0 0 10px;
 }
 .logo a {
   display: block;
@@ -115,7 +116,7 @@
 	display: block;
 }
 .rmm-button span {
-	background: #3b0081;
+	background: #fff;
 	display: block;
 	height: 3px;
 	margin-top: 4px;
@@ -142,7 +143,7 @@ ul.flex-column.nav.menu-toggle {
 	height: 20px;
 }
 .bt-close span:first-child {
-	background: #3b0081 none repeat scroll 0 0;
+	background: #fff;
 	margin-bottom: -4px;
 	margin-top: 12px;
 	transform: rotate(45deg);
@@ -155,7 +156,7 @@ ul.flex-column.nav.menu-toggle {
 	display: none;
 }
 .bt-close span:last-child {
-	background: #3b0081 none repeat scroll 0 0;
+	background: #fff;
 	margin-top: 1px;
 	transform: rotate(132deg);
 	-webkit-transform: rotate(132deg);

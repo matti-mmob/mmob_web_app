@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         {
           type: 'pie',
           size: '100%',
-          innerSize: '80%',
+          innerSize: '75%',
           states: {
             inactive: {
               opacity: 1,
@@ -75,21 +75,29 @@ export class HomeComponent implements OnInit, AfterViewInit {
               name: this.chartLabelEnum.SANTANDER_LABEL,
               y: 5550.97,
               color: '#ff4f00',
+			  borderColor: '#FFB566',
+              borderWidth: 3,
             },
             {
               name: this.chartLabelEnum.HSBC_LABEL,
               y: 23617.23,
               color: '#00008b',
+			  borderColor: '#acacd9',
+              borderWidth: 3,
             },
             {
               name: this.chartLabelEnum.BARCLAYS_LABEL,
               y: 12394.34,
               color: '#9400d3',
+			  borderColor: '#ddaef0',
+              borderWidth: 3,
             },
             {
               name: this.chartLabelEnum.CIMB_BANK_LABEL,
               y: 6823.83,
               color: '#ea4c89',
+			  borderColor: '#e29ce1',
+              borderWidth: 3,
             },
           ],
         },
