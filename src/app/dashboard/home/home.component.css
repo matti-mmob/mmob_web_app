@@ -6,7 +6,7 @@
 }
 .widget-header .widget-img {
   width: 100px;
-  margin: auto;
+  margin: 0 auto 25px;
 }
 .widget-header h1 {
   font-weight: 700;
