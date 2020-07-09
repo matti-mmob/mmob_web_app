@@ -1,0 +1,38 @@
+<!--Starts term and condition window-->
+<div class="align-center setup-section">
+  <figure><img src="{{'images/test.png' | assetsPath}}" alt="test-img"></figure>
+  <h5><strong>Terms and Conditions</strong></h5>
+  <h6>mmob collects your data to provide you with a more personal way to improve your finances- more bills to
+    investments</h6>
+  <form [formGroup]="termConditionForm">
+    <div class="setup-box">
+      <ul class="terms-points">
+        <li><i><img src="{{'images/share-icon.png' | assetsPath}}"></i>
+          <p>We only share your data with people you ask us to</p>
+        </li>
+        <li><i><img src="{{'images/protection-icon.png' | assetsPath}}"></i>
+          <p>You are protected by the FSCS(Financial Services Compensation Scheme)</p>
+        </li>
+        <li><i><img src="{{'images/change-preference-icon.png' | assetsPath}}"></i>
+          <p>You can change your sharing preferences at any time</p>
+        </li>
+      </ul>
+      <div class="read-doc">
+        <p><a href="#">Read full T&Cs</a></p>
+        <p><a href="#">Read full Privacy policy</a></p>
+      </div>
+      <div class="check-box">
+        <input type="checkbox" formControlName="age" id="html">
+        <label for="html">I am over 18 years old</label>
+        <app-show-errors [control]="termConditionForm.controls.age"></app-show-errors>
+      </div>
+      <div class="check-box">
+        <input type="checkbox" formControlName="termAndCondition" id="css">
+        <label for="css">Accept T&Cs</label>
+        <app-show-errors [control]="termConditionForm.controls.termAndCondition"></app-show-errors>
+      </div>
+      <input type="button" class="next-btn" value="Continue" (click)="onNext()">
+    </div>
+  </form>
+</div>
+<!--End-->

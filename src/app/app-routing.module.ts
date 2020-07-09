@@ -5,7 +5,7 @@ const routes: Routes = [
   // DashboardModule is lazyloaded
   {
     path: '',
-    loadChildren: () => import('./landing/landing.module').then((routeModule) => routeModule.LandingModule),
+    loadChildren: () => import('./getting-setup/getting-setup.module').then((routeModule) => routeModule.GettingSetupModule),
   },
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

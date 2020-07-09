@@ -9,11 +9,8 @@ import { AbstractControlDirective, AbstractControl } from '@angular/forms';
 export class ShowErrorsComponent {
   private static readonly errorMessages = {
     required: () => 'This field is required',
-    minlength: params => 'The min number of characters is ' + params.requiredLength,
-    maxlength: params => 'The max allowed number of characters is ' + params.requiredLength,
-    inValidMac: () => 'InValid Mac Address!',
-    smallSizeValidation: () => 'File size should be less than or equal to 1 MB.',
-    //imageType: () => 'Only ' + SentinllX.SENTINLLX_IMAGE_FORMAT + ' is allowed'
+    validateEmail: () => 'Email is Invalid!',
+    validatePassword: () => 'Password should match the criteria'
   };
 
   @Input()
