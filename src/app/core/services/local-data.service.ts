@@ -5,12 +5,12 @@ import * as tutorialImages from '../../shared/localData/tutorialImages.json';
   providedIn: 'root'
 })
 export class LocalDataService {
-public images=[];
+  public images = [];
   constructor() { }
 
- // this function is use to get all images of tutorial page
- getTutorialImages() {
-   this.images= tutorialImages['default'];
-   return this.images;
+  // this function is use to get all images of tutorial page
+  getTutorialImages() {
+    this.images = tutorialImages['default'];
+    return this.images;
   }
 }

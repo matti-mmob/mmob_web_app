@@ -10,9 +10,9 @@ import { LocalDataService } from 'src/app/core/services/local-data.service';
 })
 export class TutorialComponent implements OnInit {
   //contains tutorial images
-  public images=[];
-  constructor(private boostrapSliderConfiguration: NgbCarouselConfig, private localDataService:LocalDataService) {
-   }
+  public images = [];
+  constructor(private boostrapSliderConfiguration: NgbCarouselConfig, private localDataService: LocalDataService) {
+  }
 
   ngOnInit(): void {
     this.boostrapSliderConfiguration.wrap = true;
@@ -20,6 +20,6 @@ export class TutorialComponent implements OnInit {
     this.boostrapSliderConfiguration.pauseOnHover = false;
     this.boostrapSliderConfiguration.showNavigationArrows = false;
     this.boostrapSliderConfiguration.interval = 1;
-   this.images= this.localDataService.getTutorialImages();
+    this.images = this.localDataService.getTutorialImages();
   }
 }
