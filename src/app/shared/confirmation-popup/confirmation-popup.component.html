@@ -1,0 +1,35 @@
+<!-- <div aria-hidden="true" aria-labelledby="modalLabel" id="confrm-popup" class="plot-graph" role="dialog" tabindex="-1">
+  <div class="modal-header">
+    <h3 class="modal-title" id="lineModalLabela">{{modalType === 'confirm'?'Confirmation':'Information'}}</h3>
+  </div>
+  <div class="modal-body">
+    <ng-container>
+      {{confirmText}}
+    </ng-container>
+    <div class="status-btn-set">
+      <ng-container *ngIf="modalType === 'confirm'">
+        <button type="button" id="confirm-yes" (click)="yesPressed()">Yes</button>
+        <button type="button" (click)="noPressed()">No</button>
+      </ng-container>
+      <ng-container *ngIf="modalType === 'alert'">
+        <button type="button" id="confirm-yes" (click)="yesPressed()">Ok</button>
+      </ng-container>
+    </div>
+  </div>
+</div> -->
+<div class="modal" tabindex="-1" role="dialog" id="msg">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+		<div class="col-md-3"><div class="logo-img"><img src="{{'images/logo.png' | assetsPath}}" alt="logo-img"></div></div>
+		<div class="col-md-9"><p> {{confirmText}}</p></div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary">Send again</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">okay</button>
+      </div>
+    </div>
+  </div>
+</div>

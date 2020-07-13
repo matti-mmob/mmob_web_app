@@ -7,4 +7,5 @@ export class Constant {
   public static CHART_ICON_MARGIN = 10;
   public static MENU_TOGGLE_CLASS = 'menu-toggle';
   public static MENU_TOGGLE_ICONE = 'bt-close';
+  public static EMAIL_VERIFICATION_TEXT='An email has been sent to you, click the link in the email to verify'
 }

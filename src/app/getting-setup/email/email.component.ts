@@ -5,6 +5,9 @@ import { FieldsValidateService } from 'src/app/service/fields-validate.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
 import { CustomValidators } from 'src/app/shared/validators/custom-validators';
+import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Constant } from 'src/app/shared/constant/constant';
 
 @Component({
   selector: 'app-email',
@@ -19,7 +22,8 @@ export class EmailComponent implements OnInit {
     private assetsPipe: AssetsPathPipe,
     private formBuilder: FormBuilder,
     private fieldsValidateService: FieldsValidateService,
-    private route: Router) { }
+    private route: Router,
+    private modalService: NgbModal) { }
 
   ngOnInit() {
     this.initializeForm();
@@ -39,7 +43,20 @@ export class EmailComponent implements OnInit {
       return this.fieldsValidateService.validateAllFormFields(this.emailForm);
     }
     else {
-      this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
+      this.commonAlertPopUp(Constant.EMAIL_VERIFICATION_TEXT);
+      // this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
     }
   }
+
+  commonAlertPopUp(confirmationText) {
+    const modal = this.showPopup();
+    modal.componentInstance.confirmText = confirmationText;
+    modal.componentInstance.modalType = 'alert';
+    
+  }
+
+  showPopup() {
+    return this.modalService.open(ConfirmationPopupComponent, { size: 'sm', backdrop: 'static', keyboard: false });
+  }
+
 }
