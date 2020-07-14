@@ -43,7 +43,7 @@ export class EmailComponent implements OnInit {
       return this.fieldsValidateService.validateAllFormFields(this.emailForm);
     }
     else {
-    this.commonAlertPopUp(Constant.EMAIL_VERIFICATION_TEXT);
+      this.commonAlertPopUp(Constant.EMAIL_VERIFICATION_TEXT);
       //this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
     }
   }
@@ -52,7 +52,7 @@ export class EmailComponent implements OnInit {
     const modal = this.showPopup();
     modal.componentInstance.confirmText = confirmationText;
     modal.componentInstance.modalType = 'alert';
-    
+
   }
 
   showPopup() {
