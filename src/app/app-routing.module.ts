@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./dashboard/dashboard.module').then((routeModule) => routeModule.DashboardModule),
   },
+  {
+    path: 'kyc',
+    loadChildren: () => import('./kyc/kyc.module').then((routeModule) => routeModule.KycModule),
+  },
 ];
 
 @NgModule({

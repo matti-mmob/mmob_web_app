@@ -1,0 +1,450 @@
+<div class="main">
+	<div class="wrapper">
+	<div class="kyc">
+		<figure><img src="{{'images/consent.png' | assetsPath}}" alt="consent-img"></figure>
+		<h5><strong>Consent Management Portal</strong></h5><br>
+		<p><strong>Data Consent text to go there</strong></p>
+		<br>
+		<div class="consent-boxes">
+		<div class="accordion" id="accordionExample">
+		<div class="card">
+		<div class="card-header" id="headingOne">
+		<h2 class="mb-0">
+		<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		<figure><img src="{{'images/my-money.png' | assetsPath}}" alt="consent-img"></figure>My Money
+		</button>
+		</h2>
+		</div>
+		<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+		<div class="card-body">
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Provider</th>
+						<th></th>
+						<th>Last Updated</th>
+						<th>Days Remaining</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><figure><img src="{{'images/hsbc-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>HSBC</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox" (click) ="onClick()">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>26-jul-20</td>
+						<td>67</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/barclays-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>Barclays</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>31-jul-20</td>
+						<td>54</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/santander-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>Santander</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>1-Aug-20</td>
+						<td>49</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/cimb-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>CIMB Bank</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>12-Aug-20</td>
+						<td>12</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		</div>
+		<div class="card">
+		<div class="card-header" id="headingTwo">
+		<h2 class="mb-0">
+		<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+		<figure><img src="{{'images/my-home.png' | assetsPath}}" alt="consent-img"></figure>My Home
+		</button>
+		</h2>
+		</div>
+		<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+		<div class="card-body">
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Provider</th>
+						<th></th>
+						<th>Last Updated</th>
+						<th>Days Remaining</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><figure><img src="{{'images/hsbc-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>HSBC</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>26-jul-20</td>
+						<td>67</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/octopus-energy-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>Octopus Energy</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>31-jul-20</td>
+						<td>54</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/ee-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>EE</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>1-Aug-20</td>
+						<td>49</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/brolly-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>Brolly</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>12-Aug-20</td>
+						<td>12</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/british-gas-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>British Gas</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>12-Aug-20</td>
+						<td>12</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		</div>
+		<div class="card">
+		<div class="card-header" id="headingThree">
+		<h2 class="mb-0">
+		<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+		<figure><img src="{{'images/my-family.png' | assetsPath}}" alt="consent-img"></figure>My Family
+		</button>
+		</h2>
+		</div>
+		<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+		<div class="card-body">
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Provider</th>
+						<th></th>
+						<th>Last Updated</th>
+						<th>Days Remaining</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><figure><img src="{{'images/aviva-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>Aviva</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>26-jul-20</td>
+						<td>67</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/gohenry-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>GoHenry</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>31-jul-20</td>
+						<td>54</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/bupa-icon.png' | assetsPath}}" alt="bupa-icon"></figure></td>
+						<td>BUPA</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>1-Aug-20</td>
+						<td>49</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		</div>
+		<div class="card">
+		<div class="card-header" id="headingFour">
+		<h2 class="mb-0">
+		<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+		<figure><img src="{{'images/my-car.png' | assetsPath}}" alt="consent-img"></figure>My Car
+		</button>
+		</h2>
+		</div>
+		<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+		<div class="card-body">
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Provider</th>
+						<th></th>
+						<th>Last Updated</th>
+						<th>Days Remaining</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><figure><img src="{{'images/oodle-icon.png' | assetsPath}}" alt="oddle-icon"></figure></td>
+						<td>Oodle</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>26-jul-20</td>
+						<td>67</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/cuvva-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>Cuvva</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>31-jul-20</td>
+						<td>54</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/dvla-icon.png' | assetsPath}}" alt="bupa-icon"></figure></td>
+						<td>DVLA</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>1-Aug-20</td>
+						<td>49</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		</div>
+		<div class="card">
+		<div class="card-header" id="headingFive">
+		<h2 class="mb-0">
+		<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+		<figure><img src="{{'images/my-investments.png' | assetsPath}}" alt="consent-img"></figure>My Investments
+		</button>
+		</h2>
+		</div>
+		<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+		<div class="card-body">
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Provider</th>
+						<th></th>
+						<th>Last Updated</th>
+						<th>Days Remaining</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><figure><img src="{{'images/yielders-icon.png' | assetsPath}}" alt="oddle-icon"></figure></td>
+						<td>Yielders</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>26-jul-20</td>
+						<td>67</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/wealthify-icon.png' | assetsPath}}" alt="hsbc-icon"></figure></td>
+						<td>Wealthify</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>31-jul-20</td>
+						<td>54</td>
+					</tr>
+					<tr>
+						<td><figure><img src="{{'images/robnhood-icon.png' | assetsPath}}" alt="bupa-icon"></figure></td>
+						<td>Robnhood</td>
+						<td>
+							<div class="toggle-button-cover">
+							<div class="button-cover">
+							<div class="button r" id="button-1">
+							<input type="checkbox" class="checkbox">
+							<div class="knobs"></div>
+							<div class="layer"></div>
+							</div>
+							</div>
+							</div>
+						</td>
+						<td>1-Aug-20</td>
+						<td>49</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+	</div>

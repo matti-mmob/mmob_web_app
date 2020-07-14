@@ -1,0 +1,9 @@
+.upload-form-done{
+	text-align:center;
+	width:100%;
+	max-width:400px;
+	margin:auto;
+}
+.upload-form-done p {
+	margin:50px 0px;
+}
