@@ -43,8 +43,8 @@ export class EmailComponent implements OnInit {
       return this.fieldsValidateService.validateAllFormFields(this.emailForm);
     }
     else {
-      this.commonAlertPopUp(Constant.EMAIL_VERIFICATION_TEXT);
-      // this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
+    this.commonAlertPopUp(Constant.EMAIL_VERIFICATION_TEXT);
+      //this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
     }
   }
 
@@ -56,7 +56,7 @@ export class EmailComponent implements OnInit {
   }
 
   showPopup() {
-    return this.modalService.open(ConfirmationPopupComponent, { size: 'sm', backdrop: 'static', keyboard: false });
+    return this.modalService.open(ConfirmationPopupComponent, {});
   }
 
 }
