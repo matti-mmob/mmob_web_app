@@ -1,0 +1,268 @@
+<!--Starts name window-->
+<form [formGroup]="registrationForm">
+  <div class="align-center setup-section" *ngIf="currentActiveFormControl === 'name'">
+    <figure><img src="{{'images/pass.png' | assetsPath}}" alt="pass-img"></figure>
+    <h5><strong>What's your name?</strong></h5>
+    <div class="setup-box">
+      <p>This can be your real name, preferred name, nick name or alias- it doesn't need to match your ID.</p>
+      <div class="form-group">
+        <i><img src="{{'images/tick-icon.png' | assetsPath}}" alt="tick-icon"></i>
+        <input type="text" formControlName="name" class="form-control">
+        <app-show-errors [control]="registrationForm.controls.name"></app-show-errors>
+      </div>
+
+    </div>
+  </div>
+  <!--End-->
+  <!--Starts email window-->
+  <div class="align-center setup-section" *ngIf="currentActiveFormControl === 'email'">
+    <figure><img src="{{'images/email.png' | assetsPath}}" alt="pass-img"></figure>
+    <h5><strong>What's your e-mail adress?</strong></h5>
+    <div class="setup-box">
+      <p>To create your account not to send you spam (we promise!)</p>
+      <div class="form-group">
+        <i><img src="{{'images/tick-icon.png' | assetsPath}}" alt="tick-icon"></i>
+        <input type="text" formControlName="email" class="form-control">
+        <app-show-errors [control]="registrationForm.controls.email"></app-show-errors>
+      </div>
+      <input type="button" class="next-btn" value="Back" (click)="onPrevious('nameForm')">
+      <input type="button" class="next-btn" value="Continue" data-toggle="modal" data-target="#msg"
+        (click)="onNext('passwordForm')">
+    </div>
+  </div>
+  <!--End-->
+  <!--Starts password window-->
+  <div class="align-center setup-section" *ngIf="currentActiveFormControl === 'password'">
+    <figure><img src="{{'images/access.png' | assetsPath}}" alt="pass-img"></figure>
+    <h5><strong>Choose a secure password</strong></h5>
+    <div class="setup-box">
+      <div class="form-group">
+        <i><img src="{{'images/eye-icon.png' | assetsPath}}" alt="eye-icon"></i>
+        <input type="password" formControlName="password" class="form-control">
+      </div>
+      <ul>
+        <li>Your password should include at least:</li>
+        <li><img src="{{'images/tick-bullet.jpg' | assetsPath}}"> 8 character</li>
+        <li><img src="{{'images/tick-bullet.jpg' | assetsPath}}"> 1 number</li>
+        <li><img src="{{'images/tick-bullet.jpg' | assetsPath}}"> 1 capital letter</li>
+        <li><img src="{{'images/tick-bullet.jpg' | assetsPath}}"> 1 special character (e.g. $@&%)</li>
+      </ul>
+      <input type="button" class="next-btn" value="Back" (click)="onPrevious('emailForm')">
+      <input type="button" class="next-btn" value="Continue" (click)="onNext('mobileForm')">
+    </div>
+  </div>
+  <!--End-->
+  <!--Starts mobile window-->
+  <div class="align-center setup-section" *ngIf="currentActiveFormControl === 'mobile'">
+    <figure><img src="{{'images/kyc.png' | assetsPath}}" alt="kyc-img"></figure>
+    <h5><strong>Enter your Mobile Number</strong></h5>
+    <div class="setup-box">
+      <p>Please enter your phone number for <span>two factor authentication.</span></p>
+      <div class="form-group">
+        <input type="text" formControlName="mobile" class="form-control">
+      </div>
+      <input type="button" class="next-btn" value="Back" (click)="onPrevious('passwordForm')">
+      <input type="button" class="next-btn" value="Continue" (click)="onNext('twoFactorForm')">
+    </div>
+  </div>
+  <!--End-->
+  <!--Starts two factor Authentication window-->
+  <div class="align-center setup-section" *ngIf="currentActiveFormControl === 'twoFactorPassword'">
+    <figure><img src="{{'images/authentication.png' | assetsPath}}" alt="authentication-img"></figure>
+    <h5><strong>Two Factor Authentication</strong></h5>
+    <div class="setup-box">
+      <p>Please enter the verfication code that has been <span>sent to your device registered with your mmob
+          account.</span></p>
+      <div class="form-group">
+        <input type="password" formControlName="twoFactorPassword" class="form-control">
+      </div>
+      <input type="button" class="next-btn" value="Back" (click)="onPrevious('mobileForm')">
+      <input type="button" class="next-btn" value="Continue" (click)="onNext('termConditionForm')">
+    </div>
+  </div>
+  <!--End-->
+  <!--Starts term and condition window-->
+  <div class="align-center setup-section" *ngIf="currentActiveFormControl === 'termAndCondition'">
+    <figure><img src="{{'images/test.png' | assetsPath}}" alt="test-img"></figure>
+    <h5><strong>Terms and Conditions</strong></h5>
+    <h6>mmob collects your data to provide you with a more personal way to improve your finances- more bills to
+      investments</h6>
+    <div class="setup-box">
+      <ul class="terms-points">
+        <li><i><img src="{{'images/share-icon.png' | assetsPath}}"></i>
+          <p>We only share your data with people you ask us to</p>
+        </li>
+        <li><i><img src="{{'images/protection-icon.png' | assetsPath}}"></i>
+          <p>You are protected by the FSCS(Financial Services Compensation Scheme)</p>
+        </li>
+        <li><i><img src="{{'images/change-preference-icon.png' | assetsPath}}"></i>
+          <p>You can change your sharing preferences at any time</p>
+        </li>
+      </ul>
+      <div class="read-doc">
+        <p><a href="#">Read full T&Cs</a></p>
+        <p><a href="#">Read full Privacy policy</a></p>
+      </div>
+      <div class="check-box">
+        <input type="checkbox" formControlName="age" id="html">
+        <label for="html">I am over 18 years old</label>
+      </div>
+      <div class="check-box">
+        <input type="checkbox" formControlName="termAndCondition" id="css">
+        <label for="css">Accept T&Cs</label>
+      </div>
+      <input type="button" class="next-btn" value="Back" (click)="onPrevious('twoFactorForm')">
+      <input type="button" class="next-btn" value="Continue" (click)="onNext('banksDetailForm')">
+    </div>
+  </div>
+  <!--End-->
+  <!--Starts add data from HSBC window-->
+  <!-- <div class="align-center setup-section" *ngIf="currentActiveFormControl === 'name'">
+    <a href="#" class="add-btn">Add account <i><img src="{{'images/plus.svg' | assetsPath}}" alt="icon"></i></a>
+    <div class="account-table">
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>
+              <figure><img src="{{'images/natwest-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>Natwest</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+          <tr>
+            <td>
+              <figure><img src="{{'images/hsbc-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>HSBC</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+          <tr>
+            <td>
+              <figure><img src="{{'images/halifax-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>Halifax</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+          <tr>
+            <td>
+              <figure><img src="{{'images/santander-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>Santender</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+          <tr>
+            <td>
+              <figure><img src="{{'images/imageslloyd-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>Lloyds</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+          <tr>
+            <td>
+              <figure><img src="{{'images/royal-bank-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>Royal Bank of Scotland</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+          <tr>
+            <td>
+              <figure><img src="{{'images/barclays-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>Barclays</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+          <tr>
+            <td>
+              <figure><img src="{{'images/starling-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>Starling Bank</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+          <tr>
+            <td>
+              <figure><img src="{{'images/revolut-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>Revolut</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+          <tr>
+            <td>
+              <figure><img src="{{'images/monzo-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>Monzo</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+          <tr>
+            <td>
+              <figure><img src="{{'images/cimb-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>CIMB Bank</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+          <tr>
+            <td>
+              <figure><img src="{{'images/tsb-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
+            </td>
+            <td>
+              <h3>TSB</h3>
+            </td>
+            <td><a href="#">></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="setup-box">
+      <input type="button" href="#" class="next-btn" value="Back" (click)="onPrevious('termConditionForm')">
+      <input type="button" href="#" class="next-btn" value="Next" (click)="onNext('requestDataForm')">
+    </div>
+  </div> -->
+  <!--Start data from HSBC window-->
+  <!-- <div class="align-center setup-section" *ngIf="currentActiveFormControl === 'name'">
+    <figure><img src="{{'images/presentation.png' | assetsPath}}" alt="presentation-img"></figure>
+    <h5><strong>Request data from HSBC</strong></h5>
+    <h6>mmob will request the following information from your bank.</h6>
+    <div class="setup-box">
+      <ul class="terms-points">
+        <li><i><img src="{{'images/account-icon.png' | assetsPath}}"></i>
+          <p>Account details including your balance and transactions from the last year.</p>
+        </li>
+        <li><i><img src="{{'images/regular-icon.png' | assetsPath}}"></i>
+          <p>Regular payments and standing orders</p>
+        </li>
+        <li><i><img src="{{'images/payee-icon.png' | assetsPath}}"></i>
+          <p>Details of payee agreements you have set up</p>
+        </li>
+      </ul>
+      <p class="note-text"><small>*This consent is vaild for 90 days</small></p>
+      <p>Your safety is our priority. We use a secure network to link to your bank.</p>
+      <input type="button" href="#" class="next-btn" value="Back" (click)="onPrevious('banksDetailForm')">
+      <input type="button" href="#" class="next-btn" value="Confirm" data-toggle="modal" data-target="#allow"
+        (click)="onNext()">
+    </div>
+  </div> -->
+  <button (click)="validateFormNextStep()" class="next-btn">Continue</button>
+</form>
+
+<!--End-->
