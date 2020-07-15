@@ -6,6 +6,16 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./getting-setup/getting-setup.module').then((routeModule) => routeModule.GettingSetupModule),
+    // path: 'dashboard',
+    // loadChildren: () => import('./dashboard/dashboard.module').then((routeModule) => routeModule.DashboardModule),
+  },
+  {
+    path: 'kyc',
+    loadChildren: () => import('./kyc/kyc.module').then((routeModule) => routeModule.KycModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./landing/landing.module').then((routeModule) => routeModule.LandingModule),
   },
 ];
 
