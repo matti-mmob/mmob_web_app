@@ -44,7 +44,7 @@ export class EmailComponent implements OnInit {
     }
     else {
       this.commonAlertPopUp(Constant.EMAIL_VERIFICATION_TEXT);
-      //this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
+      this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
     }
   }
 
