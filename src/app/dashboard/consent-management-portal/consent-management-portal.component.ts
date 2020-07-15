@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfirmationPopupComponent } from 'src/app/shared/utils/confirmation-popup/confirmation-popup.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
 
 @Component({
   selector: 'app-consent-management-portal',

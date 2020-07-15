@@ -13,8 +13,7 @@ export class ConfirmationPopupComponent implements OnInit {
   @Input() public modalType = 'confirm'; // alert/confirm
   @Input() public confirmText = '';
 
-  constructor(private activeModal: NgbActiveModal,
-    private assetsPipe: AssetsPathPipe) {
+  constructor(private activeModal: NgbActiveModal) {
   }
 
   ngOnInit() {

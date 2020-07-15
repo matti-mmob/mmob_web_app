@@ -5,7 +5,7 @@ import { TutorialComponent } from './tutorial/tutorial.component';
 
 const routes: Routes = [
   { path: '', component: SplashScreenComponent },
-  { path: 'tutorial', component: TutorialComponent }
+  { path: 'tutorial', component: TutorialComponent },
 ];
 
 @NgModule({

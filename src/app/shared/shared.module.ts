@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AssetsPathPipe } from './pipes/assets-path.pipe';
 import { ShowErrorsComponent } from './show-errors/show-errors.component';
-import { ConfirmationPopupComponent } from './utils/confirmation-popup/confirmation-popup.component';
+import { ConfirmationPopupComponent } from './confirmation-popup/confirmation-popup.component';
+
 
 @NgModule({
-  declarations: [AssetsPathPipe, ConfirmationPopupComponent],
+  declarations: [AssetsPathPipe, ConfirmationPopupComponent, ShowErrorsComponent],
   imports: [CommonModule],
   exports: [AssetsPathPipe, ShowErrorsComponent, ConfirmationPopupComponent],
   providers: [AssetsPathPipe, ConfirmationPopupComponent],
