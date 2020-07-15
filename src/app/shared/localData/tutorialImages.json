@@ -1,0 +1,27 @@
+[
+  {
+    "name": "All your money in one place",
+    "image": "assets/images/centre_openbanking.png",
+    "data": "mmob gives you a snapshot of all your bank accounts, savings, investments and more"
+  },
+  {
+    "name": "Track and manage your spending",
+    "image": "assets/images/speed.png",
+    "data": "easy to understand view of your incomings and outgoings so you can start to budget better"
+  },
+  {
+    "name": "Keep your data safe and secure",
+    "image": "assets/images/fruit.png",
+    "data": "We use evolving best-in-class secutity protocols to keep your information safe"
+  },
+  {
+    "name": "Notification settings",
+    "image": "assets/images/hotel.png",
+    "data": "Get instant notification on all your spending and product renewal reminders"
+  },
+  {
+    "name": "Tailored Products",
+    "image": "assets/images/handmade.png",
+    "data": "Products selected to suit your needs and budgets"
+  }
+]

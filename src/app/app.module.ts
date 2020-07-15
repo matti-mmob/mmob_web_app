@@ -12,4 +12,5 @@ import { AssetsPathPipe } from './shared/pipes/assets-path.pipe';
   providers: [AssetsPathPipe],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {}
