@@ -22,6 +22,14 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./landing/landing.module').then((routeModule) => routeModule.LandingModule),
   },
+  {
+    path: 'marketPlace',
+    loadChildren: () => import('./market-place/market-place.module').then((routeModule) => routeModule.MarketPlaceModule),
+  },
+  {
+    path: 'investments',
+    loadChildren: () => import('./investments/investments.module').then((routeModule) => routeModule.InvestmentsModule),
+  },
 ];
 
 @NgModule({

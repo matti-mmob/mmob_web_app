@@ -2,11 +2,11 @@
 <nav class="sidebar" data-toggle="pill">
   <div class="logo">
     <a href="javascript:;"><img src="{{'images/logo-alt.png' | assetsPath}}" alt="logo"></a>
-	<div class="rmm-button {{menuToggleIconeClass}}" (click)="mobileToggleMenu()">
-		<span>&nbsp;</span>
-		<span>&nbsp;</span>
-		<span>&nbsp;</span>
-	</div>
+    <div class="rmm-button {{menuToggleIconeClass}}" (click)="mobileToggleMenu()">
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+    </div>
   </div>
   <ul class="nav flex-column {{menuToggleClass}}">
     <li class="nav-header active">Menu</li>
@@ -25,8 +25,8 @@
         <figure><img src="{{'images/accounts.svg' | assetsPath}}" alt="nav-icon"></figure>Accounts
       </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">
+    <li class="nav-item" >
+      <a class="nav-link" [routerLink]="['/marketPlace']">
         <figure><img src="{{'images/marketplace.svg' | assetsPath}}" alt="nav-icon"></figure>Market Place
       </a>
     </li>
