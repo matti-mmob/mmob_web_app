@@ -1,37 +1,38 @@
 <div class="main">
-	<div class="wrapper">
-	
-	  <div class="upload-id">
-	    <figure><img src="{{'images/backup.png' | assetsPath}}" alt="backup icon"></figure>
-			<h5><strong>Upload photo of your ID</strong></h5>
-             <p>please upload a photo of the front and back of your ID</p>
-			 <div class="row justify-content-center">
-			 <div class="col-md-5">
-			 <h5><strong>Front</strong></h5>
-			   <form>
-				  <div class="image-upload-wrap">
-					<input class="file-upload-input" type='file'  onchange="readURL(this);" accept="image/*" />
-				  </div>
-				  <div class="file-upload-content">
-					<img class="file-upload-image" src="#" alt="your image" />
-				  </div>
-					<button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">choose a file to upload</button>
-			  </form>
-			 </div>
-			 
-			  <div class="col-md-5">
-			  <h5><strong>Back</strong></h5>
-			   <form>
-				  <div class="image-upload-wrap-1">
-					<input class="file-upload-input-1" type='file' onchange="readURL1(this);" accept="image/*" />
-				  </div>
-				  <div class="file-upload-content-1">
-					<img class="file-upload-image-1" src="#" alt="your image" />
-				  </div>
-					<button class="file-upload-btn" type="button" onclick="$('.file-upload-input-1').trigger( 'click' )">choose a file to upload</button>
-			  </form>
-			 </div>
-			  </div>
-		  </div>
-	</div>
+  <div class="wrapper">
+    <div class="upload-id">
+      <figure><img src="{{'images/backup.png' | assetsPath}}" alt="backup icon"></figure>
+      <h5><strong>Upload photo of your ID</strong></h5>
+      <p>please upload a photo of the front and back of your ID</p>
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <h5><strong>Front</strong></h5>
+          <form>
+            <div class="image-upload-wrap">
+              <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            </div>
+            <div class="file-upload-content">
+              <img class="file-upload-image" src="#" alt="your image" />
+            </div>
+            <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">choose a
+              file to upload</button>
+          </form>
+        </div>
+
+        <div class="col-md-5">
+          <h5><strong>Back</strong></h5>
+          <form>
+            <div class="image-upload-wrap-1">
+              <input class="file-upload-input-1" type='file' onchange="readURL1(this);" accept="image/*" />
+            </div>
+            <div class="file-upload-content-1">
+              <img class="file-upload-image-1" src="#" alt="your image" />
+            </div>
+            <button class="file-upload-btn" type="button" onclick="$('.file-upload-input-1').trigger( 'click' )">choose
+              a file to upload</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
