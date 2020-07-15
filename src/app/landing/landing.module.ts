@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SplashScreenComponent } from './splash-screen/splash-screen.component';
+import { TutorialComponent } from './tutorial/tutorial.component';
 import { LandingRoutingModule } from './landing-routing.module';
-import { RegistrationComponent } from './registration/registration.component';
 import { SharedModule } from '../shared/shared.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CoreModule } from '../core/core.module';
+
 
 
 @NgModule({
-  declarations: [RegistrationComponent],
+  declarations: [SplashScreenComponent, TutorialComponent],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
     LandingRoutingModule,
     SharedModule,
+    NgbModule,
+    CoreModule
   ]
 })
 export class LandingModule { }
