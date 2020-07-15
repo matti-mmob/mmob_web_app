@@ -1,0 +1,11 @@
+.upload-address-submit{
+	text-align:center;
+	width:100%;
+	max-width:400px;
+	margin:auto;
+}
+.upload-address-submit p, 
+.upload-address-submit h5, 
+.upload-address-submit figure {
+	margin:20px 0px;
+}

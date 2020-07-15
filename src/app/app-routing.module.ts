@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('./dashboard/dashboard.module').then((routeModule) => routeModule.DashboardModule),
   },
   {
+    path: 'kyc',
+    loadChildren: () => import('./kyc/kyc.module').then((routeModule) => routeModule.KycModule)
+  },
+  {
     path: '',
     loadChildren: () => import('./landing/landing.module').then((routeModule) => routeModule.LandingModule),
   },
@@ -17,4 +21,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
