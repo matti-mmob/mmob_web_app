@@ -4,11 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   // DashboardModule is lazyloaded
   {
-    path: '',
+    path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then((routeModule) => routeModule.DashboardModule),
     // loadChildren: () => import('./getting-setup/getting-setup.module').then((routeModule) => routeModule.GettingSetupModule),
     // path: 'dashboard',
     // loadChildren: () => import('./dashboard/dashboard.module').then((routeModule) => routeModule.DashboardModule),
+  },
+  {
+    path: 'gettingSetUp',
+    loadChildren: () =>  import('./getting-setup/getting-setup.module').then((routeModule) => routeModule.GettingSetupModule),
   },
   {
     path: 'kyc',
