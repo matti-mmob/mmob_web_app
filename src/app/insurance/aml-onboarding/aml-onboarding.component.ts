@@ -10,12 +10,12 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Constant } from 'src/app/shared/constant/constant';
 
 @Component({
-  selector: 'app-email',
-  templateUrl: './email.component.html',
-  styleUrls: ['./email.component.css']
+  selector: 'app-aml-onboarding',
+  templateUrl: './aml-onboarding.component.html',
+  styleUrls: ['./aml-onboarding.component.css']
 })
-export class EmailComponent implements OnInit {
-  emailForm: FormGroup;
+export class AmlOnboardingComponent implements OnInit {
+  onboardingFrom: FormGroup;
   //Navigation Url Constanst
   navigationUrl = NavigationUrl;
   constructor(
@@ -33,14 +33,20 @@ export class EmailComponent implements OnInit {
    *  This function will used to Prepare Form Fields.
    */
   initializeForm() {
-    this.emailForm = this.formBuilder.group({
-      email: ['', [Validators.required, CustomValidators.emailCustomValidation]],
+    this.onboardingFrom = this.formBuilder.group({
+      firstName: ['', [Validators.required]],
+      sirName: ['', [Validators.required]],
+      date: [''],
+      month: [''],
+      year: [''],
+      postCode: ['', [Validators.required]],
+      address: ['', [Validators.required]],
     });
   }
   //this function validate form and redirect to next step
   onNext() {
-    if (this.emailForm.invalid) {
-      return this.fieldsValidateService.validateAllFormFields(this.emailForm);
+    if (this.onboardingFrom.invalid) {
+      return this.fieldsValidateService.validateAllFormFields(this.onboardingFrom);
     }
     else {
       this.commonAlertPopUp();
@@ -49,12 +55,12 @@ export class EmailComponent implements OnInit {
 
   commonAlertPopUp() {
     const modal = this.showPopup();
-    modal.componentInstance.confirmText = Constant.EMAIL_CONFIRM_TEXT;
-    modal.componentInstance.firstButtonText = Constant.EMAIL_FIRST_BUTTON_TEXT;
-    modal.componentInstance.secondButtonText = Constant.EMAIL_SECOND_BUTTON_TEXT;
+    modal.componentInstance.confirmText = Constant.ONBOARD_CONFIRM_TEXT;
+    modal.componentInstance.firstButtonText = Constant.ONBOARD_FIRST_BUTTON_TEXT;
+    modal.componentInstance.secondButtonText = Constant.ONBOARD_SECOND_BUTTON_TEXT;
     modal.result.then((data) => {
       if (data.isYesPressed) {
-        this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
+        // this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
       }
     });
   }

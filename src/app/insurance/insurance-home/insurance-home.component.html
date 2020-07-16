@@ -1,0 +1,52 @@
+<div class="main">
+    <div class="wrapper">
+        <div class="insurance-sec">
+            <figure><img src="{{'images/health-insurance.png' | assetsPath}}" alt="utilitie icon"></figure>
+            <h5><strong>Insurance</strong></h5>
+            <form [formGroup]="insurance">
+                <input type="search" class="Utilitie-search-box">
+                <div class="brand-box"  (click)="onNext()">
+                    <div class="row justify-content-between px-1">
+                        <div class="logo-box"><img src="{{'images/cuvva-img.png' | assetsPath}}" alt="cuvva"></div>
+                        <div class="time-box">
+                            <img src="{{'images/clock.png' | assetsPath}}" alt="clock image">
+                            <p>4 mins</p>
+                        </div>
+                    </div>
+                    <p class="utilitie-dis">
+                        We are cutting out the jargon, the paperwork and the call centre queues. Get temporary car
+                        insurance
+                        and travel insurance today.
+                    </p>
+                </div>
+                <div class="brand-box" (click)="onNext()">
+                    <div class="row justify-content-between px-1">
+                        <div class="logo-box"><img src="{{'images/brolly-img.png' | assetsPath}}" alt="brolly"></div>
+                        <div class="time-box">
+                            <img src="{{'images/clock.png' | assetsPath}}" alt="clock image">
+                            <p>4 mins</p>
+                        </div>
+                    </div>
+                    <p class="utilitie-dis">
+                        We are building Brolly to create insurance that just works, enabling people to protect the
+                        things
+                        they care about in a simple and joyful way.
+                    </p>
+                </div>
+                <div class="brand-box" (click)="onNext()">
+                    <div class="row justify-content-between px-1">
+                        <div class="logo-box"><img src="{{'images/lemonade-img.png' | assetsPath}}" alt="lemonade">
+                        </div>
+                        <div class="time-box">
+                            <img src="{{'images/clock.png' | assetsPath}}" alt="clock image">
+                            <p>9 mins</p>
+                        </div>
+                    </div>
+                    <p class="utilitie-dis">
+                        Robinhood, a pioneer of commision-free investing, gives you more way to make your money work
+                        harder.
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>

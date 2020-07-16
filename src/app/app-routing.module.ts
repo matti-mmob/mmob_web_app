@@ -6,12 +6,9 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then((routeModule) => routeModule.DashboardModule),
-    // loadChildren: () => import('./getting-setup/getting-setup.module').then((routeModule) => routeModule.GettingSetupModule),
-    // path: 'dashboard',
-    // loadChildren: () => import('./dashboard/dashboard.module').then((routeModule) => routeModule.DashboardModule),
   },
   {
-    path: 'gettingSetUp',
+    path: 'getting-setup',
     loadChildren: () =>  import('./getting-setup/getting-setup.module').then((routeModule) => routeModule.GettingSetupModule),
   },
   {
@@ -21,6 +18,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./landing/landing.module').then((routeModule) => routeModule.LandingModule),
+  },
+  {
+    path: 'insurance',
+    loadChildren: () => import('./insurance/insurance.module').then((routeModule) => routeModule.InsuranceModule),
   },
 ];
 

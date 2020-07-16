@@ -12,6 +12,9 @@ export class ConfirmationPopupComponent implements OnInit {
   @Input() public action;
   @Input() public modalType = 'confirm'; // alert/confirm
   @Input() public confirmText = '';
+  @Input() public headerText = '';
+  @Input() public firstButtonText = 'NO THANKS';
+  @Input() public secondButtonText = 'ALLOW';
 
   constructor(private activeModal: NgbActiveModal) {
   }
