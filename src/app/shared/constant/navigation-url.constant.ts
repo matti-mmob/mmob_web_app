@@ -35,4 +35,8 @@ export class NavigationUrl {
   // NavigationUrl.BANK_ADDED
   public static AML_ONBOARDING = NavigationUrl.INSURANCE_ROUTE + '/aml-onboarding';
 
+  // NavigationUrl.MARKETPLACE
+  public static MARKETPLACE = 'marketPlace';
+  // NavigationUrl.INVESTMENTS
+  public static INVESTMENTS = 'investments';
 }
