@@ -1,0 +1,63 @@
+<div class="main">
+  <div class="wrapper">
+    <div class="market-place">
+      <div class="market-place-header">
+        <figure class="market-place-img"><img src="{{'images/market-place.png' | assetsPath}}" alt="Market Place image">
+        </figure>
+        <h5><strong>Welcome to the Market Place</strong></h5>
+        <form>
+          <input type="search" class="market-place-search-box">
+        </form>
+      </div>
+      <!-- widget-boxes -->
+      <div class="market-place-boxes">
+        <div class="row justify-content-around mt-4">
+          <!-- insurance-box -->
+          <div class="col-sm insurance box">
+            <a href="#">
+              <figure><img src="{{'images/health-insurance.png' | assetsPath}}" alt="Insurance image"></figure>
+              <h6><strong>Insurance</strong></h6>
+            </a>
+          </div>
+          <!-- merchants-box -->
+          <div class="col-sm merchants box">
+            <a href="#">
+              <figure><img src="{{'images/merchants-icon.png' | assetsPath}}" alt="Merchants image"></figure>
+              <h6><strong>Merchants</strong></h6>
+            </a>
+          </div>
+          <!-- utilities-box -->
+          <div class="col-sm utilities box">
+            <a href="#">
+              <figure><img src="{{'images/document.png' | assetsPath}}" alt="Utilities image"></figure>
+              <h6><strong>Utilities</strong></h6>
+            </a>
+          </div>
+        </div>
+        <div class="row justify-content-around">
+          <!-- lending-box -->
+          <div class="col-sm lending box">
+            <a href="#">
+              <figure><img src="{{'images/lending-icon.png' | assetsPath}}" alt="Lending image"></figure>
+              <h6><strong>Lending</strong></h6>
+            </a>
+          </div>
+          <!-- investments-box -->
+          <div class="col-sm investments box">
+            <a [routerLink]="['/investments']">
+              <figure><img src="{{'images/investment-icon.png' | assetsPath}}" alt="Investments image"></figure>
+              <h6><strong>Investments</strong></h6>
+            </a>
+          </div>
+          <!-- credit-box -->
+          <div class="col-sm credit box">
+            <a href="#">
+              <figure><img src="{{'images/credit-card.png' | assetsPath}}" alt="Credit Score image"></figure>
+              <h6><strong>Credit Score</strong></h6>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

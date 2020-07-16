@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Constant } from 'src/app/shared/constant/constant';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,7 +15,7 @@ export class SidebarComponent implements OnInit {
   menuToggleClass: any = '';
   menuToggle: boolean = false;
   menuToggleIconeClass: any = '';
-  constructor() {}
+  constructor( private route: Router) {}
 
   ngOnInit(): void {}
 
