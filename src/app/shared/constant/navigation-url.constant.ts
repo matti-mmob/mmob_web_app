@@ -28,4 +28,6 @@ export class NavigationUrl {
   public static CONNECTING_BABK_ACCOUNT_TWO_FACTOR_AUTHENTICATION = NavigationUrl.CONNECTING_BABK_ACCOUNT_ROUTE + '/two-factor-authentication';
   // NavigationUrl.BANK_ADDED
   public static CONNECTING_BABK_ACCOUNT_BANK_ADDED = NavigationUrl.CONNECTING_BABK_ACCOUNT_ROUTE + '/bank-added';
+  public static MARKETPLACE = 'marketPlace';
+  public static INVESTMENTS = 'investments';
 }
