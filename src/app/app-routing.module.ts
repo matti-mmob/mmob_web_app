@@ -31,6 +31,10 @@ const routes: Routes = [
     path: NavigationUrl.INVESTMENTS,
     loadChildren: () => import('./investments/investments.module').then((routeModule) => routeModule.InvestmentsModule),
   },
+  {
+    path:'utilities',
+    loadChildren: () => import('./utilities/utilities.module').then((routeModule) => routeModule.UtilitiesModule),
+  },
 ];
 
 @NgModule({
