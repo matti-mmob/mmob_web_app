@@ -10,12 +10,12 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Constant } from 'src/app/shared/constant/constant';
 
 @Component({
-  selector: 'app-email',
-  templateUrl: './email.component.html',
-  styleUrls: ['./email.component.css']
+  selector: 'app-insurance-home',
+  templateUrl: './insurance-home.component.html',
+  styleUrls: ['./insurance-home.component.css']
 })
-export class EmailComponent implements OnInit {
-  emailForm: FormGroup;
+export class InsuranceHomeComponent implements OnInit {
+  insurance: FormGroup;
   //Navigation Url Constanst
   navigationUrl = NavigationUrl;
   constructor(
@@ -33,33 +33,29 @@ export class EmailComponent implements OnInit {
    *  This function will used to Prepare Form Fields.
    */
   initializeForm() {
-    this.emailForm = this.formBuilder.group({
-      email: ['', [Validators.required, CustomValidators.emailCustomValidation]],
+    this.insurance = this.formBuilder.group({
     });
   }
   //this function validate form and redirect to next step
   onNext() {
-    if (this.emailForm.invalid) {
-      return this.fieldsValidateService.validateAllFormFields(this.emailForm);
-    }
-    else {
-      this.commonAlertPopUp();
-    }
+    this.commonAlertPopUp();
   }
 
   commonAlertPopUp() {
     const modal = this.showPopup();
-    modal.componentInstance.confirmText = Constant.EMAIL_CONFIRM_TEXT;
-    modal.componentInstance.firstButtonText = Constant.EMAIL_FIRST_BUTTON_TEXT;
-    modal.componentInstance.secondButtonText = Constant.EMAIL_SECOND_BUTTON_TEXT;
+    modal.componentInstance.confirmText = Constant.INSURANCE_CONFIRM_TEXT;
+    modal.componentInstance.headerText = Constant.INSURANCE_HEADER_TEXT;
+    modal.componentInstance.firstButtonText = Constant.INSURANCE_FIRST_BUTTON_TEXT;
+    modal.componentInstance.secondButtonText = Constant.INSURANCE_SECOND_BUTTON_TEXT;
     modal.result.then((data) => {
       if (data.isYesPressed) {
-        this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
+        this.route.navigate([NavigationUrl.AML_ONBOARDING]);
       }
     });
   }
+
   showPopup() {
-    return this.modalService.open(ConfirmationPopupComponent, {});
+    return this.modalService.open(ConfirmationPopupComponent, {backdrop: 'static', keyboard: false});
   }
 
 }
