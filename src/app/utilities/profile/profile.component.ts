@@ -13,6 +13,6 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
   next(){
-    this.route.navigate(['utilities/accessUtilities', {previousUrl: 'my-current-route'}]);
+    this.route.navigate(['utilities/accessUtilities']);
   }
 }

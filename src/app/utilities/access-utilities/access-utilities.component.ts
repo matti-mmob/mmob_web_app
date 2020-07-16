@@ -14,7 +14,6 @@ export class AccessUtilitiesComponent implements OnInit {
   constructor(private modalService: NgbModal, private route: Router) { 
   }
   
-
   ngOnInit(): void {
    
   }
