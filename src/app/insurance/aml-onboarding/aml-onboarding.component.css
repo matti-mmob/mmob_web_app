@@ -50,3 +50,7 @@
 	background: #00008b;
 	color: white;
 }
+select.custom-select {
+    width: auto;
+	box-shadow: none;
+}
