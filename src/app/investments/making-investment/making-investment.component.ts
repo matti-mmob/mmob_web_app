@@ -13,7 +13,14 @@ export class MakingInvestmentComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  // method to call pop up
+  commonAlertPopUp(confirmationText) {
+    const modal = this.showPopup();
+    modal.componentInstance.confirmText = confirmationText;
+  }
+  // shows confirmation popup
   showPopup() {
-    return this.modalService.open(ConfirmationPopupComponent, {  backdrop: 'static', keyboard: false });
+    return this.modalService.open(ConfirmationPopupComponent, { backdrop: 'static', keyboard: false });
   }
 }
