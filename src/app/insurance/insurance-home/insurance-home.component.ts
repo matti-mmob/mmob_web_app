@@ -55,7 +55,7 @@ export class InsuranceHomeComponent implements OnInit {
   }
 
   showPopup() {
-    return this.modalService.open(ConfirmationPopupComponent, {});
+    return this.modalService.open(ConfirmationPopupComponent, {backdrop: 'static', keyboard: false});
   }
 
 }
