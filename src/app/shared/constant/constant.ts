@@ -25,4 +25,6 @@ export class Constant {
   public static ONBOARD_HEADER_TEXT=''
   public static ONBOARD_FIRST_BUTTON_TEXT='NO THANKS'
   public static ONBOARD_SECOND_BUTTON_TEXT='ALLOW'
+  public static USER_DETAILS_TO_ACCESS_UTILITIES='To access utilities provide few more details to unlock'
+  public static SHARE_DETIALS_WITH_OCTOPUS_ENERGY='Allow mmob to share data with octopus energy'
 }

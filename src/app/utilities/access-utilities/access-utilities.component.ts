@@ -3,6 +3,7 @@ import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/co
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { PreviousRouteService } from 'src/app/service/previous-route.service';
+import { Constant } from 'src/app/shared/constant/constant';
 
 
 @Component({
@@ -12,17 +13,16 @@ import { PreviousRouteService } from 'src/app/service/previous-route.service';
 })
 export class AccessUtilitiesComponent implements OnInit {
   private previousUrl: string = undefined;
+  constant= Constant;
   constructor(private modalService: NgbModal, private previousRouteService: PreviousRouteService, private route: Router) {
   }
 
   ngOnInit(): void {
     this.previousUrl = this.previousRouteService.getPreviousUrl();
     if (this.previousUrl === '/utilities/profile') {
-      this.commonAlertPopUp('Allow mmob to share data with octopus energy');
+      this.commonAlertPopUp(Constant.SHARE_DETIALS_WITH_OCTOPUS_ENERGY);
     }
   }
-
-
 
   // method to call pop up
   commonAlertPopUp(confirmationText) {
@@ -30,7 +30,7 @@ export class AccessUtilitiesComponent implements OnInit {
     modalRefForFirstConfirm.componentInstance.confirmText = confirmationText;
     modalRefForFirstConfirm.result.then(
       data => {
-        if (data.isYesPressed) {
+        if (data.isYesPressed && confirmationText === Constant.USER_DETAILS_TO_ACCESS_UTILITIES) {
           this.route.navigate(['utilities/profile']);
         }
       },
