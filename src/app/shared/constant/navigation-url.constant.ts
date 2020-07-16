@@ -21,13 +21,20 @@ export class NavigationUrl {
   public static GETTING_SETUP_REQUEST_BANK_DATA = NavigationUrl.GETTING_SETUP_ROUTE + '/request-bank-data';
 
 
-
   // NavigationUrl.CONNECTING_BABK_ACCOUNT_MAIN_ROUTE
   public static CONNECTING_BABK_ACCOUNT_ROUTE = 'connecting-bank-account';
   // NavigationUrl.TWO_FACTOR_AUTHENTICATION
   public static CONNECTING_BABK_ACCOUNT_TWO_FACTOR_AUTHENTICATION = NavigationUrl.CONNECTING_BABK_ACCOUNT_ROUTE + '/two-factor-authentication';
   // NavigationUrl.BANK_ADDED
   public static CONNECTING_BABK_ACCOUNT_BANK_ADDED = NavigationUrl.CONNECTING_BABK_ACCOUNT_ROUTE + '/bank-added';
+
+  // NavigationUrl.INSURANCE_MAIN_ROUTE
+  public static INSURANCE_ROUTE = 'insurance';
+  // NavigationUrl.TWO_FACTOR_AUTHENTICATION
+  public static INSURANCE_HOME = NavigationUrl.INSURANCE_ROUTE + '/insurance-home';
+  // NavigationUrl.BANK_ADDED
+  public static AML_ONBOARDING = NavigationUrl.INSURANCE_ROUTE + '/aml-onboarding';
+
   // NavigationUrl.MARKETPLACE
   public static MARKETPLACE = 'marketPlace';
   // NavigationUrl.INVESTMENTS

@@ -1,20 +1,19 @@
-<div tabindex="-1" role="dialog" id="msg">
-  <div class="modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="logo-img"><img src="{{'images/logo.png' | assetsPath}}" alt="logo-img"></div>
-          </div>
-          <div class="col-md-9">
-            <p> {{confirmText}}</p>
-          </div>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="logo-img"><img src="{{'images/logo.png' | assetsPath}}" alt="logo-img"></div>
+        </div>
+        <div class="col-md-9">
+          <h6>{{headerText}}</h6>
+          <p> {{confirmText}}</p>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" (click) ="noPressed()">Send again</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="yesPressed()">okay</button>
-      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="noPressed()">{{firstButtonText}}</button>
+      <button type="button" class="btn btn-primary" data-dismiss="modal"
+        (click)="yesPressed()">{{secondButtonText}}</button>
     </div>
   </div>
-</div>
