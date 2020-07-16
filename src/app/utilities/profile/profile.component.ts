@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  next(){
+  next() {
     this.route.navigate(['utilities/accessUtilities']);
   }
 }
