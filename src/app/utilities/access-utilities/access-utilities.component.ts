@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Router, ActivatedRoute, RoutesRecognized } from '@angular/router';
-import { filter, pairwise } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { PreviousRouteService } from 'src/app/service/previous-route.service';
 
 
 @Component({
@@ -12,17 +12,14 @@ import { filter, pairwise } from 'rxjs/operators';
 })
 export class AccessUtilitiesComponent implements OnInit {
   private previousUrl: string = undefined;
-  constructor(private modalService: NgbModal, private route: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private modalService: NgbModal, private previousRouteService: PreviousRouteService, private route: Router) {
   }
 
   ngOnInit(): void {
-    this.route.events.pipe(filter((evt: any) => evt instanceof RoutesRecognized), pairwise())
-      .subscribe((events: RoutesRecognized[]) => {
-        this.previousUrl = events[0].urlAfterRedirects;
-        if (this.previousUrl === '/utilities/profile') {
-          this.commonAlertPopUp('Allow mmob to share with octopus energy');
-        }
-      });
+    this.previousUrl = this.previousRouteService.getPreviousUrl();
+    if (this.previousUrl === '/utilities/profile') {
+      this.commonAlertPopUp('Allow mmob to share data with octopus energy');
+    }
   }
 
 
