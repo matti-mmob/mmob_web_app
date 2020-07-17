@@ -1,26 +1,114 @@
-<!--Start data from HSBC window-->
-<div class="align-center setup-section">
-  <figure><img src="{{'images/presentation.png' | assetsPath}}" alt="presentation-img"></figure>
-  <h5><strong>Request data from HSBC</strong></h5>
-  <h6>mmob will request the following information from your bank.</h6>
-  <div class="setup-box">
-    <ul class="terms-points">
-      <li><i><img src="{{'images/account-icon.png' | assetsPath}}"></i>
-        <p>Account details including your balance and transactions from the last year.</p>
-      </li>
-      <li><i><img src="{{'images/regular-icon.png' | assetsPath}}"></i>
-        <p>Regular payments and standing orders</p>
-      </li>
-      <li><i><img src="{{'images/payee-icon.png' | assetsPath}}"></i>
-        <p>Details of payee agreements you have set up</p>
-      </li>
-    </ul>
-    <p class="note-text"><small>*This consent is vaild for 90 days</small></p>
-    <p>Your safety is our priority. We use a secure network to link to your bank.</p>
+
+<div class="main">
+	<div class="wrapper">
     <form [formGroup]="requestBankDataForm">
-      <input type="button" href="#" class="next-btn" value="Confirm" data-toggle="modal" data-target="#allow"
-        (click)="onNext()">
-    </form>
-  </div>
-</div>
-<!--End-->
+	<div class="data-request">
+		<figure><img src="{{'images/presentation.png' | assetsPath}}" alt="presentation image"></figure>
+		<h5><strong>Request data from HSBC</strong></h5><br>
+		<p>mmob will request the following information from your bank:</p>
+		<div class="consent-boxes">
+		<div class="accordion" id="accordionExample"> 
+		<div class="card">
+		<div class="card-header">
+		<h2 class="mb-0">
+		<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		Your Account Details
+		</button>
+		</h2>
+		</div>
+		<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+		<div class="card-body">
+			<ul>
+			<li>&#8722; Any another names by which you refer to this account</li>
+			<li>&#8722; Your account balances</li>
+			<li>&#8722; Your account name, number and sort-code</li>
+			</ul>	
+		</div>
+		</div>
+		</div>
+		<div class="card">
+		<div class="card-header">
+		<h2 class="mb-0">
+		<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+		Your Regular Payments
+		</button>
+		</h2>
+		</div>
+		<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+		<div class="card-body">
+			<ul>
+			<li>&#8722; Your standing orders</li>
+			<li>&#8722; Details of your standing orders</li>
+			<li>&#8722; Recurring and future dated payments</li>
+			<li>&#8722; Details of recurring and future dated payments</li>
+			<li>&#8722; Payee agreements you have set up</li>
+			<li>&#8722; Details of payee agreements you have set up</li>
+			</ul>
+		</div>
+		</div>
+		</div>
+		<div class="card">
+		<div class="card-header">
+		<h2 class="mb-0">
+		<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+		Your Transaction Details
+		</button>
+		</h2>
+		</div>
+		<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+		<div class="card-body">
+			<ul>
+			<li>&#8722; Your transactions</li>
+			<li>&#8722; Details of your transactions</li>
+			</ul>
+		</div>
+		</div>
+		</div>
+		<div class="card">
+		<div class="card-header">
+		<h2 class="mb-0">
+		<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+		Your Contact Details
+		</button>
+		</h2>
+		</div>
+		<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+		<div class="card-body">
+			<ul>
+			<li>&#8722; The full legal name(s) of account holder(s)</li>
+			<li>&#8722; Address(es), telephone number(s) and email address(es)</li>
+			</ul>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		
+		<div class="row justify-content-around text-center">
+		<div class="col-md-4 my-3">
+		<h5><strong>Our Access</strong></h5><br>
+		<p>mmob will have access to this data for 90 days</p>
+		<p>mmob will access this data on a recurring basis</p>
+		</div>
+		<div class="col-md-4 my-3">
+		<h5><strong>What We Will Do</strong></h5><br>
+		<p>mmob will access 12 months worth of historical data</p>
+		<p>mmob will use this data to provide you a more personalisaed service</p>
+		</div>
+		<div class="col-12 my-3">
+		<p>information accessed by mmob from your account may be shared with third party providers on the market place.<br>mmob will always ask for your prior consent before sharing data with a third party on the market place</p>
+		</div>
+		</div>
+		
+		<div class="row justify-content-around text-center">
+		<div class="col-10 col-md-4">
+		    <button class="btn confirm-btn" type="button" data-toggle="modal" data-target="#allow">Confirm</button>
+		</div>
+		<div class="col-10 col-md-4">
+		    <button class="btn decline-btn" type="button">Decline</button>
+		</div>
+		</div>
+    </div>
+  </form>
+	</div>
+	</div>
