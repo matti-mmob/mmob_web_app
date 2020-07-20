@@ -1,0 +1,83 @@
+
+  /*****************************************************Utilities profile screen*******************************************/
+  .utilities-type {
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+  }
+  .user-img {
+      width: 105px;
+      height: 105px;
+      margin: auto;
+      border: 2px solid #442f64;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+  }
+  .type-box {
+      margin: 15px 0 0;
+  }
+  .type-box h6{font-weight:600; font-size:15px;margin:0 0 15px;}
+  .utilities-type ul {
+      width: 100%;
+      max-width: 325px;
+      text-align: left;
+      margin: 20px auto 0;
+  }
+  .utilities-type ul li:first-child{font-weight:600;}
+  .utilities-type ul li{color: #000;}
+  .utilities-type .next-btn {
+      width: 100%;
+      max-width: 400px;
+      margin: 30px auto;
+  }
+  /**************Custom radio button*******************/
+  .custom-radios {
+      width: 100%;
+      max-width: 336px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+  }
+  .custom-radios div {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .custom-radios input[type="radio"] {
+    display: none;
+  }
+  .custom-radios input[type="radio"] + label {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin:0;
+  }
+  .custom-radios input[type="radio"] + label span {
+  display: inline-block;
+      width: 100%;
+      margin: 0;
+      vertical-align: middle;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      border-radius: 8px;
+      border: 1px solid #e6e6e6;
+      font-weight: 600;
+      color: #bbb;
+      padding: 14px 16px;
+  }
+  .custom-radios input[type="radio"] + label span img {
+    opacity: 0;
+    transition: all .3s ease;
+  }
+  .custom-radios input[type="radio"]:checked + label span {
+    background: #cccce8;
+    color: #191996;
+    border-color: #191996;
+  }
+  
+  

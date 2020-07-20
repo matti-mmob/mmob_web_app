@@ -44,9 +44,7 @@ export class InsuranceHomeComponent implements OnInit {
   commonAlertPopUp() {
     const modal = this.showPopup();
     modal.componentInstance.confirmText = Constant.INSURANCE_CONFIRM_TEXT;
-    modal.componentInstance.headerText = Constant.INSURANCE_HEADER_TEXT;
-    modal.componentInstance.firstButtonText = Constant.INSURANCE_FIRST_BUTTON_TEXT;
-    modal.componentInstance.secondButtonText = Constant.INSURANCE_SECOND_BUTTON_TEXT;
+    modal.componentInstance.headerText = Constant.DEFAULT_HEADER_TEXT;
     modal.result.then((data) => {
       if (data.isYesPressed) {
         this.route.navigate([NavigationUrl.AML_ONBOARDING]);

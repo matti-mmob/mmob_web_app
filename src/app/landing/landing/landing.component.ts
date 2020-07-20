@@ -10,12 +10,12 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Constant } from 'src/app/shared/constant/constant';
 
 @Component({
-  selector: 'app-aml-onboarding',
-  templateUrl: './aml-onboarding.component.html',
-  styleUrls: ['./aml-onboarding.component.css']
+  selector: 'app-landing',
+  templateUrl: './landing.component.html',
+  styleUrls: ['./landing.component.css']
 })
-export class AmlOnboardingComponent implements OnInit {
-  onboardingFrom: FormGroup;
+export class LandingComponent implements OnInit {
+  landing: FormGroup;
   //Navigation Url Constanst
   navigationUrl = NavigationUrl;
   constructor(
@@ -33,37 +33,27 @@ export class AmlOnboardingComponent implements OnInit {
    *  This function will used to Prepare Form Fields.
    */
   initializeForm() {
-    this.onboardingFrom = this.formBuilder.group({
-      firstName: ['', [Validators.required]],
-      sirName: ['', [Validators.required]],
-      date: [''],
-      month: [''],
-      year: [''],
-      postCode: ['', [Validators.required]],
-      address: ['', [Validators.required]],
+    this.landing = this.formBuilder.group({
     });
   }
   //this function validate form and redirect to next step
   onNext() {
-    if (this.onboardingFrom.invalid) {
-      return this.fieldsValidateService.validateAllFormFields(this.onboardingFrom);
-    }
-    else {
-      this.commonAlertPopUp();
-    }
+    this.commonAlertPopUp();
   }
 
   commonAlertPopUp() {
     const modal = this.showPopup();
-    modal.componentInstance.confirmText = Constant.ONBOARD_CONFIRM_TEXT;
+    modal.componentInstance.confirmText = Constant.LANDING_CONFIRM_TEXT;
+    modal.componentInstance.headerText = Constant.DEFAULT_HEADER_TEXT
     modal.result.then((data) => {
       if (data.isYesPressed) {
-        // this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
+        this.route.navigate([NavigationUrl.AML_ONBOARDING]);
       }
     });
   }
+
   showPopup() {
-    return this.modalService.open(ConfirmationPopupComponent, {backdrop: 'static', keyboard: false});
+    return this.modalService.open(ConfirmationPopupComponent, { backdrop: 'static', keyboard: false });
   }
 
 }
