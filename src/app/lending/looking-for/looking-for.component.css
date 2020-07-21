@@ -1,9 +1,18 @@
 
+.align-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	padding: 15px;
+}
   /*****************************************************Utilities profile screen*******************************************/
   .utilities-type {
       text-align: center;
       width: 100%;
-      max-width: 500px;
+      max-width: 435px;
       margin: auto;
   }
   .user-img {
@@ -31,13 +40,12 @@
   .utilities-type ul li{color: #000;}
   .utilities-type .next-btn {
       width: 100%;
-      max-width: 400px;
-      margin: 30px auto;
+      max-width: 375px;
+      margin: 130px auto 20px;
   }
   /**************Custom radio button*******************/
   .custom-radios {
       width: 100%;
-      max-width: 336px;
       margin: auto;
       display: flex;
       justify-content: space-between;

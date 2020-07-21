@@ -11,7 +11,7 @@
   border-radius:20px;
   box-shadow: none;
   outline: none;
-  background: #fff url(src/assets/images/search-icon.png) no-repeat scroll right center;
+  background: #efefef url(src/assets/images/search-icon.png) no-repeat scroll right center;
   background-size: 30px;
   cursor: pointer;
   width:70%;
@@ -70,34 +70,34 @@
     background-color:#93d8d5;
 }
 .Utilitie .brand-box:first-of-type .time-box{
-    background-color:#8d2fb9;
+    background-color:#acde9a;
 }
 .Utilitie .brand-box:last-of-type .time-box{
     background-color:#8af181;
 }
 
 .insurance-sec .brand-box:first-of-type {
-  border: 1px solid #7571f4;
+  border: 1px solid #acde9a;
 }
 
 .insurance-sec .brand-box:first-of-type .time-box {
-  background: #7571f4;
+  background: #acde9a;
 }
 
 .insurance-sec .brand-box:nth-of-type(2) {
-  border: 1px solid #fd9c9c;
+  border: 1px solid #5e93ff;
 }
 
 .insurance-sec .brand-box:nth-of-type(2) .time-box {
-  background: #fd9c9c;
+  background: #5e93ff;
 }
 
 .insurance-sec .brand-box:last-of-type {
-  border: 1px solid #f490d4;
+  border: 1px solid #3abbbe;
 }
 
 .insurance-sec .brand-box:last-of-type .time-box {
-  background: #f490d4;
+  background: #3abbbe;
 }
 /******************Media query fot utilities starts here********************************************/
 @media (max-width: 767px) {
