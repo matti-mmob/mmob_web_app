@@ -6,8 +6,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-
-
 @Component({
   selector: 'app-looking-for',
   templateUrl: './looking-for.component.html',
