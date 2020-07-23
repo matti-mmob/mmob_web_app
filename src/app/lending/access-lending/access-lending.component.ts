@@ -18,6 +18,7 @@ export class AccessLendingComponent implements OnInit {
   lending: FormGroup;
   //Navigation Url Constanst
   navigationUrl = NavigationUrl;
+  url:string;
   constructor(
     private assetsPipe: AssetsPathPipe,
     private formBuilder: FormBuilder,
@@ -27,6 +28,7 @@ export class AccessLendingComponent implements OnInit {
 
   ngOnInit() {
     this.initializeForm();
+    this.url=NavigationUrl.GETTING_SETUP_ROUTE;
   }
 
   /**
@@ -60,4 +62,5 @@ export class AccessLendingComponent implements OnInit {
     return this.modalService.open(ConfirmationPopupComponent, { backdrop: 'static', keyboard: false });
   }
 
+  
 }
