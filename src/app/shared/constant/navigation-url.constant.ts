@@ -42,12 +42,12 @@ export class NavigationUrl {
 
   // NavigationUrl.LOGIN_MAIN_ROUTE
   public static LOGIN_ROUTE = 'login';
-  // NavigationUrl.TWO_FACTOR_AUTHENTICATION
+  // NavigationUrl.LOGIN_ROUTE
   public static LOGIN = NavigationUrl.LOGIN_ROUTE + '/login';
-  // NavigationUrl.BANK_ADDED
+  // NavigationUrl.FORGOT_PASSWORD
   public static FORGOT_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/forgot-password';
-  // NavigationUrl.BANK_ADDED
+  // NavigationUrl.RESET_PASSWORD
   public static RESET_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/reset-password';
-  // NavigationUrl.BANK_ADDED
-  public static VERIFY_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/verify-password';
+  // NavigationUrl.VERIFY_EMAIL
+  public static VERIFY_EMAIL = NavigationUrl.LOGIN_ROUTE + '/verify-email';
 }   

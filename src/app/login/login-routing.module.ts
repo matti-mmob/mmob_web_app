@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: NavigationUrl.FORGOT_PASSWORD, component: ForgotPasswordComponent },
   { path: NavigationUrl.RESET_PASSWORD, component: ResetPasswordComponent },
-  { path: NavigationUrl.VERIFY_PASSWORD, component: VerifyEmailComponent },
+  { path: NavigationUrl.VERIFY_EMAIL, component: VerifyEmailComponent },
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
