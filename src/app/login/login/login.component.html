@@ -1,0 +1,19 @@
+<div class="align-center login">
+    <div class="site-logo"><img src="{{'images/logo.png' | assetsPath}}" alt="logo"></div>
+    <h3>Login</h3>
+    <form [formGroup]="loginForm">
+        <div class="form-group">
+            <label>Email</label>
+            <input class="form-control" type="text" formControlName="email" placeholder="Type your Email">
+            <app-show-errors [control]="loginForm.controls.email"></app-show-errors>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input class="form-control" type="password" formControlName="password" placeholder="************">
+            <app-show-errors [control]="loginForm.controls.password"></app-show-errors>
+        </div>
+        <p class="forgot-pwd"><a [routerLink]="[navigationUrl.FORGOT_PASSWORD]"><small>Forgot password?</small></a></p>
+        <input type="button" value="login" (click)="onNext()">
+        <p>dont have an account? <a [routerLink]="[navigationUrl.GETTING_SETUP_ROUTE]">Sign Up</a></p>
+    </form>
+</div>
