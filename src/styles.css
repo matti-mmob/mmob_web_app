@@ -86,7 +86,7 @@ text.highcharts-title {
   display: none;
 }
 .highcharts-label span {
-    overflow: visible !important;
+  overflow: visible !important;
 }
 /*****Tooltip postion css**************/
 g.highcharts-label.highcharts-tooltip.highcharts-color-2 {
@@ -148,4 +148,70 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
   g.highcharts-label.highcharts-tooltip.highcharts-color-0 {
     transform: translate(230px, 44px) !important;
   }
+}
+/*****css to align centre **************/
+.align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+}
+/**************Custom radio button*******************/
+.custom-radios {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.custom-radios div {
+  display: inline-block;
+  margin: 0 5px;
+}
+.custom-radios input[type='radio'] {
+  display: none;
+}
+.custom-radios input[type='radio'] + label {
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+.custom-radios input[type='radio'] + label span {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  font-weight: 600;
+  color: #bbb;
+  padding: 14px 16px;
+}
+.custom-radios input[type='radio'] + label span img {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.custom-radios input[type='radio']:checked + label span {
+  background: #cccce8;
+  color: #191996;
+  border-color: #191996;
+}
+.next-btn,
+.finish-btn {
+  display: block;
+  width: 100%;
+  padding: 0 2px;
+  background: #00008b;
+  border-radius: 5px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
 }

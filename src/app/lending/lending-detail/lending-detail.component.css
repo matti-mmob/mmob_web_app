@@ -1,54 +1,45 @@
-.align-center {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-	width: 100%;
-	padding: 15px;
-}
 @media screen and (max-height: 600px) {
-	.align-center {
-		height: auto;
-	}
+  .align-center {
+    height: auto;
+  }
 }
 .getting-insurance {
-	max-width: 390px;
-	width: 100%;
-	margin: auto;
-	text-align: center;
+  max-width: 390px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
 
 .getting-insurance input {
-	width: 100%;
-	border: 1px solid #c3c3c3;
-	padding: 10px;
-	text-align: center;
-	border-radius: 10px;
+  width: 100%;
+  border: 1px solid #c3c3c3;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .getting-insurance label {
-	font-weight: 600;
-	margin-top: 20px;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 .getting-insurance button {
-	background: #00008b;
-	color: white;
-	padding: 10px;
-	width: 100%;
-	margin: 100px auto 20px;
-	border: none;
-	border-radius: 5px;
+  background: #00008b;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  margin: 100px auto 20px;
+  border: none;
+  border-radius: 5px;
 }
 .user-img {
-	width: 105px;
-	height: 105px;
-	margin: auto;
-	border: 2px solid #442f64;
-	border-radius: 50%;
-	overflow: hidden;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
+  width: 105px;
+  height: 105px;
+  margin: auto;
+  border: 2px solid #442f64;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
