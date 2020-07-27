@@ -39,4 +39,7 @@ export class NavigationUrl {
   public static MARKETPLACE = 'marketPlace';
   // NavigationUrl.INVESTMENTS
   public static INVESTMENTS = 'investments';
+  // NavigationUrl.TUTORIAL
+  public static TUTORIALS = 'tutorial';
+
 }
