@@ -43,6 +43,8 @@ export class LoginComponent implements OnInit {
   onNext() {
     if (this.loginForm.invalid) {
       return this.fieldsValidateService.validateAllFormFields(this.loginForm);
+    } else {
+      this.route.navigate(['dashboard']);
     }
   }
 

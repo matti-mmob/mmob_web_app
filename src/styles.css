@@ -86,7 +86,7 @@ text.highcharts-title {
   display: none;
 }
 .highcharts-label span {
-    overflow: visible !important;
+  overflow: visible !important;
 }
 /*****Tooltip postion css**************/
 g.highcharts-label.highcharts-tooltip.highcharts-color-2 {
@@ -147,5 +147,176 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
   }
   g.highcharts-label.highcharts-tooltip.highcharts-color-0 {
     transform: translate(230px, 44px) !important;
+  }
+}
+/*****authentication forms css**************/
+.align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+}
+.login h3 {
+  color: #00008b;
+  margin: 40px 0 25px;
+}
+
+.login form {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.login form .form-group {
+  border: 0;
+  padding: 0;
+  margin: 15px 0 0;
+  height: auto;
+}
+
+.login form .form-group label {
+  display: block;
+  color: #00008b;
+  text-align: left;
+}
+
+.login form .form-control {
+  width: 100%;
+  background: #f8f8f8;
+  border: 0;
+  height: 36px;
+  padding: 0 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px #d0d0d0;
+  text-align: left;
+  color: #000;
+}
+
+p.forgot-pwd {
+  text-align: right;
+}
+
+p.forgot-pwd a {
+  color: #808080;
+}
+
+p.forgot-pwd a:hover {
+  color: #00008b;
+}
+
+.login form input[type='button'] {
+  width: 158px;
+  height: 42px;
+  margin: 40px auto 10px;
+  display: block;
+  border: 0;
+  background: #0000f2;
+  background: -moz-linear-gradient(left, #0000f2 1%, #0000c0 49%, #000093 100%);
+  background: -webkit-linear-gradient(left, #0000f2 1%, #0000c0 49%, #000093 100%);
+  background: linear-gradient(to right, #0000f2 1%, #0000c0 49%, #000093 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000f2', endColorstr='#000093', GradientType=1);
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.login form input[type='button']:hover {
+  background: #b5b5ff;
+  color: #3e295f;
+}
+
+.login form input[type='button'] ~ p {
+  text-align: center;
+  color: #969696;
+  font-weight: 500;
+}
+
+.login form input[type='button'] ~ p a,
+.resend {
+  color: #00008b;
+  position: relative;
+  display: inline-block;
+}
+
+.login form input[type='button'] ~ p a:after,
+.resend:after {
+  position: absolute;
+  content: '';
+  background: #00008b;
+  width: 100%;
+  height: 1px;
+  bottom: 3px;
+  left: 0;
+}
+.resend {
+  margin-top: 5px;
+}
+
+.login.forgot form {
+  text-align: center;
+}
+
+.login.forgot form .form-control {
+  text-align: center;
+}
+
+.login.forgot form h5 {
+  color: #1f1f99;
+  font-size: 16px;
+  margin: 24px 0;
+}
+
+.login .form-control::-webkit-input-placeholder {
+  color: #a098b0;
+  opacity: 1;
+}
+
+.login .form-control::-moz-placeholder {
+  color: #a098b0;
+  opacity: 1;
+}
+
+.login .form-control:-ms-input-placeholder {
+  color: #a098b0;
+  opacity: 1;
+}
+
+.login .form-control::placeholder {
+  color: #a098b0;
+  opacity: 1;
+}
+
+.login .back-btn {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  margin: 0;
+  transform: inherit;
+  text-align: center;
+  color: #969494;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 32px;
+}
+.login .back-btn:hover {
+  background: #00008b;
+  color: #fff;
+}
+.login.verify form .form-control {
+  text-align: center;
+  width: 15%;
+  margin: 0 1%;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .align-center.login.forgot {
+    padding-top: 50px;
   }
 }
