@@ -1,19 +1,19 @@
 .main {
   position: relative;
   margin-left: 220px;
-  height:100%;
+  height: 100%;
 }
 .wrapper {
   padding: 15px;
-  height:100%;
+  height: 100%;
 }
 
 @media (max-width: 767px) {
-.main {
+  .main {
     position: relative;
     margin-left: 0;
-}
-app-footer {
+  }
+  app-footer {
     display: none;
-}
+  }
 }
