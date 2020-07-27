@@ -9,11 +9,12 @@ import { AddressProofComponent } from './address-proof/address-proof.component';
 import { UploadAddressProofComponent } from './upload-address-proof/upload-address-proof.component';
 import { FinalVerificationComponent } from './final-verification/final-verification.component';
 import { DrivingLicenseComponent } from './driving-license/driving-license.component';
+import { KycFormComponent } from './kyc-form/kyc-form.component';
 
 
 
 @NgModule({
-  declarations: [SelectIdComponent, IssuingCountryComponent, UploadIdComponent, AddressProofComponent, UploadAddressProofComponent, FinalVerificationComponent, DrivingLicenseComponent],
+  declarations: [SelectIdComponent, IssuingCountryComponent, UploadIdComponent, AddressProofComponent, UploadAddressProofComponent, FinalVerificationComponent, DrivingLicenseComponent, KycFormComponent],
   imports: [
     CommonModule,
     KycRoutingModule,
