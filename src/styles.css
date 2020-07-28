@@ -149,3 +149,89 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
     transform: translate(230px, 44px) !important;
   }
 }
+
+/***************************************************Tutorials screen design css*******************************************/
+
+.align-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	padding: 15px;
+}
+
+.carousel {
+	position: relative;
+	width: 100%;
+	padding: 0 0 20px;
+}
+
+.carousel-inner {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	justify-content: center;
+}
+
+.carousel-inner img {
+	width: auto;
+	max-width: max-content;
+}
+
+.carousel-item {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.carousel-item.active {
+    display: block;
+}
+.carousel-item h5 {
+	margin: 0 0 30px;
+}
+
+ol.carousel-indicators {
+	margin: 0;
+	bottom: 0px;
+}
+
+.carousel-indicators li {
+	background: #869791;
+	width: 12px;
+	height: 12px;
+	margin: 5px 16px;
+	border-radius: 20px;
+	max-width: none;
+	display: block;
+	flex: inherit;
+	border:0;
+	padding:0;
+}
+
+.carousel-indicators li.active {
+	background: #00008b;
+}
+
+.carousel-item p {
+	margin: 25px 0 15px;
+	color: #000;
+}
+
+.button-set-alt {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+a.skip-btn {
+	display: inline-block;
+	margin: 10px auto;
+	color: #000;
+}
+a.carousel-control-prev, .carousel-control-next {
+    display: none;
+}
