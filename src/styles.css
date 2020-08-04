@@ -125,7 +125,7 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
     overflow: visible;
   }
 }
-
+/*****Tooltip postion css**************/
 @media (max-width: 479px) {
   .highcharts-data-label-color-2 {
     left: 20px !important;
@@ -149,19 +149,16 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
     transform: translate(230px, 44px) !important;
   }
 }
-
-/*****css to align centre **************/
-
+/*****center align css**************/
 .align-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
   padding: 15px;
 }
-
 /**************Custom radio button*******************/
 .custom-radios {
   width: 100%;
@@ -170,6 +167,19 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
   justify-content: space-between;
 }
 .custom-radios div {
+display: inline-block;
+margin: 0 5px;
+}
+.custom-radios input[type="radio"] {
+display: none;
+}
+.custom-radios input[type="radio"] + label {
+color: #333;
+font-family: Arial, sans-serif;
+font-size: 14px;
+margin:0;
+}
+.custom-radios input[type="radio"] + label span {
   display: inline-block;
   margin: 0 5px;
 }
@@ -197,6 +207,7 @@ g.highcharts-label.highcharts-tooltip.highcharts-color-1 {
   color: #bbb;
   padding: 14px 16px;
 }
+
 .custom-radios input[type='radio'] + label span img {
   opacity: 0;
   transition: all 0.3s ease;

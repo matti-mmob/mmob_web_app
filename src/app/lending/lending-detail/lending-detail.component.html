@@ -1,21 +1,21 @@
 <div class="align-center">
-	<div class="getting-insurance">
-		<div class="profile">
-			<div class="user-img"><img src="{{'images/user-farah.png' | assetsPath}}" alt="user"></div>
-			<p>Farah</p>
-			<p>farah@gmail.com</p>
-		</div>
-		<form [formGroup]="lendingDetailForm">
-			<label>Total Income</label>
-			<input type="text" formControlName="totalIncome">
-			<app-show-errors [control]="lendingDetailForm.controls.totalIncome"></app-show-errors>
-			<label>Current Employement Status</label>
-			<input type="text" formControlName="employementStatus">
-			<app-show-errors [control]="lendingDetailForm.controls.employementStatus"></app-show-errors>
-			<label>Duration in Continous Employment</label>
-			<input type="text" formControlName="employementDuration">
-			<app-show-errors [control]="lendingDetailForm.controls.employementDuration"></app-show-errors>
-			<button type="submit" (click)="onNext()">confirm</button>
-		</form>
-	</div>
+  <div class="getting-insurance">
+    <div class="profile">
+      <div class="user-img"><img src="{{'images/user-farah.png' | assetsPath}}" alt="user"></div>
+      <p>Farah</p>
+      <p>farah@gmail.com</p>
+    </div>
+    <form [formGroup]="lendingDetailForm">
+      <label>Total Income</label>
+      <input type="text" formControlName="totalIncome">
+      <app-show-errors [control]="lendingDetailForm.controls.totalIncome"></app-show-errors>
+      <label>Current Employement Status</label>
+      <input type="text" formControlName="employementStatus">
+      <app-show-errors [control]="lendingDetailForm.controls.employementStatus"></app-show-errors>
+      <label>Duration in Continous Employment</label>
+      <input type="text" formControlName="employementDuration">
+      <app-show-errors [control]="lendingDetailForm.controls.employementDuration"></app-show-errors>
+      <button type="submit" (click)="onNext()">confirm</button>
+    </form>
+  </div>
 </div>
