@@ -27,4 +27,5 @@ export class Constant {
   public static ONBOARD_SECOND_BUTTON_TEXT='ALLOW'
   public static USER_DETAILS_TO_ACCESS_UTILITIES='To access utilities provide few more details to unlock'
   public static SHARE_DETIALS_WITH_OCTOPUS_ENERGY='Allow mmob to share data with octopus energy'
+  public static MERCHANTS_CONFIRM_TEXT='Allow mmob to pull your jd sports basket into our app'
 }

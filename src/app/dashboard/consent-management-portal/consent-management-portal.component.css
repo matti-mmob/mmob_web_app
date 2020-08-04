@@ -1,3 +1,7 @@
+.kyc {
+    text-align: center;
+    margin: 20px 0;
+}
 .consent-boxes {
   width: 80%;
   margin: auto;
@@ -86,7 +90,6 @@ border:0;
 .toggle-button-cover {
   position: relative;
 width:100px;
-top:-14px;
 margin:auto;
 }
 .button-cover, .knobs, .layer

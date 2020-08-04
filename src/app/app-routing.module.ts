@@ -9,7 +9,7 @@ const routes: Routes = [
     loadChildren: () => import('./dashboard/dashboard.module').then((routeModule) => routeModule.DashboardModule),
   },
   {
-    path: 'getting-setup',
+    path: '',
     loadChildren: () => import('./getting-setup/getting-setup.module').then((routeModule) => routeModule.GettingSetupModule),
   },
   {
@@ -40,6 +40,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./login/login.module').then((routeModule) => routeModule.LoginModule),
+  },
+  {
+    path: 'merchants',
+    loadChildren: () => import('./merchants/merchants.module').then((routeModule) => routeModule.MerchantsModule),
   },
 ];
 
