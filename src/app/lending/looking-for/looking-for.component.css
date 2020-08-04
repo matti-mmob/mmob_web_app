@@ -1,0 +1,32 @@
+/*****************************************************Utilities profile screen*******************************************/
+.utilities-type {
+  text-align: center;
+  width: 100%;
+  max-width: 435px;
+  margin: auto;
+}
+.type-box {
+  margin: 15px 0 0;
+}
+.type-box h6 {
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0 0 15px;
+}
+.utilities-type ul {
+  width: 100%;
+  max-width: 325px;
+  text-align: left;
+  margin: 20px auto 0;
+}
+.utilities-type ul li:first-child {
+  font-weight: 600;
+}
+.utilities-type ul li {
+  color: #000;
+}
+.utilities-type .next-btn {
+  width: 100%;
+  max-width: 375px;
+  margin: 130px auto 20px;
+}

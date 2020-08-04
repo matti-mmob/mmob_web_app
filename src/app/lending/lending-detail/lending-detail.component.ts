@@ -10,12 +10,12 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Constant } from 'src/app/shared/constant/constant';
 
 @Component({
-  selector: 'app-aml-onboarding',
-  templateUrl: './aml-onboarding.component.html',
-  styleUrls: ['./aml-onboarding.component.css']
+  selector: 'app-lending-detail',
+  templateUrl: './lending-detail.component.html',
+  styleUrls: ['./lending-detail.component.css']
 })
-export class AmlOnboardingComponent implements OnInit {
-  onboardingFrom: FormGroup;
+export class LendingDetailComponent implements OnInit {
+  lendingDetailForm: FormGroup;
   //Navigation Url Constanst
   navigationUrl = NavigationUrl;
   constructor(
@@ -25,45 +25,23 @@ export class AmlOnboardingComponent implements OnInit {
     private route: Router,
     private modalService: NgbModal) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.initializeForm();
   }
-
   /**
-   *  This function will used to Prepare Form Fields.
-   */
+    *  This function will used to Prepare Form Fields.
+    */
   initializeForm() {
-    this.onboardingFrom = this.formBuilder.group({
-      firstName: ['', [Validators.required]],
-      sirName: ['', [Validators.required]],
-      date: [''],
-      month: [''],
-      year: [''],
-      postCode: ['', [Validators.required]],
-      address: ['', [Validators.required]],
+    this.lendingDetailForm = this.formBuilder.group({
+      totalIncome: ['', [Validators.required]],
+      employementStatus: ['', [Validators.required]],
+      employementDuration: ['', [Validators.required]],
     });
   }
   //this function validate form and redirect to next step
   onNext() {
-    if (this.onboardingFrom.invalid) {
-      return this.fieldsValidateService.validateAllFormFields(this.onboardingFrom);
-    }
-    else {
-      this.commonAlertPopUp();
+    if (this.lendingDetailForm.invalid) {
+      return this.fieldsValidateService.validateAllFormFields(this.lendingDetailForm);
     }
   }
-
-  commonAlertPopUp() {
-    const modal = this.showPopup();
-    modal.componentInstance.confirmText = Constant.ONBOARD_CONFIRM_TEXT;
-    modal.result.then((data) => {
-      if (data.isYesPressed) {
-        // this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
-      }
-    });
-  }
-  showPopup() {
-    return this.modalService.open(ConfirmationPopupComponent, {backdrop: 'static', keyboard: false});
-  }
-
 }

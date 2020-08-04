@@ -6,6 +6,7 @@ import { LandingRoutingModule } from './landing-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from '../core/core.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -16,7 +17,8 @@ import { CoreModule } from '../core/core.module';
     LandingRoutingModule,
     SharedModule,
     NgbModule,
-    CoreModule
+    CoreModule,
+    ReactiveFormsModule
   ]
 })
 export class LandingModule { }

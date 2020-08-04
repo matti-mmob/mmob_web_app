@@ -30,7 +30,7 @@ export class NavigationUrl {
 
   // NavigationUrl.INSURANCE_MAIN_ROUTE
   public static INSURANCE_ROUTE = 'insurance';
-  // NavigationUrl.TWO_FACTOR_AUTHENTICATION
+  // NavigationUrl.INSURANCE_HOME
   public static INSURANCE_HOME = NavigationUrl.INSURANCE_ROUTE + '/insurance-home';
   // NavigationUrl.BANK_ADDED
   public static AML_ONBOARDING = NavigationUrl.INSURANCE_ROUTE + '/aml-onboarding';
@@ -39,6 +39,15 @@ export class NavigationUrl {
   public static MARKETPLACE = 'marketPlace';
   // NavigationUrl.INVESTMENTS
   public static INVESTMENTS = 'investments';
+
+  // NavigationUrl.LENDING_MAIN_ROUTE
+  public static LENDING_ROUTE = 'lending';
+  // NavigationUrl.ACCESS_LENDING
+  public static ACCESS_LENDING = NavigationUrl.LENDING_ROUTE + '/access-lending';
+  // NavigationUrl.LOOKING_FOR
+  public static LOOKING_FOR = NavigationUrl.LENDING_ROUTE + '/looking-for';
+ // NavigationUrl.LENDING_DETAIL
+  public static LENDING_DETAIL = NavigationUrl.LENDING_ROUTE + '/lending-detail';
   // NavigationUrl.TUTORIAL
   public static TUTORIALS = 'tutorial';
   // NavigationUrl.LOGIN_MAIN_ROUTE
@@ -51,6 +60,6 @@ export class NavigationUrl {
   public static RESET_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/reset-password';
   // NavigationUrl.VERIFY_EMAIL
   public static VERIFY_EMAIL = NavigationUrl.LOGIN_ROUTE + '/verify-email';
+}  
 
-}
   
