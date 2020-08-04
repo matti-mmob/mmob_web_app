@@ -48,6 +48,8 @@ export class NavigationUrl {
   public static LOOKING_FOR = NavigationUrl.LENDING_ROUTE + '/looking-for';
  // NavigationUrl.LENDING_DETAIL
   public static LENDING_DETAIL = NavigationUrl.LENDING_ROUTE + '/lending-detail';
+  // NavigationUrl.TUTORIAL
+  public static TUTORIALS = 'tutorial';
   // NavigationUrl.LOGIN_MAIN_ROUTE
   public static LOGIN_ROUTE = 'login';
   // NavigationUrl.LOGIN_ROUTE
@@ -58,5 +60,6 @@ export class NavigationUrl {
   public static RESET_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/reset-password';
   // NavigationUrl.VERIFY_EMAIL
   public static VERIFY_EMAIL = NavigationUrl.LOGIN_ROUTE + '/verify-email';
-
 }  
+
+  
