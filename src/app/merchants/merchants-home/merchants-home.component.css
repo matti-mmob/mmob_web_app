@@ -1,7 +1,7 @@
 /************************************* Utilitie starts here ***********************************************/
 .Utilitie, .insurance-sec {
   max-width: 760px;
-  margin: auto;
+  margin: 58px auto 0;
   width: 100%;
   text-align: center;
 }
@@ -11,7 +11,7 @@ border:1px solid grey;
 border-radius:20px;
 box-shadow: none;
 outline: none;
-background: #fff url(src/assets/images/search-icon.png) no-repeat scroll right center;
+background: #efefef url(src/assets/images/search-icon.png) no-repeat scroll right center;
 background-size: 30px;
 cursor: pointer;
 width:70%;
@@ -35,7 +35,7 @@ margin-top:20px;
   border:1px solid gray;
   border-radius:20px;
 }
-.brand-box .row{margin:0;}
+.brand-box .row{margin:0; padding: 0 !important;}
 .time-box img {
   width:20px;
 }

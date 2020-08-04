@@ -386,6 +386,7 @@ p.forgot-pwd a:hover {
   margin: 0 1%;
   display: inline-block;
 }
+.form-control:focus{box-shadow:none;}
 @media (max-width: 767px) {
   .align-center.login.forgot {
     padding-top: 50px;

@@ -24,6 +24,7 @@
 
 .id-table td {
 	padding: 8px 5px;
+	vertical-align: middle;
 }
 
 .id-table td h3 {
