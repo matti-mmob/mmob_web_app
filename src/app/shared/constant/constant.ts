@@ -22,4 +22,8 @@ export class Constant {
   public static SHARE_DETIALS_WITH_OCTOPUS_ENERGY = 'Allow mmob to share data with octopus energy'
   //lending popup text 
   public static LENDING_CONFIRM_TEXT = 'To access landing produces,provide few more details to unlock'
+  public static ONBOARD_HEADER_TEXT=''
+  public static ONBOARD_FIRST_BUTTON_TEXT='NO THANKS'
+  public static ONBOARD_SECOND_BUTTON_TEXT='ALLOW'
+  public static MERCHANTS_CONFIRM_TEXT='Allow mmob to pull your jd sports basket into our app'
 }

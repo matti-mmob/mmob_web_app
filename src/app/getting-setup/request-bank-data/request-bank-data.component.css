@@ -1,126 +1,76 @@
-.setup-box {
-    width: 100%;
-    max-width: 373px;
-    text-align: center;
-	margin:50px 0 0;
+.data-request {
+	text-align: center;
+	margin: 20px 0;
 }
-.setup-box p span{display:block;}
-.setup-box form{margin: 20px 0;}
-.setup-box .form-group{position:relative;}
-.form-group i {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
+
+.data-request .card:first-of-type {
+	border-right: 10px solid #0000e0;
+	border-radius: 5px;
 }
-.form-control{height:50px;border-radius: 10px;border:1px solid #b3b3b3;text-align: center;padding-right: 45px;color: #000;}
-.next-btn, .finish-btn{
-    display:block;
-    width: 100%;
-    padding: 0 2px;
-    background: #00008b;
-    border-radius: 5px;
-    height: 50px;
-    border: 0;
-    cursor: pointer;
-    color: #fff;
+
+.data-request .card:nth-of-type(2) {
+	border-right: 10px solid #00008b;
+	border-radius: 5px;
 }
-.next-btn:hover, .add-btn:hover {
+
+.data-request .card:nth-of-type(3) {
+	border-right: 10px solid #9400d3;
+	border-radius: 5px;
+}
+
+.data-request .card:last-of-type {
+	border-right: 10px solid #ea4c89;
+	border-radius: 5px;
+}
+
+.data-request .card .card-header .btn {
+	padding: 10px 10px 10px 30px;
+}
+
+.data-request .card .card-body {
+	padding: 20px 30px;
+	background: #f6f6f6;
+}
+
+.data-request .card .card-body ul li {
+	text-align: left;
+	font-weight: normal;
+	font-size: 14px;
+	margin: 10px 0px;
+}
+
+.data-request .row p {
+	font-size: 14px;
+}
+
+.data-request .confirm-btn {
+	background: #00008b;
+	color: white;
+	padding: 15px;
+	width: 100%;
+	margin: 10px auto;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer
+}
+
+.data-request .confirm-btn:hover {
 	background: #b5b5ff;
 	color: #3e295f;
 }
-.finish-btn{background: #fc0d1b;}
-.finish-btn:hover{background: #d9091f;}
-.setup-box p {
-    font-size: 13px;
-	font-weight:500;
+
+.data-request .decline-btn {
+	background: #e5e5e5;
+	color: #00008b;
+	padding: 15px;
+	width: 100%;
+	margin: 10px auto;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
-.setup-box .next-btn{margin:50px 0 0;}
-.setup-box ul {
-    text-align: left;
-    margin: 30px 0 0;
+
+.data-request .decline-btn:hover {
+	background: #fc0d1b;
+	color: #ffffff;
 }
-.setup-box ul li {
-    font-size: 14px;
-	margin: 5px 0 0;
-	color: #000;
-	font-weight:500;
-}
-.setup-section h6 {
-    color: #000;
-    margin: 20px 0 0;
-	font-size:13px;
-	font-weight:500;
-}
-.setup-box ul.terms-points{margin:0;}
-.setup-box ul li i {
-    display: inline-block;
-    width: 20px;
-	vertical-align: top;
-}
-.setup-box ul li p {
-    display: inline-block;
-    width: calc(100% - 35px);
-    margin: 0 0 0 5px;
-    vertical-align: top;
-	font-weight:500;
-}
-.terms-points li +li{margin: 20px 0 0;}
-.read-doc {margin:20px 0 0;}
-.read-doc p +p{margin:10px 0;}
-.read-doc p a{color: #1f74f2}
-.read-doc p a:hover{color: #00008b}
-.setup-box .check-box ~ .next-btn {
-    margin: 20px 0 0;
-}
-p.note-text {
-    margin: 20px 0;
-    font-size: 14px;
-}
-.add-btn{
-    display:block;
-    width: 344px;
-    padding: 0 2px;
-    background: #00008b;
-    border-radius: 5px;
-    height: 50px;
-	line-height: 50px;
-	text-align:center;
-    border: 0;
-    cursor: pointer;
-    color: #fff;
-	position:relative;
-}
-.add-btn i{position:absolute;right:20px;width:22px;height:22px;}
-.account-table {
-    width: 100%;
-    max-width: 80%;
-	margin:20px 0 0;
-}
-.account-table table td h3 {
-    font-size: 14px;
-    font-weight: 500;
-}
-.account-table table td figure {
-    margin: 0;
-}
-.account-table table td {
-    padding: 5px;
-}
-.account-table ~ .setup-box {
-    margin: 0;
-}
-.align-center{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    padding: 15px;
-}
-.account-table table tr td:first-child{width:6%;}
-.account-table table tr td:nth-child(2){width:92%;}
-.account-table table tr td:last-child{width:2%;}
-.account-table table tr td:last-child a{color: #000}
