@@ -39,7 +39,7 @@ export class BanksComponent implements OnInit {
     //  return this.fieldsValidateService.validateAllFormFields(this.banksDetailForm);
     // }
     // else {
-    this.route.navigate(['/' + NavigationUrl.GETTING_SETUP_REQUEST_BANK_DATA]);
+    this.route.navigate([ '/getting-setup/request-bank-data']);
     // }
   }
 }

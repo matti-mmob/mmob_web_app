@@ -68,7 +68,7 @@ export class PasswordComponent implements OnInit {
       return this.fieldsValidateService.validateAllFormFields(this.passwordForm);
     }
     else {
-      this.route.navigate(['/' + NavigationUrl.GETTING_SETUP_MOBILE]);
+      this.route.navigate([ '/getting-setup/mobile']);
     }
   }
 }

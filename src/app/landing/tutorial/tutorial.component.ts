@@ -21,7 +21,7 @@ export class TutorialComponent implements OnInit {
     this.boostrapSliderConfiguration.keyboard = true;
     this.boostrapSliderConfiguration.pauseOnHover = false;
     this.boostrapSliderConfiguration.showNavigationArrows = false;
-    this.boostrapSliderConfiguration.interval = 1;
+    this.boostrapSliderConfiguration.interval = 2000;
     this.images = this.localDataService.getTutorialImages();
   }
 

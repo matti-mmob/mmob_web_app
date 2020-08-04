@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
 
 @Component({
   selector: 'app-splash-screen',
@@ -17,6 +18,6 @@ export class SplashScreenComponent implements OnInit {
   }
 
   alreadyMember() {
-    this.route.navigate(['utilities/profile']);
+    this.route.navigate([NavigationUrl.LOGIN_ROUTE]);
   }
 }

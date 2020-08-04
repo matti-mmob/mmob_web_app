@@ -37,7 +37,7 @@ export class NameComponent implements OnInit {
       return this.fieldsValidateService.validateAllFormFields(this.nameForm);
     }
     else {
-      this.route.navigate(['/' + NavigationUrl.GETTING_SETUP_EMAIL]);
+      this.route.navigate(['/getting-setup/email']);
     }
   }
 }
