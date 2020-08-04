@@ -56,7 +56,7 @@ position:relative
   border-radius: 0 0 6px 6px !important;
   box-shadow: none;
 }
-.card{border-radius:0;margin-bottom:30px;border:0;}
+.card{border-radius:0;margin-bottom:5px;border:0;}
 .card-body table tr{border:0;}
 .card-body table th, .card-body table td {
   text-align: center;
