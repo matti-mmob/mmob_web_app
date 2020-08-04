@@ -39,7 +39,8 @@ export class NavigationUrl {
   public static MARKETPLACE = 'marketPlace';
   // NavigationUrl.INVESTMENTS
   public static INVESTMENTS = 'investments';
-
+  // NavigationUrl.TUTORIAL
+  public static TUTORIALS = 'tutorial';
   // NavigationUrl.LOGIN_MAIN_ROUTE
   public static LOGIN_ROUTE = 'login';
   // NavigationUrl.LOGIN_ROUTE
@@ -50,4 +51,6 @@ export class NavigationUrl {
   public static RESET_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/reset-password';
   // NavigationUrl.VERIFY_EMAIL
   public static VERIFY_EMAIL = NavigationUrl.LOGIN_ROUTE + '/verify-email';
-}   
+
+}
+  

@@ -11,8 +11,13 @@
   },
   {
     "name": "Keep your data safe and secure",
-    "image": "assets/images/fruit.png",
+    "image": "assets/images/blocked.png",
     "data": "We use evolving best-in-class secutity protocols to keep your information safe"
+  },
+  {
+    "name": "Access to your marketplace",
+    "image": "assets/images/fruit.png",
+    "data": "Access to the latest products at competitive prices in our growing market place"
   },
   {
     "name": "Notification settings",

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-splash-screen',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SplashScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
+  joinMmob() {
+    this.route.navigate(['tutorial']);
+  }
 
+  alreadyMember() {
+    this.route.navigate(['utilities/profile']);
+  }
 }
