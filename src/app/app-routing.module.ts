@@ -9,7 +9,7 @@ const routes: Routes = [
     loadChildren: () => import('./dashboard/dashboard.module').then((routeModule) => routeModule.DashboardModule),
   },
   {
-    path: 'getting-setup',
+    path: '',
     loadChildren: () => import('./getting-setup/getting-setup.module').then((routeModule) => routeModule.GettingSetupModule),
   },
   {
@@ -17,7 +17,7 @@ const routes: Routes = [
     loadChildren: () => import('./kyc/kyc.module').then((routeModule) => routeModule.KycModule)
   },
   {
-    path: '',
+    path: 'landing',
     loadChildren: () => import('./landing/landing.module').then((routeModule) => routeModule.LandingModule),
   },
   {
@@ -34,8 +34,16 @@ const routes: Routes = [
     loadChildren: () => import('./investments/investments.module').then((routeModule) => routeModule.InvestmentsModule),
   },
   {
-    path:'utilities',
+    path: 'utilities',
     loadChildren: () => import('./utilities/utilities.module').then((routeModule) => routeModule.UtilitiesModule),
+  },
+  {
+    path: '',
+    loadChildren: () => import('./login/login.module').then((routeModule) => routeModule.LoginModule),
+  },
+  {
+    path: 'merchants',
+    loadChildren: () => import('./merchants/merchants.module').then((routeModule) => routeModule.MerchantsModule),
   },
 ];
 
