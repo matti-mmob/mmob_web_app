@@ -39,7 +39,7 @@ export class TermsAndConditionsComponent implements OnInit {
       return this.fieldsValidateService.validateAllFormFields(this.termConditionForm);
     }
     else {
-      this.route.navigate(['/' + NavigationUrl.GETTING_SETUP_BANKS]);
+      this.route.navigate([ '/getting-setup/banks']);
     }
   }
 }
