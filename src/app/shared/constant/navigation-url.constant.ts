@@ -39,4 +39,15 @@ export class NavigationUrl {
   public static MARKETPLACE = 'marketPlace';
   // NavigationUrl.INVESTMENTS
   public static INVESTMENTS = 'investments';
-}
+
+  // NavigationUrl.LOGIN_MAIN_ROUTE
+  public static LOGIN_ROUTE = 'login';
+  // NavigationUrl.LOGIN_ROUTE
+  public static LOGIN = NavigationUrl.LOGIN_ROUTE + '/login';
+  // NavigationUrl.FORGOT_PASSWORD
+  public static FORGOT_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/forgot-password';
+  // NavigationUrl.RESET_PASSWORD
+  public static RESET_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/reset-password';
+  // NavigationUrl.VERIFY_EMAIL
+  public static VERIFY_EMAIL = NavigationUrl.LOGIN_ROUTE + '/verify-email';
+}   

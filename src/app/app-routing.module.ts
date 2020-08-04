@@ -17,7 +17,7 @@ const routes: Routes = [
     loadChildren: () => import('./kyc/kyc.module').then((routeModule) => routeModule.KycModule)
   },
   {
-    path: '',
+    path: 'landing',
     loadChildren: () => import('./landing/landing.module').then((routeModule) => routeModule.LandingModule),
   },
   {
@@ -36,6 +36,10 @@ const routes: Routes = [
   {
     path: 'utilities',
     loadChildren: () => import('./utilities/utilities.module').then((routeModule) => routeModule.UtilitiesModule),
+  },
+  {
+    path: '',
+    loadChildren: () => import('./login/login.module').then((routeModule) => routeModule.LoginModule),
   },
   {
     path: 'merchants',
