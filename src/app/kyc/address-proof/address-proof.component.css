@@ -2,13 +2,13 @@
 	text-align:center;
 	width:100%;
 	max-width:400px;
-	margin:auto;
+	margin:58px auto 0;
 }
 .upload-address-submit p, 
-.upload-address-submit h5, 
-.upload-address-submit figure {
+.upload-address-submit h5 {
 	margin:20px 0px;
 }
+.upload-address-submit figure{margin:0 0 20px;}
 .file-upload-btn {
 	width: 100%;
 	margin: 0;

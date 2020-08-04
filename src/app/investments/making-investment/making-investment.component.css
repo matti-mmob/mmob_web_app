@@ -1,6 +1,6 @@
 .making-investment{
   max-width: 760px;
-  margin: auto;
+  margin: 52px auto 15px;
   width: 100%;
 text-align: center;
 }
@@ -30,13 +30,16 @@ text-align: center;
   width: 100%;
   text-align: center;
 }
-
+.row.justify-content-between.px-1 {
+    margin: 0;
+    padding: 0 !important;
+}
 .Utilitie-search-box {
   border: 1px solid grey;
   border-radius: 20px;
   box-shadow: none;
   outline: none;
-  background: #fff url(src/assets/images/search-icon.png) no-repeat scroll right center;
+  background: #efefef url(src/assets/images/search-icon.png) no-repeat scroll right center;
   background-size: 30px;
   cursor: pointer;
   width: 70%;
@@ -52,6 +55,7 @@ text-align: center;
   justify-content: space-between;
   align-items: center;
   background: #ccc;
+  height:34px;
 }
 .brand-box {
   padding: 10px 25px;
