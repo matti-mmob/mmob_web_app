@@ -1,0 +1,103 @@
+/************************************* Utilitie starts here ***********************************************/
+.Utilitie,
+.insurance-sec {
+  max-width: 760px;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.Utilitie-search-box {
+  border: 1px solid grey;
+  border-radius: 20px;
+  box-shadow: none;
+  outline: none;
+  background: #efefef url(src/assets/images/search-icon.png) no-repeat scroll right center;
+  background-size: 30px;
+  cursor: pointer;
+  width: 70%;
+  padding: 2px 30px 2px 10px;
+  margin-top: 20px;
+}
+.time-box {
+  padding: 5px 15px;
+  border-radius: 20px;
+  max-width: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ccc;
+}
+.brand-box {
+  padding: 10px 25px;
+  margin: 20px 0px;
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+.brand-box .row {
+  margin: 0;
+}
+.time-box img {
+  width: 20px;
+}
+.time-box p {
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+}
+.logo-box {
+  width: 100px;
+  text-align: left;
+}
+.utilitie-dis {
+  width: 100%;
+  max-width: 520px;
+  text-align: left;
+  font-size: 14px;
+  text-transform: capitalize;
+  margin: 5px 0 0;
+}
+.Utilitie .brand-box:nth-of-type(2) {
+  border: 1px solid #93d8d5;
+}
+.Utilitie .brand-box:first-of-type {
+  border: 1px solid #8d2fb9;
+}
+.Utilitie .brand-box:last-of-type {
+  border: 1px solid #8af181;
+}
+
+.Utilitie .brand-box:nth-of-type(2) .time-box {
+  background-color: #93d8d5;
+}
+.Utilitie .brand-box:first-of-type .time-box {
+  background-color: #acde9a;
+}
+.Utilitie .brand-box:last-of-type .time-box {
+  background-color: #8af181;
+}
+
+.insurance-sec .brand-box:first-of-type {
+  border: 1px solid #acde9a;
+}
+
+.insurance-sec .brand-box:first-of-type .time-box {
+  background: #acde9a;
+}
+
+.insurance-sec .brand-box:nth-of-type(2) {
+  border: 1px solid #5e93ff;
+}
+
+.insurance-sec .brand-box:nth-of-type(2) .time-box {
+  background: #5e93ff;
+}
+
+.insurance-sec .brand-box:last-of-type {
+  border: 1px solid #3abbbe;
+}
+
+.insurance-sec .brand-box:last-of-type .time-box {
+  background: #3abbbe;
+}

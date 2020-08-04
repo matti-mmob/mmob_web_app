@@ -38,7 +38,7 @@ export class MobileComponent implements OnInit {
       return this.fieldsValidateService.validateAllFormFields(this.mobileForm);
     }
     else {
-      this.route.navigate(['/' + NavigationUrl.GETTING_SETUP_TWO_FACTOR_AUTHENTICATION]);
+      this.route.navigate([ '/getting-setup/two-factor-authentication']);
     }
   }
 }

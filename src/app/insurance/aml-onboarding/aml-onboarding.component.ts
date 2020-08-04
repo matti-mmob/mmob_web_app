@@ -56,8 +56,6 @@ export class AmlOnboardingComponent implements OnInit {
   commonAlertPopUp() {
     const modal = this.showPopup();
     modal.componentInstance.confirmText = Constant.ONBOARD_CONFIRM_TEXT;
-    modal.componentInstance.firstButtonText = Constant.ONBOARD_FIRST_BUTTON_TEXT;
-    modal.componentInstance.secondButtonText = Constant.ONBOARD_SECOND_BUTTON_TEXT;
     modal.result.then((data) => {
       if (data.isYesPressed) {
         // this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);

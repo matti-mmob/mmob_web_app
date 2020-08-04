@@ -54,7 +54,7 @@ export class EmailComponent implements OnInit {
     modal.componentInstance.secondButtonText = Constant.EMAIL_SECOND_BUTTON_TEXT;
     modal.result.then((data) => {
       if (data.isYesPressed) {
-        this.route.navigate([NavigationUrl.GETTING_SETUP_PASSWORD]);
+        this.route.navigate(['/getting-setup/password']);
       }
     });
   }

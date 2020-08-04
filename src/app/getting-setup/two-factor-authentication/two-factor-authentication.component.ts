@@ -39,7 +39,7 @@ export class TwoFactorAuthenticationComponent implements OnInit {
       return this.fieldsValidateService.validateAllFormFields(this.twoFactorForm);
     }
     else {
-      this.route.navigate(['/' + NavigationUrl.GETTING_SETUP_TREMS_AND_CONDITION]);
+      this.route.navigate(['/getting-setup/terms-and-conditions']);
     }
   }
 }
