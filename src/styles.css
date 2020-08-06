@@ -59,6 +59,9 @@ body {
   overflow-x: hidden;
   font-family: Roboto, sans-serif;
 }
+h6:empty {
+    display: none;
+}
 /*************************Highchart css**********************/
 g.highcharts-data-labels.highcharts-series-0.highcharts-pie-series.highcharts-tracker {
   display: none;
@@ -295,6 +298,7 @@ p.forgot-pwd a:hover {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
+  text-transform:capitalize;
 }
 
 .login form input[type='button']:hover {

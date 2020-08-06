@@ -5,10 +5,10 @@
       <form [formGroup]="verifyEmailForm">
 	  <h5>Enter the 4 digit code sent to your <br>email</h5>
 		<div class="form-group">
-			<input class="form-control" type="text">
-			<input class="form-control" type="text">
-			<input class="form-control" type="text">
-			<input class="form-control" type="text">
+			<input id="first" class="form-control" type="text" onkeyup="movetoNext(this, 'second')" maxlength="1">
+			<input id="second" class="form-control" type="text" onkeyup="movetoNext(this, 'third')" maxlength="1">
+			<input id="third" class="form-control" type="text" onkeyup="movetoNext(this, 'last')" maxlength="1">
+			<input id="last" class="form-control" type="text" maxlength = "1">
 		</div>
 		<p><a class="resend" href="#">resend code</a></p>
 		<input type="button" value="confirm"  (click)="onNext()">
