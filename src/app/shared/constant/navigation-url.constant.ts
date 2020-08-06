@@ -55,11 +55,11 @@ export class NavigationUrl {
   // NavigationUrl.LOGIN_ROUTE
   public static LOGIN = NavigationUrl.LOGIN_ROUTE + '/login';
   // NavigationUrl.FORGOT_PASSWORD
-  public static FORGOT_PASSWORD = 'forgot-password';
+  public static FORGOT_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/forgot-password';
   // NavigationUrl.RESET_PASSWORD
-  public static RESET_PASSWORD = 'reset-password';
+  public static RESET_PASSWORD =NavigationUrl.LOGIN_ROUTE +  '/reset-password';
   // NavigationUrl.VERIFY_EMAIL
-  public static VERIFY_EMAIL = 'verify-email';
+  public static VERIFY_EMAIL = NavigationUrl.LOGIN_ROUTE + '/verify-email';
 }  
 
   

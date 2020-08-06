@@ -18,6 +18,6 @@ export class SplashScreenComponent implements OnInit {
   }
 
   alreadyMember() {
-    this.route.navigate([NavigationUrl.LOGIN_ROUTE]);
+    this.route.navigate(['login']);
   }
 }

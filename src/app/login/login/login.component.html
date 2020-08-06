@@ -12,7 +12,7 @@
             <input class="form-control" type="password" formControlName="password" placeholder="************">
             <app-show-errors [control]="loginForm.controls.password"></app-show-errors>
         </div>
-        <p class="forgot-pwd"><a [routerLink]="[navigationUrl.FORGOT_PASSWORD]"><small>Forgot password?</small></a></p>
+        <p class="forgot-pwd"><a [routerLink]="['../login/forgot-password']"><small>Forgot password?</small></a></p>
         <input type="button" value="login" (click)="onNext()">
         <p>Don't have an account? <a [routerLink]="[navigationUrl.GETTING_SETUP_ROUTE]">Sign Up</a></p>
     </form>
