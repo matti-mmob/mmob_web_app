@@ -10,7 +10,7 @@ const routes: Routes = [
     path: '',
     component: MainContentComponent,
     children: [{ path: '', component: HomeComponent },
-    { path: 'consentManagementPortal', component: ConsentManagementPortalComponent }],
+               { path: 'consentManagementPortal', component: ConsentManagementPortalComponent }],
   },
 ];
 

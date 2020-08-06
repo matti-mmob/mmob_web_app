@@ -42,6 +42,9 @@ export class ForgotPasswordComponent implements OnInit {
     if (this.forgotPasswordForm.invalid) {
       return this.fieldsValidateService.validateAllFormFields(this.forgotPasswordForm);
     }
+    else{
+      this.route.navigate(['/login']);
+    }
   }
 
 }

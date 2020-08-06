@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-upload-address-proof',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadAddressProofComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
-
+  //this function validate form and redirect to next step
+  onNext() {
+    this.route.navigate(['kyc/addressProof']);
+  }
 }

@@ -1,47 +1,46 @@
-
-    <div class="making-investment">
-      <figure><img src="{{'images/investment-icon.png' | assetsPath}}" alt="investment icon"></figure>
-      <h5><strong>Investments</strong></h5>
-      <form>
-        <input type="search" class="Utilitie-search-box">
-      </form>
-      <div class="brand-box">
-        <div class="row justify-content-between px-1">
-          <div class="logo-box"><img src="{{'images/robinhood-logo.png' | assetsPath}}" alt="robinhood-logo"></div>
-          <div class="time-box" (click)="commonAlertPopUp('Provide More Details')">
-            <img src="{{'images/clock.png' | assetsPath}}" alt="clock image">
-            <p>4 mins</p>
-          </div>
-        </div>
-        <p class="utilitie-dis">
-          Robinhood, a pioneer of commission-free investing, gives you more ways to make your money work harder.
-        </p>
+<div class="making-investment">
+  <figure><img src="{{'images/investment-icon.png' | assetsPath}}" alt="investment icon"></figure>
+  <h5><strong>Investments</strong></h5>
+  <form>
+    <input type="search" class="Utilitie-search-box">
+  </form>
+  <div class="brand-box" (click)="commonAlertPopUp('Provide More Details')">
+    <div class="row justify-content-between px-1">
+      <div class="logo-box"><img src="{{'images/robinhood-logo.png' | assetsPath}}" alt="robinhood-logo"></div>
+      <div class="time-box">
+        <img src="{{'images/clock.png' | assetsPath}}" alt="clock image">
+        <p>4 mins</p>
       </div>
-      <div class="brand-box">
-        <div class="row justify-content-between px-1">
-          <div class="logo-box"><img src="{{'images/yielders-logo.png' | assetsPath}}" alt="yielders-logo"></div>
-          <div class="time-box" (click)="commonAlertPopUp('Provide More Details')">
-            <img src="{{'images/clock.png' | assetsPath}}" alt="clock image">
-            <p>4 mins</p>
-          </div>
-        </div>
-        <p class="utilitie-dis">
-          Yielders is a crowd investing property platform that gives you easy access to the UK property market and allows
-          you to earn competitive returns.
-        </p>
-      </div>
-      <div class="brand-box">
-        <div class="row justify-content-between px-1">
-          <div class="logo-box"><img src="{{'images/acorns-logo.png' |assetsPath}}" alt="acorns-logo"></div>
-          <div class="time-box" (click)="commonAlertPopUp('Provide More Details')">
-            <img src="{{'images/clock.png' | assetsPath}}" alt="clock image">
-            <p>9 mins</p>
-          </div>
-        </div>
-        <p class="utilitie-dis">
-          The only micro--investing account that allows you to invest spare change. Set in under 5 minutes and
-          automatically add money to your diversified portfolio.
-        </p>
-      </div>
-
     </div>
+    <p class="utilitie-dis">
+      Robinhood, a pioneer of commission-free investing, gives you more ways to make your money work harder.
+    </p>
+  </div>
+  <div class="brand-box" (click)="commonAlertPopUp('Provide More Details')">
+    <div class="row justify-content-between px-1">
+      <div class="logo-box"><img src="{{'images/yielders-logo.png' | assetsPath}}" alt="yielders-logo"></div>
+      <div class="time-box">
+        <img src="{{'images/clock.png' | assetsPath}}" alt="clock image">
+        <p>4 mins</p>
+      </div>
+    </div>
+    <p class="utilitie-dis">
+      Yielders is a crowd investing property platform that gives you easy access to the UK property market and allows
+      you to earn competitive returns.
+    </p>
+  </div>
+  <div class="brand-box" (click)="commonAlertPopUp('Provide More Details')">
+    <div class="row justify-content-between px-1">
+      <div class="logo-box"><img src="{{'images/acorns-logo.png' |assetsPath}}" alt="acorns-logo"></div>
+      <div class="time-box">
+        <img src="{{'images/clock.png' | assetsPath}}" alt="clock image">
+        <p>9 mins</p>
+      </div>
+    </div>
+    <p class="utilitie-dis">
+      The only micro--investing account that allows you to invest spare change. Set in under 5 minutes and
+      automatically add money to your diversified portfolio.
+    </p>
+  </div>
+
+</div>

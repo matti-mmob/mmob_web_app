@@ -113,15 +113,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
     const iconImage = {
       HSBC:
         '<img  src="' +
-        this.assetsPipe.transform('home.png', 'img') +
+        this.assetsPipe.transform('Home.png', 'img') +
         '" alt="HSBC" style="vertical-align: middle; margin: 0 10px;">',
       Barclays:
         '<img  src="' +
-        this.assetsPipe.transform('car-icon.png', 'img') +
+        this.assetsPipe.transform('Car-icon.png', 'img') +
         '" alt="Barclays" style="vertical-align: middle; margin: 0 10px;">',
       Santander:
         '<img  src="' +
-        this.assetsPipe.transform('phone-icon.png', 'img') +
+        this.assetsPipe.transform('Phone-icon.png', 'img') +
         '" alt="Santander" style="vertical-align: middle; margin: 0 10px;">',
       'CIMB Bank':
         '<img  src="' +

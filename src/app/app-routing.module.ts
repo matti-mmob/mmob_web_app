@@ -49,6 +49,7 @@ const routes: Routes = [
     path: 'merchants',
     loadChildren: () => import('./merchants/merchants.module').then((routeModule) => routeModule.MerchantsModule),
   },
+  
 ];
 
 @NgModule({
