@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Constant } from 'src/app/shared/constant/constant';
 import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-merchants-home',
@@ -10,7 +11,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class MerchantsHomeComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal,
+    private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +23,7 @@ export class MerchantsHomeComponent implements OnInit {
     modal.componentInstance.headerText = Constant.INSURANCE_HEADER_TEXT;
     modal.result.then((data) => {
       if (data.isYesPressed) {
+        this.route.navigate(['/kyc']);
       }
     });
   }

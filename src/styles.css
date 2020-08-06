@@ -70,20 +70,20 @@ g.highcharts-data-labels.highcharts-series-0.highcharts-pie-series.highcharts-tr
   display: none;
 }
 .highcharts-data-label-color-1 {
-  left: 318px !important;
+  /* left: 318px !important; */
   top: 135px !important;
 }
 .highcharts-data-label-color-0 {
-  left: 260px !important;
+  /* left: 260px !important; */
   top: -16px !important;
 }
 .highcharts-data-label-color-3 {
-  left: 160px !important;
+  /* left: 160px !important; */
   top: -15px !important;
 }
 .highcharts-data-label-color-2 {
   top: 100px !important;
-  left: 100px !important;
+  /* left: 100px !important; */
 }
 text.highcharts-title {
   display: none;

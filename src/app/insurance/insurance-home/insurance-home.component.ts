@@ -47,7 +47,7 @@ export class InsuranceHomeComponent implements OnInit {
     modal.componentInstance.headerText = Constant.DEFAULT_HEADER_TEXT;
     modal.result.then((data) => {
       if (data.isYesPressed) {
-        this.route.navigate([NavigationUrl.AML_ONBOARDING]);
+        this.route.navigate(['/kyc']);
       }
     });
   }

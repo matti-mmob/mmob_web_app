@@ -13,7 +13,7 @@ import { Constant } from 'src/app/shared/constant/constant';
 })
 export class AccessUtilitiesComponent implements OnInit {
   private previousUrl: string = undefined;
-  constant= Constant;
+  constant = Constant;
   constructor(private modalService: NgbModal, private previousRouteService: PreviousRouteService, private route: Router) {
   }
 
@@ -31,7 +31,7 @@ export class AccessUtilitiesComponent implements OnInit {
     modalRefForFirstConfirm.result.then(
       data => {
         if (data.isYesPressed && confirmationText === Constant.USER_DETAILS_TO_ACCESS_UTILITIES) {
-          this.route.navigate(['utilities/profile']);
+          this.route.navigate(['/kyc']);
         }
       },
       () => {
