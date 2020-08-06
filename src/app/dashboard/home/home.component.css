@@ -55,8 +55,8 @@
 .spent-amount-breakdown table td p {
 	font-size: 13px;
 	text-align: left;
+	color: #c3c0c0;
 }
-
 .card-header {
     padding: 4px;
     border-radius: 0 !important;

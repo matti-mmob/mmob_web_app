@@ -3,8 +3,8 @@
   <figure><img src="{{'images/kyc.png' | assetsPath}}" alt="kyc-img"></figure>
   <h5><strong>Enter your Mobile Number</strong></h5>
   <div class="setup-box">
+  <p>Please enter your phone number for <span>two factor authentication.</span></p>
   <form [formGroup]="mobileForm">
-      <p>Please enter your phone number for <span>two factor authentication.</span></p>
       <div class="form-group">
         <input type="text" formControlName="mobile" class="form-control">
         <app-show-errors [control]="mobileForm.controls.mobile"></app-show-errors>

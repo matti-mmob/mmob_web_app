@@ -20,6 +20,7 @@ text-align:center;
 border-radius:5px;
 margin:0 8px;
 box-shadow: 0 2px 4px #9a9797;
+    font-weight: 700;
 }
 .bg-alt, .click-button:hover {
 background: #b5b5ff;

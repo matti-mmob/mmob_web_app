@@ -10,7 +10,7 @@ export class Constant {
   //Default popup text
   public static DEFAULT_HEADER_TEXT = 'Neraly there!'
   //Email popup text
-  public static EMAIL_CONFIRM_TEXT = 'An email has been sent to you, click the link in the email to verify'
+  public static EMAIL_CONFIRM_TEXT = 'An email has been sent to you, click the link in the email to verify.'
   //Universal  button text
   public static UNIVERSAL_FIRST_BUTTON_TEXT = 'OK'
   public static UNIVERSAL_SECOND_BUTTON_TEXT = 'CLOSE'
@@ -32,6 +32,6 @@ export class Constant {
   public static INSURANCE_HEADER_TEXT = 'Neraly there!'
   public static INSURANCE_FIRST_BUTTON_TEXT = 'NO THANKS'
   public static INSURANCE_SECOND_BUTTON_TEXT = 'ALLOW'
-  public static TUTORIAL_CONFIRMATION_TEXT = 'We would like to show you notifications for spending and product renewal reminders'
+  public static TUTORIAL_CONFIRMATION_TEXT = 'We would like to show you notifications for spending and product renewal reminders.'
   public static MERCHANTS_CONFIRM_TEXT='Allow mmob to pull your jd sports basket into our app'
 }
