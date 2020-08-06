@@ -42,7 +42,7 @@ const routes: Routes = [
     loadChildren: () => import('./lending/lending.module').then((routeModule) => routeModule.LendingModule),
   },
   {
-    path: '',
+    path: 'login',
     loadChildren: () => import('./login/login.module').then((routeModule) => routeModule.LoginModule),
   },
   {
