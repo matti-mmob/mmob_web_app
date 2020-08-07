@@ -43,7 +43,7 @@ export class ForgotPasswordComponent implements OnInit {
       return this.fieldsValidateService.validateAllFormFields(this.forgotPasswordForm);
     }
     else{
-      this.route.navigate(['/login']);
+      this.route.navigate(['login/reset-password']);
     }
   }
 

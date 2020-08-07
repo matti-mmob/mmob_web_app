@@ -35,7 +35,10 @@ export class RequestBankDataComponent implements OnInit {
     });
   }
   //this function validate form and redirect to next step
-  onNext() {
-
+  onDecline() {
+    this.route.navigate([ '/getting-setup/banks']);
+  }
+  onConfirm() {
+    this.route.navigate(['login']);
   }
 }

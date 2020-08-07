@@ -124,3 +124,55 @@ p.note-text {
 .account-table table tr td:nth-child(2){width:92%;}
 .account-table table tr td:last-child{width:2%;}
 .account-table table tr td:last-child a{color: #000}
+
+.check-box input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+  
+  .check-box label {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    margin:0;
+  }
+  
+  .check-box label:before {
+    content:'';
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+    cursor: pointer;
+    right: 0;
+  }
+  
+  .check-box input:checked + label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2px;
+      right: 9px;
+      width: 5px;
+      height: 17px;
+      border: solid #3bb54a;
+      border-width: 0 2px 2px 0;
+      transform: rotate(40deg);
+      -webkit-transform: rotate(40deg);
+      font-family: 'Roboto', sans-serif;
+  }
+  .check-box {
+      background: #b3b3dc;
+      text-align: left;
+      padding: 8px 20px 8px 30px;
+  }
+  .check-box + .check-box {border-top:1px solid #8f8fb0;}
+  
