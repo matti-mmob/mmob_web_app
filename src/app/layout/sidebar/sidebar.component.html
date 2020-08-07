@@ -11,22 +11,22 @@
   <ul class="nav flex-column {{menuToggleClass}}">
     <li class="nav-header active">Menu</li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/dashboard']">
+      <a class="nav-link active"  (click)="highLightClickedElement($event)"  [routerLink]="['/dashboard']" >
         <figure><img src="{{'images/star.svg' | assetsPath}}" alt="nav-icon"></figure>Home
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/dashboard']">
+      <a class="nav-link" (click)="highLightClickedElement($event)" [routerLink]="['/dashboard']">
         <figure><img src="{{'images/spending.svg' | assetsPath}}" alt="nav-icon"></figure>Spending
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/dashboard']">
+      <a class="nav-link" (click)="highLightClickedElement($event)" [routerLink]="['/dashboard']">
         <figure><img src="{{'images/accounts.svg' | assetsPath}}" alt="nav-icon"></figure>Accounts
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" [routerLink]="['/marketPlace']">
+      <a class="nav-link"  (click)="highLightClickedElement($event)" [routerLink]="['/marketPlace']">
         <figure><img src="{{'images/marketplace.svg' | assetsPath}}" alt="nav-icon"></figure>Market Place
       </a>
     </li>

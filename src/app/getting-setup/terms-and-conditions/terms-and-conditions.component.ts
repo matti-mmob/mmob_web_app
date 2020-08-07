@@ -4,6 +4,9 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { FieldsValidateService } from 'src/app/service/fields-validate.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
+import { Constant } from 'src/app/shared/constant/constant';
+import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-terms-and-conditions',
@@ -18,7 +21,8 @@ export class TermsAndConditionsComponent implements OnInit {
     private assetsPipe: AssetsPathPipe,
     private formBuilder: FormBuilder,
     private fieldsValidateService: FieldsValidateService,
-    private route: Router) { }
+    private route: Router,
+    private modalService: NgbModal) { }
 
   ngOnInit() {
     this.initializeForm();
@@ -36,10 +40,13 @@ export class TermsAndConditionsComponent implements OnInit {
   //this function validate form and redirect to next step
   onNext() {
     if (this.termConditionForm.invalid) {
+      alert("Both checboxes are requried");
       return this.fieldsValidateService.validateAllFormFields(this.termConditionForm);
+     
     }
     else {
       this.route.navigate([ '/getting-setup/banks']);
     }
   }
+
 }

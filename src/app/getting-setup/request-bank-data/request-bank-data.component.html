@@ -107,10 +107,10 @@
 
         <div class="row justify-content-around text-center">
           <div class="col-10 col-md-4">
-            <button class="btn confirm-btn" type="button" data-toggle="modal" data-target="#allow">Confirm</button>
+            <button class="btn confirm-btn" type="button" data-toggle="modal" data-target="#allow" (click)="onConfirm()" >Confirm</button>
           </div>
           <div class="col-10 col-md-4">
-            <button class="btn decline-btn" type="button">Decline</button>
+            <button class="btn decline-btn" type="button" (click)="onDecline()" >Decline</button>
           </div>
         </div>
       </div>

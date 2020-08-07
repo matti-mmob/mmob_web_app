@@ -15,9 +15,10 @@ export class SidebarComponent implements OnInit {
   menuToggleClass: any = '';
   menuToggle: boolean = false;
   menuToggleIconeClass: any = '';
-  constructor( private route: Router) {}
+  selectedItem;
+  constructor(private route: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   /*  This function is used to show/hide More menu.
    */
@@ -26,12 +27,19 @@ export class SidebarComponent implements OnInit {
     this.buttonLabel = this.showMoreMenu ? Constant.TOGGLE_TEXT_LESS : Constant.TOGGLE_TEXT_MORE;
   }
 
-   /* 
-   * This function is used to show/hide More menu for mobile
-   */
-   mobileToggleMenu() {
+  /* 
+  * This function is used to show/hide More menu for mobile
+  */
+  mobileToggleMenu() {
     this.menuToggle = !this.menuToggle;
     this.menuToggleClass = this.menuToggle ? Constant.MENU_TOGGLE_CLASS : '';
     this.menuToggleIconeClass = this.menuToggle ? Constant.MENU_TOGGLE_ICONE : '';
+  }
+  highLightClickedElement($event) {
+    const highlights = document.querySelectorAll('.nav-link');
+    highlights.forEach((element) => {
+      element.classList.remove('active');
+    });
+    $event.target.classList.add('active');
   }
 }
