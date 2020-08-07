@@ -45,6 +45,7 @@
 }
 .drag-text {
   text-align: center;
+  margin:100px 0 0;
 }
 .file-upload-image {
   max-height: 300px;
