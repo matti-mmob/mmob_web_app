@@ -25,7 +25,7 @@
   }
   .carousel-item{flex-direction: column;
   justify-content:center;align-items:center;}
-  .carousel-item h5{margin:0 0 30px;}
+  .carousel-item h5{margin:0 0 15px;}
   ol.carousel-indicators {
   margin: 0;
   bottom: 0px;
