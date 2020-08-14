@@ -249,6 +249,7 @@ margin:0;
   padding: 0;
   margin: 15px 0 0;
   height: auto;
+  position:relative;
 }
 
 .login form .form-group label {
@@ -610,3 +611,20 @@ p.note-text {
 .account-table table tr td:nth-child(2){width:92%;}
 .account-table table tr td:last-child{width:2%;}
 .account-table table tr td:last-child a{color: #000}
+
+ul.error-list li {
+    font-size: 14px;
+}
+.error-list {
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 0;
+    margin-top:50px !important;
+}
+.login .error-list {
+    margin-top: 70px !important;
+}
+.login.forgot .error-list {
+    margin-top: 45px !important;
+}
