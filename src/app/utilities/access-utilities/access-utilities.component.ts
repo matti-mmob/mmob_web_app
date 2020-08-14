@@ -26,7 +26,7 @@ export class AccessUtilitiesComponent implements OnInit {
 
   // method to call pop up
   commonAlertPopUp(confirmationText) {
-    const modalRefForFirstConfirm = this.modalService.open(ConfirmationPopupComponent, { backdrop: 'static', keyboard: false });
+    const modalRefForFirstConfirm = this.modalService.open(ConfirmationPopupComponent, ConfirmationPopupComponent.POP_UP_DEFAULT_PROPS);
     modalRefForFirstConfirm.componentInstance.confirmText = confirmationText;
     modalRefForFirstConfirm.result.then(
       data => {

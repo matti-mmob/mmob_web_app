@@ -14,8 +14,7 @@ export class SidebarComponent implements OnInit {
   buttonLabel: any = Constant.TOGGLE_TEXT_MORE;
   menuToggleClass: any = '';
   menuToggle: boolean = false;
-  menuToggleIconeClass: any = '';
-  selectedItem;
+  menuToggleIconClass: any = '';
   constructor(private route: Router) { }
 
   ngOnInit(): void { }
@@ -33,8 +32,9 @@ export class SidebarComponent implements OnInit {
   mobileToggleMenu() {
     this.menuToggle = !this.menuToggle;
     this.menuToggleClass = this.menuToggle ? Constant.MENU_TOGGLE_CLASS : '';
-    this.menuToggleIconeClass = this.menuToggle ? Constant.MENU_TOGGLE_ICONE : '';
+    this.menuToggleIconClass = this.menuToggle ? Constant.MENU_TOGGLE_ICON : '';
   }
+
   highLightClickedElement($event) {
     const highlights = document.querySelectorAll('.nav-link');
     highlights.forEach((element) => {

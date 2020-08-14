@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import {NgbActiveModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
 import { AssetsPathPipe } from '../pipes/assets-path.pipe';
 
 
@@ -16,6 +16,7 @@ export class ConfirmationPopupComponent implements OnInit {
   @Input() public firstButtonText = 'NO THANKS';
   @Input() public secondButtonText = 'ALLOW';
 
+  public static POP_UP_DEFAULT_PROPS: NgbModalOptions = {backdrop: 'static', keyboard: false, centered: true};
   constructor(private activeModal: NgbActiveModal) {
   }
 

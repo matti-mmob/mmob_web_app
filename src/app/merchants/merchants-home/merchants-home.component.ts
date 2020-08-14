@@ -29,7 +29,7 @@ export class MerchantsHomeComponent implements OnInit {
   }
 
   showPopup() {
-    return this.modalService.open(ConfirmationPopupComponent, { backdrop: 'static', keyboard: false });
+    return this.modalService.open(ConfirmationPopupComponent, ConfirmationPopupComponent.POP_UP_DEFAULT_PROPS);
   }
 
 }

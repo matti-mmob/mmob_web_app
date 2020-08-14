@@ -30,7 +30,7 @@ export class TutorialComponent implements OnInit {
 
   // function to open popup
   continue() {
-    const modalRefForFirstConfirm = this.modalService.open(ConfirmationPopupComponent, { backdrop: 'static', keyboard: false });
+    const modalRefForFirstConfirm = this.modalService.open(ConfirmationPopupComponent, ConfirmationPopupComponent.POP_UP_DEFAULT_PROPS);
     modalRefForFirstConfirm.componentInstance.confirmText = Constant.TUTORIAL_CONFIRMATION_TEXT;
     modalRefForFirstConfirm.componentInstance.secondButtonText = 'Okay';
     modalRefForFirstConfirm.result.then(

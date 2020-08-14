@@ -59,7 +59,7 @@ export class EmailComponent implements OnInit {
     });
   }
   showPopup() {
-    return this.modalService.open(ConfirmationPopupComponent, {});
+    return this.modalService.open(ConfirmationPopupComponent, ConfirmationPopupComponent.POP_UP_DEFAULT_PROPS);
   }
 
 }

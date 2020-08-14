@@ -20,7 +20,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     GettingSetupRoutingModule,
     SharedModule,
-
   ]
 })
 export class GettingSetupModule { }
