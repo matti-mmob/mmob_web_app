@@ -22,8 +22,7 @@ export class LendingDetailComponent implements OnInit {
     private assetsPipe: AssetsPathPipe,
     private formBuilder: FormBuilder,
     private fieldsValidateService: FieldsValidateService,
-    private route: Router,
-    private modalService: NgbModal) { }
+    private route: Router) { }
 
   ngOnInit(): void {
     this.initializeForm();

@@ -36,44 +36,7 @@
 .card-header figure {
 	margin: 0 13px 0 0;
 	width: 40px;
-}
-
-#headingOne {
-	border-right: 10px solid #000070 !important;
-	background-color: white;
-	border-radius: 0 0 6px 6px !important;
-	box-shadow: none;
-}
-
-#headingTwo {
-	border-right: 10px solid #0000e0 !important;
-	background-color: white;
-	border-radius: 0 0 6px 6px !important;
-	box-shadow: none;
-}
-
-#headingThree {
-	border-right: 10px solid #9400d3 !important;
-	background-color: white;
-	border-radius: 0 0 6px 6px !important;
-	box-shadow: none;
-}
-
-#headingFour {
-	border-right: 10px solid #ea4c89 !important;
-	background-color: white;
-	border-radius: 0 0 6px 6px !important;
-	box-shadow: none;
-}
-
-#headingFive {
-	border-right: 10px solid #ff4f00 !important;
-	background-color: white;
-	border-radius: 0 0 6px 6px !important;
-	box-shadow: none;
-}
-
-.card {
+}.card {
 	border-radius: 0;
 	margin-bottom: 5px;
 	border: 0;
@@ -95,32 +58,7 @@
 .card-body table thead th {
 	font-weight: 600;
 	border-bottom: 1px solid #eceeef;
-}
-
-.card-body table thead th:first-child {
-	border-bottom: 0;
-}
-
-.card-body {
-	padding: 8px 0 0;
-}
-
-.card-header button.collapsed::before {
-	content: url(src/assets/images/add.png);
-}
-
-.card-header button::before {
-	content: url(src/assets/images/minus.png);
-	display: block;
-	right: 15px;
-	margin: 0;
-	position: absolute;
-	top: 54%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-}
-
-/************************************* data request permission page css ***********************************************/
+}/************************************* data request permission page css ***********************************************/
 
 .data-request {
 	text-align: center;
