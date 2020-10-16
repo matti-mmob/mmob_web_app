@@ -1,374 +1,378 @@
-
-    <div class="kyc">
-      <div class="profile">
-        <div class="user-img"><img src="{{'images/user-farah.png' | assetsPath}}" alt="user"></div>
-        <p><strong>Farah</strong></p>
-        <p>Farah@gmail.com</p>
-      </div>
-      <div class="consent-boxes">
-        <div class="accordion" id="accordionExample">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                  data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <figure><img src="{{'images/my-money.png' | assetsPath}}" alt="consent-img"></figure>My Money
-                </button>
-              </h2>
+<div class="kyc">
+  <div class="profile">
+    <div class="user-img"><img alt="user" src="{{'images/user-farah.png' | assetsPath}}"></div>
+    <p><strong>Farah</strong></p>
+    <p>Farah@gmail.com</p>
+  </div>
+  <div class="consent-boxes">
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link btn-block text-left collapsed"
+                    data-target="#collapseOne" data-toggle="collapse" type="button">
+              <figure><img alt="consent-img" src="{{'images/my-money.png' | assetsPath}}"></figure>
+              My Money
+            </button>
+          </h2>
+        </div>
+        <div aria-labelledby="headingOne" class="collapse" data-parent="#accordionExample" id="collapseOne">
+          <div class="card-body">
+            <div class="widget-header">
+              <h1><span>&#163;</span> 48,386.37</h1>
             </div>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
-                <div class="widget-header">
-                  <h1><span>&#163;</span> 48,386.37</h1>
-                </div>
-                <div class="widget-chart">
-                  <div id="container" style="min-width: 275px; height: 230px; margin: 0 auto"></div>
-                  <div class="chart-content">
-                    <h4><span>&#163;</span>3,534.72</h4>
-                  </div>
-                </div>
-                <div class="spent-amount-breakdown">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <figure><img src="{{'images/hsb.png' | assetsPath}}" alt="hsbc-icon"></figure>
-                        </td>
-                        <td>
-                          <h3>HSBC</h3>
-                          <p>40-23-21 <span>45724853</span></p>
-                        </td>
-                        <td><span>&#163;</span>23,617.23</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <figure><img src="{{'images/barclays.png' | assetsPath}}" alt="barclays-icon"></figure>
-                        </td>
-                        <td>
-                          <h3>Barclays</h3>
-                          <p>25-30-23 <span>90185739</span></p>
-                        </td>
-                        <td><span>&#163;</span>6,823.83</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <figure><img src="{{'images/santander.png' | assetsPath}}" alt="santander-icon"></figure>
-                        </td>
-                        <td>
-                          <h3>Santander</h3>
-                          <p>35-27-92 <span>37483954</span></p>
-                        </td>
-                        <td><span>&#163;</span>5,550.97</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <figure><img src="{{'images/cimb-bank.png' | assetsPath}}" alt="cimb-bank-icon"></figure>
-                        </td>
-                        <td>
-                          <h3>CIMB Bank</h3>
-                          <p>43-74-83 <span>77543271</span></p>
-                        </td>
-                        <td><span>&#163;</span>12,394.34</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+            <div class="widget-chart">
+              <div id="container" style="min-width: 275px; height: 230px; margin: 0 auto"></div>
+              <div class="chart-content">
+                <h4><span>&#163;</span>3,534.72</h4>
               </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                  data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                  <figure><img src="{{'images/my-home.png' | assetsPath}}" alt="consent-img"></figure>My Home
-                </button>
-              </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="card-body">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Provider</th>
-                      <th>Description</th>
-                      <th>Balance</th>
-                      <th>Payment Amount</th>
-                      <th>Next Payment Date</th>
-                      <th>Renewal Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/hsbc-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
-                      </td>
-                      <td>HSBC</td>
-                      <td>Mortgage</td>
-                      <td><span>&#163;</span>257,947.23</td>
-                      <td><span>&#163;</span>542.12</td>
-                      <td>26-Jul-2020</td>
-                      <td>20-Feb-2022</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/octopus-energy-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
-                      </td>
-                      <td>Octopus Energy</td>
-                      <td>Energy</td>
-                      <td>-</td>
-                      <td><span>&#163;</span>21.99</td>
-                      <td>31-Jul-2020</td>
-                      <td>11-Mar-2021</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/ee-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
-                      </td>
-                      <td>EE</td>
-                      <td>Telephone</td>
-                      <td>-</td>
-                      <td><span>&#163;</span>30.00</td>
-                      <td>01-Aug-2020</td>
-                      <td>12-Apr-2021</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/brolly-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
-                      </td>
-                      <td>Brolly</td>
-                      <td>Home Insurance</td>
-                      <td>-</td>
-                      <td><span>&#163;</span>100.00</td>
-                      <td>12-Aug-2020</td>
-                      <td>11-Nov-2020</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/british-gas-icon.png' | assetsPath}}" alt="hsbc-icon"></figure>
-                      </td>
-                      <td>British Gas</td>
-                      <td>Gas</td>
-                      <td>-</td>
-                      <td><span>&#163;</span>17.99</td>
-                      <td>17-Aug-2020</td>
-                      <td>16-Apr-2021</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                  data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                  <figure><img src="{{'images/my-family.png' | assetsPath}}" alt="consent-img"></figure>My Family
-                </button>
-              </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-              <div class="card-body">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Provider</th>
-                      <th>Description</th>
-                      <th>Balance</th>
-                      <th>Payment Amount</th>
-                      <th>Next Payment Date</th>
-                      <th>Renewal Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/aviva-icon.png' | assetsPath}}" alt="aviva-icon"></figure>
-                      </td>
-                      <td>Aviva</td>
-                      <td>Life Insurance</td>
-                      <td>-</td>
-                      <td><span>&#163;</span>102.93</td>
-                      <td>22-Jul-2020</td>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/gohenry-icon.png' | assetsPath}}" alt="gohenry-icon"></figure>
-                      </td>
-                      <td>GoHenry</td>
-                      <td>Abdulla</td>
-                      <td><span>&#163;</span>27.67</td>
-                      <td><span>&#163;</span>7.00</td>
-                      <td>31-Jul-2020</td>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/gohenry-icon.png' | assetsPath}}" alt="gohenry-icon"></figure>
-                      </td>
-                      <td>GoHenry</td>
-                      <td>Dania</td>
-                      <td><span>&#163;</span>35.41</td>
-                      <td><span>&#163;</span>5.00</td>
-                      <td>31-Jul-2020</td>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/bupa-icon.png' | assetsPath}}" alt="bupa-icon"></figure>
-                      </td>
-                      <td>BUPA</td>
-                      <td>Health Insurance</td>
-                      <td>-</td>
-                      <td><span>&#163;</span>100.00</td>
-                      <td>03-Aug-2020</td>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure></figure>
-                      </td>
-                      <td>St. Georges</td>
-                      <td>Education</td>
-                      <td>-</td>
-                      <td><span>&#163;</span>1343.30</td>
-                      <td>07-Aug-2020</td>
-                      <td>-</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingFour">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                  data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                  <figure><img src="{{'images/my-car.png' | assetsPath}}" alt="consent-img"></figure>My Car
-                </button>
-              </h2>
-            </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-              <div class="card-body">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Provider</th>
-                      <th>Description</th>
-                      <th>Balance</th>
-                      <th>Payment Amount</th>
-                      <th>Next Payment Date</th>
-                      <th>Renewal Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/oodle-icon.png' | assetsPath}}" alt="oddle-icon"></figure>
-                      </td>
-                      <td>Oodle</td>
-                      <td>Car Finance</td>
-                      <td><span>&#163;</span>26,897.09</td>
-                      <td><span>&#163;</span>276.21</td>
-                      <td>28-Jul-2020</td>
-                      <td>19-May-2021</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/cuvva-icon.png' | assetsPath}}" alt="cuvva-icon"></figure>
-                      </td>
-                      <td>Cuvva</td>
-                      <td>Insurance</td>
-                      <td><span>&#163;</span>465.26</td>
-                      <td><span>&#163;</span>65.14</td>
-                      <td>30-Jul-2020</td>
-                      <td>13-Apr-2021</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/dvla-icon.png' | assetsPath}}" alt="dvla-icon"></figure>
-                      </td>
-                      <td>DVLA</td>
-                      <td>Tax</td>
-                      <td>-</td>
-                      <td><span>&#163;</span>540.00</td>
-                      <td>19-Aug-2020</td>
-                      <td>19-Aug-2020</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingFive">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                  data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                  <figure><img src="{{'images/my-investments.png' | assetsPath}}" alt="consent-img"></figure>My
-                  Investments
-                </button>
-              </h2>
-            </div>
-            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-              <div class="card-body">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Provider</th>
-                      <th>Description</th>
-                      <th>Balance</th>
-                      <th>Payment Amount</th>
-                      <th>Next Payment Date</th>
-                      <th>Renewal Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/yielders-icon.png' | assetsPath}}" alt="yielders-icon"></figure>
-                      </td>
-                      <td>Yielders</td>
-                      <td>Property</td>
-                      <td><span>&#163;</span>57,343.75</td>
-                      <td>-</td>
-                      <td>-</td>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/wealthify-icon.png' | assetsPath}}" alt="wealthify-icon"></figure>
-                      </td>
-                      <td>Wealthify</td>
-                      <td>Investment ISA</td>
-                      <td><span>&#163;</span>12,957.31</td>
-                      <td>-</td>
-                      <td>-</td>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <figure><img src="{{'images/robnhood-icon.png' | assetsPath}}" alt="robnhood-icon"></figure>
-                      </td>
-                      <td>Robinhood</td>
-                      <td>BitCoin</td>
-                      <td><span>&#163;</span>8,384.99</td>
-                      <td>-</td>
-                      <td>-</td>
-                      <td>-</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div class="spent-amount-breakdown">
+              <table class="table">
+                <tbody>
+                <tr>
+                  <td>
+                    <figure><img alt="hsbc-icon" src="{{'images/hsb.png' | assetsPath}}"></figure>
+                  </td>
+                  <td>
+                    <h3>HSBC</h3>
+                    <p>40-23-21 <span>45724853</span></p>
+                  </td>
+                  <td><span>&#163;</span>23,617.23</td>
+                </tr>
+                <tr>
+                  <td>
+                    <figure><img alt="barclays-icon" src="{{'images/barclays.png' | assetsPath}}"></figure>
+                  </td>
+                  <td>
+                    <h3>Barclays</h3>
+                    <p>25-30-23 <span>90185739</span></p>
+                  </td>
+                  <td><span>&#163;</span>6,823.83</td>
+                </tr>
+                <tr>
+                  <td>
+                    <figure><img alt="santander-icon" src="{{'images/santander.png' | assetsPath}}"></figure>
+                  </td>
+                  <td>
+                    <h3>Santander</h3>
+                    <p>35-27-92 <span>37483954</span></p>
+                  </td>
+                  <td><span>&#163;</span>5,550.97</td>
+                </tr>
+                <tr>
+                  <td>
+                    <figure><img alt="cimb-bank-icon" src="{{'images/cimb-bank.png' | assetsPath}}"></figure>
+                  </td>
+                  <td>
+                    <h3>CIMB Bank</h3>
+                    <p>43-74-83 <span>77543271</span></p>
+                  </td>
+                  <td><span>&#163;</span>12,394.34</td>
+                </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button aria-controls="collapseTwo" aria-expanded="true" class="btn btn-link btn-block text-left collapsed"
+                    data-target="#collapseTwo" data-toggle="collapse" type="button">
+              <figure><img alt="consent-img" src="{{'images/my-home.png' | assetsPath}}"></figure>
+              My Home
+            </button>
+          </h2>
+        </div>
+        <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordionExample" id="collapseTwo">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+              <tr>
+                <th></th>
+                <th>Provider</th>
+                <th>Description</th>
+                <th>Balance</th>
+                <th>Payment Amount</th>
+                <th>Next Payment Date</th>
+                <th>Renewal Date</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <figure><img alt="hsbc-icon" src="{{'images/hsbc-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>HSBC</td>
+                <td>Mortgage</td>
+                <td><span>&#163;</span>257,947.23</td>
+                <td><span>&#163;</span>542.12</td>
+                <td>26-Jul-2020</td>
+                <td>20-Feb-2022</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure><img alt="hsbc-icon" src="{{'images/octopus-energy-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>Octopus Energy</td>
+                <td>Energy</td>
+                <td>-</td>
+                <td><span>&#163;</span>21.99</td>
+                <td>31-Jul-2020</td>
+                <td>11-Mar-2021</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure><img alt="hsbc-icon" src="{{'images/ee-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>EE</td>
+                <td>Telephone</td>
+                <td>-</td>
+                <td><span>&#163;</span>30.00</td>
+                <td>01-Aug-2020</td>
+                <td>12-Apr-2021</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure><img alt="hsbc-icon" src="{{'images/brolly-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>Brolly</td>
+                <td>Home Insurance</td>
+                <td>-</td>
+                <td><span>&#163;</span>100.00</td>
+                <td>12-Aug-2020</td>
+                <td>11-Nov-2020</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure><img alt="hsbc-icon" src="{{'images/british-gas-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>British Gas</td>
+                <td>Gas</td>
+                <td>-</td>
+                <td><span>&#163;</span>17.99</td>
+                <td>17-Aug-2020</td>
+                <td>16-Apr-2021</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button aria-controls="collapseThree" aria-expanded="true" class="btn btn-link btn-block text-left collapsed"
+                    data-target="#collapseThree" data-toggle="collapse" type="button">
+              <figure><img alt="consent-img" src="{{'images/my-family.png' | assetsPath}}"></figure>
+              My Family
+            </button>
+          </h2>
+        </div>
+        <div aria-labelledby="headingThree" class="collapse" data-parent="#accordionExample" id="collapseThree">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+              <tr>
+                <th></th>
+                <th>Provider</th>
+                <th>Description</th>
+                <th>Balance</th>
+                <th>Payment Amount</th>
+                <th>Next Payment Date</th>
+                <th>Renewal Date</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <figure><img alt="aviva-icon" src="{{'images/aviva-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>Aviva</td>
+                <td>Life Insurance</td>
+                <td>-</td>
+                <td><span>&#163;</span>102.93</td>
+                <td>22-Jul-2020</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure><img alt="gohenry-icon" src="{{'images/gohenry-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>GoHenry</td>
+                <td>Abdulla</td>
+                <td><span>&#163;</span>27.67</td>
+                <td><span>&#163;</span>7.00</td>
+                <td>31-Jul-2020</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure><img alt="gohenry-icon" src="{{'images/gohenry-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>GoHenry</td>
+                <td>Dania</td>
+                <td><span>&#163;</span>35.41</td>
+                <td><span>&#163;</span>5.00</td>
+                <td>31-Jul-2020</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure><img alt="bupa-icon" src="{{'images/bupa-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>BUPA</td>
+                <td>Health Insurance</td>
+                <td>-</td>
+                <td><span>&#163;</span>100.00</td>
+                <td>03-Aug-2020</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure></figure>
+                </td>
+                <td>St. Georges</td>
+                <td>Education</td>
+                <td>-</td>
+                <td><span>&#163;</span>1343.30</td>
+                <td>07-Aug-2020</td>
+                <td>-</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h2 class="mb-0">
+            <button aria-controls="collapseFour" aria-expanded="true" class="btn btn-link btn-block text-left collapsed"
+                    data-target="#collapseFour" data-toggle="collapse" type="button">
+              <figure><img alt="consent-img" src="{{'images/my-car.png' | assetsPath}}"></figure>
+              My Car
+            </button>
+          </h2>
+        </div>
+        <div aria-labelledby="headingFour" class="collapse" data-parent="#accordionExample" id="collapseFour">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+              <tr>
+                <th></th>
+                <th>Provider</th>
+                <th>Description</th>
+                <th>Balance</th>
+                <th>Payment Amount</th>
+                <th>Next Payment Date</th>
+                <th>Renewal Date</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <figure><img alt="oddle-icon" src="{{'images/oodle-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>Oodle</td>
+                <td>Car Finance</td>
+                <td><span>&#163;</span>26,897.09</td>
+                <td><span>&#163;</span>276.21</td>
+                <td>28-Jul-2020</td>
+                <td>19-May-2021</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure><img alt="cuvva-icon" src="{{'images/cuvva-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>Cuvva</td>
+                <td>Insurance</td>
+                <td><span>&#163;</span>465.26</td>
+                <td><span>&#163;</span>65.14</td>
+                <td>30-Jul-2020</td>
+                <td>13-Apr-2021</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure><img alt="dvla-icon" src="{{'images/dvla-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>DVLA</td>
+                <td>Tax</td>
+                <td>-</td>
+                <td><span>&#163;</span>540.00</td>
+                <td>19-Aug-2020</td>
+                <td>19-Aug-2020</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h2 class="mb-0">
+            <button aria-controls="collapseFive" aria-expanded="true" class="btn btn-link btn-block text-left collapsed"
+                    data-target="#collapseFive" data-toggle="collapse" type="button">
+              <figure><img alt="consent-img" src="{{'images/my-investments.png' | assetsPath}}"></figure>
+              My
+              Investments
+            </button>
+          </h2>
+        </div>
+        <div aria-labelledby="headingFive" class="collapse" data-parent="#accordionExample" id="collapseFive">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+              <tr>
+                <th></th>
+                <th>Provider</th>
+                <th>Description</th>
+                <th>Balance</th>
+                <th>Payment Amount</th>
+                <th>Next Payment Date</th>
+                <th>Renewal Date</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <figure><img alt="yielders-icon" src="{{'images/yielders-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>Yielders</td>
+                <td>Property</td>
+                <td><span>&#163;</span>57,343.75</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure><img alt="wealthify-icon" src="{{'images/wealthify-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>Wealthify</td>
+                <td>Investment ISA</td>
+                <td><span>&#163;</span>12,957.31</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>
+                  <figure><img alt="robnhood-icon" src="{{'images/robnhood-icon.png' | assetsPath}}"></figure>
+                </td>
+                <td>Robinhood</td>
+                <td>BitCoin</td>
+                <td><span>&#163;</span>8,384.99</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>

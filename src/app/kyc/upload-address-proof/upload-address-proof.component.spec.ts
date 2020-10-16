@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { UploadAddressProofComponent } from './upload-address-proof.component';
+import {UploadAddressProofComponent} from './upload-address-proof.component';
 
 describe('UploadAddressProofComponent', () => {
   let component: UploadAddressProofComponent;
@@ -8,9 +8,9 @@ describe('UploadAddressProofComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UploadAddressProofComponent ]
+      declarations: [UploadAddressProofComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

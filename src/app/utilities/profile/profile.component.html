@@ -1,108 +1,109 @@
- <div class="utilities-type">
-      <div class="profile">
-        <div class="user-img"><img src="{{'images/user-img.png'  | assetsPath}}" alt="user"></div>
-        <p>Carolina</p>
-        <p>carolina@gmail.com</p>
-      </div>
-      <div class="type-box">
-        <h6>Energy Type</h6>
-        <div class="custom-radios">
-          <div>
-            <input type="radio" id="color-1" name="color" value="color-1" checked>
-            <label for="color-1">
+<div class="utilities-type">
+  <div class="profile">
+    <div class="user-img"><img alt="user" src="{{'images/user-img.png'  | assetsPath}}"></div>
+    <p>Carolina</p>
+    <p>carolina@gmail.com</p>
+  </div>
+  <div class="type-box">
+    <h6>Energy Type</h6>
+    <div class="custom-radios">
+      <div>
+        <input checked id="color-1" name="color" type="radio" value="color-1">
+        <label for="color-1">
               <span>
                 Gas & Electricity
               </span>
-            </label>
-          </div>
-          <div>
-            <input type="radio" id="color-2" name="color" value="color-2">
-            <label for="color-2">
+        </label>
+      </div>
+      <div>
+        <input id="color-2" name="color" type="radio" value="color-2">
+        <label for="color-2">
               <span>
                 Electricity Only
               </span>
-            </label>
-          </div>
-        </div>
+        </label>
       </div>
-      <div class="type-box">
-        <h6>Meter Type</h6>
-        <div class="custom-radios">
-          <div>
-            <input type="radio" id="color-3" name="color" value="color-3" checked>
-            <label for="color-3">
+    </div>
+  </div>
+  <div class="type-box">
+    <h6>Meter Type</h6>
+    <div class="custom-radios">
+      <div>
+        <input checked id="color-3" name="color" type="radio" value="color-3">
+        <label for="color-3">
               <span>
                 Standard
               </span>
-            </label>
-          </div>
-          <div>
-            <input type="radio" id="color-4" name="color" value="color-4">
-            <label for="color-4">
+        </label>
+      </div>
+      <div>
+        <input id="color-4" name="color" type="radio" value="color-4">
+        <label for="color-4">
               <span>
                 Economy 7
               </span>
-            </label>
-          </div>
-          <div>
-            <input type="radio" id="color-5" name="color" value="color-5">
-            <label for="color-5">
+        </label>
+      </div>
+      <div>
+        <input id="color-5" name="color" type="radio" value="color-5">
+        <label for="color-5">
               <span>
                 Smart
               </span>
-            </label>
-          </div>
-        </div>
+        </label>
       </div>
-      <div class="type-box">
-        <h6>Energy Usage</h6>
-        <div class="custom-radios">
-          <div>
-            <input type="radio" id="color-6" name="color" value="color-6" checked>
-            <label for="color-6">
+    </div>
+  </div>
+  <div class="type-box">
+    <h6>Energy Usage</h6>
+    <div class="custom-radios">
+      <div>
+        <input checked id="color-6" name="color" type="radio" value="color-6">
+        <label for="color-6">
               <span>
                 High
               </span>
-            </label>
-          </div>
-          <div>
-            <input type="radio" id="color-7" name="color" value="color-7">
-            <label for="color-7">
+        </label>
+      </div>
+      <div>
+        <input id="color-7" name="color" type="radio" value="color-7">
+        <label for="color-7">
               <span>
                 Medium
               </span>
-            </label>
-          </div>
-          <div>
-            <input type="radio" id="color-8" name="color" value="color-8">
-            <label for="color-8">
+        </label>
+      </div>
+      <div>
+        <input id="color-8" name="color" type="radio" value="color-8">
+        <label for="color-8">
               <span>
                 Low
               </span>
-            </label>
-          </div>
-          <div>
-            <input type="radio" id="color-9" name="color" value="color-9">
-            <label for="color-9">
+        </label>
+      </div>
+      <div>
+        <input id="color-9" name="color" type="radio" value="color-9">
+        <label for="color-9">
               <span>
                 Actual
               </span>
-            </label>
-          </div>
-        </div>
+        </label>
       </div>
-      <ul>
-        <li>Typically, high consumption homes:</li>
-        <li>- Are larger (4+ bedrooms)</li>
-        <li>- May be older (pre 1970s)</li>
-        <li>- Need a lot of heating</li>
-      </ul>
-      <ul>
-        <li>Approx. usage for a high household:</li>
-        <li>- 4300 kWh of electricity</li>
-        <li>- 17000 kWh of gas</li>
-      </ul>
-      <form>
-        <input type="button" href="#" class="next-btn" value="Confirm" data-toggle="modal" data-target="#allow" (click)= "next()">
-      </form>
     </div>
+  </div>
+  <ul>
+    <li>Typically, high consumption homes:</li>
+    <li>- Are larger (4+ bedrooms)</li>
+    <li>- May be older (pre 1970s)</li>
+    <li>- Need a lot of heating</li>
+  </ul>
+  <ul>
+    <li>Approx. usage for a high household:</li>
+    <li>- 4300 kWh of electricity</li>
+    <li>- 17000 kWh of gas</li>
+  </ul>
+  <form>
+    <input (click)="next()" class="next-btn" data-target="#allow" data-toggle="modal" href="#" type="button"
+           value="Confirm">
+  </form>
+</div>

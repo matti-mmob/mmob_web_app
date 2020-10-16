@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Constant } from 'src/app/shared/constant/constant';
-import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Constant} from 'src/app/shared/constant/constant';
+import {ConfirmationPopupComponent} from 'src/app/shared/confirmation-popup/confirmation-popup.component';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-merchants-home',
@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
 export class MerchantsHomeComponent implements OnInit {
 
   constructor(private modalService: NgbModal,
-    private route: Router) { }
+              private route: Router) {
+  }
 
   ngOnInit(): void {
   }

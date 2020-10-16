@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { RequestBankDataComponent } from './request-bank-data.component';
+import {RequestBankDataComponent} from './request-bank-data.component';
 
 describe('RequestBankDataComponent', () => {
   let component: RequestBankDataComponent;
@@ -8,9 +8,9 @@ describe('RequestBankDataComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RequestBankDataComponent ]
+      declarations: [RequestBankDataComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,6 +1,5 @@
-<!--Starts term and condition window-->
 <div class="align-center setup-section">
-  <figure><img src="{{'images/test.png' | assetsPath}}" alt="test-img"></figure>
+  <figure><img alt="test-img" src="{{'images/test.png' | assetsPath}}"></figure>
   <h5><strong>Terms and Conditions</strong></h5>
   <h6>mmob collects your data to provide you with a more personal way to improve your finances- more bills to
     investments</h6>
@@ -22,17 +21,16 @@
         <p><a href="#">Read full Privacy policy</a></p>
       </div>
       <div class="check-box">
-        <input type="checkbox" formControlName="age" id="html">
+        <input formControlName="age" id="html" type="checkbox">
         <label for="html">I am over 18 years old</label>
         <app-show-errors [control]="termConditionForm.controls.age"></app-show-errors>
       </div>
       <div class="check-box">
-        <input type="checkbox" formControlName="termAndCondition" id="css">
+        <input formControlName="termAndCondition" id="css" type="checkbox">
         <label for="css">Accept T&Cs</label>
         <app-show-errors [control]="termConditionForm.controls.termAndCondition"></app-show-errors>
       </div>
-      <input type="button" class="next-btn" value="Continue" (click)="onNext()">
+      <input (click)="onNext()" class="next-btn" type="button" value="Continue">
     </div>
   </form>
 </div>
-<!--End-->

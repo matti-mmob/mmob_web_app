@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import {Injectable} from '@angular/core';
+import {NavigationEnd, Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,8 @@ export class PreviousRouteService {
       if (event instanceof NavigationEnd) {
         this.previousUrl = this.currentUrl;
         this.currentUrl = event.url;
-      };
+      }
+      ;
     });
   }
 

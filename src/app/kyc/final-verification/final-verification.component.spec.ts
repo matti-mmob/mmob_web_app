@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FinalVerificationComponent } from './final-verification.component';
+import {FinalVerificationComponent} from './final-verification.component';
 
 describe('FinalVerificationComponent', () => {
   let component: FinalVerificationComponent;
@@ -8,9 +8,9 @@ describe('FinalVerificationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FinalVerificationComponent ]
+      declarations: [FinalVerificationComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

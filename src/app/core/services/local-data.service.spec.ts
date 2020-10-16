@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { LocalDataService } from './local-data.service';
+import {LocalDataService} from './local-data.service';
 
 describe('LocalDataService', () => {
   let service: LocalDataService;

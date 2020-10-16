@@ -1,18 +1,16 @@
-<!--Starts email window-->
 <div class="align-center setup-section">
-    <figure><img src="{{'images/email.png' | assetsPath}}" alt="pass-img"></figure>
-    <h5><strong>What's your e-mail address?</strong></h5>
-	<div class="setup-box">
+  <figure><img alt="pass-img" src="{{'images/email.png' | assetsPath}}"></figure>
+  <h5><strong>What's your e-mail address?</strong></h5>
+  <div class="setup-box">
     <p>To create your account not to send you spam (we promise!)</p>
     <form [formGroup]="emailForm">
-            <div class="form-group">
-                <i *ngIf="emailForm.controls.email.valid"><img src="{{'images/tick-icon.png' | assetsPath}}"
-                        alt="tick-icon"></i>
-                <input type="text" formControlName="email" class="form-control">
-                <app-show-errors [control]="emailForm.controls.email"></app-show-errors>
-            </div>
-            <input type="button" class="next-btn" value="Continue"  (click)="onNext()">
+      <div class="form-group">
+        <i *ngIf="emailForm.controls.email.valid"><img alt="tick-icon"
+                                                       src="{{'images/tick-icon.png' | assetsPath}}"></i>
+        <input class="form-control" formControlName="email" type="text">
+        <app-show-errors [control]="emailForm.controls.email"></app-show-errors>
+      </div>
+      <input (click)="onNext()" class="next-btn" type="button" value="Continue">
     </form>
-	</div>
+  </div>
 </div>
-<!--End-->

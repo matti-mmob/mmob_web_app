@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { AssetsPathPipe } from 'src/app/shared/pipes/assets-path.pipe';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { FieldsValidateService } from 'src/app/service/fields-validate.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
+import {Component, OnInit} from '@angular/core';
+import {AssetsPathPipe} from 'src/app/shared/pipes/assets-path.pipe';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {FieldsValidateService} from 'src/app/service/fields-validate.service';
+import {Router} from '@angular/router';
+import {NavigationUrl} from 'src/app/shared/constant/navigation-url.constant';
 
 @Component({
   selector: 'app-banks',
@@ -18,7 +18,8 @@ export class BanksComponent implements OnInit {
     private assetsPipe: AssetsPathPipe,
     private formBuilder: FormBuilder,
     private fieldsValidateService: FieldsValidateService,
-    private route: Router) { }
+    private route: Router) {
+  }
 
   ngOnInit() {
     this.initializeForm();
@@ -28,18 +29,10 @@ export class BanksComponent implements OnInit {
    *  This function will used to Prepare Form Fields.
    */
   initializeForm() {
-    this.banksDetailForm = this.formBuilder.group({
-      // age: ['', Validators.required],
-      // termAndCondition: ['', Validators.required],
-    });
+    this.banksDetailForm = this.formBuilder.group({});
   }
   //this function validate form and redirect to next step
   onNext() {
-    //if (this.banksDetailForm.invalid) {
-    //  return this.fieldsValidateService.validateAllFormFields(this.banksDetailForm);
-    // }
-    // else {
-    this.route.navigate([ '/getting-setup/request-bank-data']);
-    // }
+    this.route.navigate(['/getting-setup/request-bank-data']);
   }
 }

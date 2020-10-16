@@ -1,44 +1,44 @@
 .kyc {
-	text-align: center;
-	margin: 58px 0 15px;
+    text-align: center;
+    margin: 58px 0 15px;
 }
 
 .id-table {
-	text-align: left;
-	width: 80%;
-	margin: 40px auto 0;
+    text-align: left;
+    width: 80%;
+    margin: 40px auto 0;
 }
 
 .id-table tr td:nth-child(2) {
-	width: 93%;
+    width: 93%;
 }
 
 .id-table tr td:first-child {
-	width: 5%;
+    width: 5%;
 }
 
 .id-table tr td:last-child {
-	width: 2%;
+    width: 2%;
 }
 
 .id-table td {
-	padding: 8px 5px;
+    padding: 8px 5px;
 }
 
 .id-table td h3 {
-	font-size: 14px;
-	font-weight: 500;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .id-table tr td figure {
-	margin: 0;
-	width: 20px;
+    margin: 0;
+    width: 20px;
 }
 
 .id-table tr:first-child {
-	border-top: 1px solid #cecfd0;
+    border-top: 1px solid #cecfd0;
 }
 
 .id-table tr td a {
-	color: #000;
+    color: #000;
 }

@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AmlOnboardingComponent } from './aml-onboarding.component';
+import {AmlOnboardingComponent} from './aml-onboarding.component';
 
 describe('AmlOnboardingComponent', () => {
   let component: AmlOnboardingComponent;
@@ -8,9 +8,9 @@ describe('AmlOnboardingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AmlOnboardingComponent ]
+      declarations: [AmlOnboardingComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

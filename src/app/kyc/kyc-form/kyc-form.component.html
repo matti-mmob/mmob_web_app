@@ -1,18 +1,17 @@
 <div class="main">
   <div class="wrapper">
-    <!-- <a href="#" class="back-butn">&lt;</a> -->
     <div class="aml-form">
       <form>
         <div class="form-group row">
           <label class="col-12 col-form-label">First name:</label>
           <div class="col-12">
-            <input type="text" placeholder="Farah">
+            <input placeholder="Farah" type="text">
           </div>
         </div>
         <div class="form-group row">
           <label class="col-12 col-form-label">Surname:</label>
           <div class="col-12">
-            <input type="text" placeholder="Khan">
+            <input placeholder="Khan" type="text">
           </div>
         </div>
         <div class="form-group row">
@@ -51,7 +50,7 @@
               <option value="30">30</option>
               <option value="31">30</option>
             </select>
-            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <select class="custom-select mr-sm-2">
               <option value="January">January</option>
               <option value="Fabruary">Fabruary</option>
               <option value="March">March</option>
@@ -65,7 +64,7 @@
               <option value="November">November</option>
               <option value="December">December</option>
             </select>
-            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <select class="custom-select mr-sm-2">
               <option value="">1990</option>
               <option value="">1991</option>
               <option value="">1992</option>
@@ -105,13 +104,13 @@
         <div class="form-group row justify-content-center">
           <label class="col-12 col-form-label">Postcode:</label>
           <div class="col-8 col-sm-5">
-            <input type="text" placeholder="E14 5AB">
+            <input placeholder="E14 5AB" type="text">
           </div>
         </div>
         <div class="form-group row justify-content-center">
           <label class="col-12 col-form-label">Select address:</label>
           <div class="col-sm-7">
-            <select size="2" class="custom-select add">
+            <select class="custom-select add" size="2">
               <option>01 Canada Square, Canary Wharf</option>
               <option>02 Canada Square, Canary Wharf</option>
               <option>03 Canada Square, Canary Wharf</option>
@@ -126,7 +125,7 @@
             </select>
           </div>
         </div>
-        <button type="button" (click)="onNext()">Confirm</button>
+        <button (click)="onNext()" type="button">Confirm</button>
       </form>
     </div>
   </div>

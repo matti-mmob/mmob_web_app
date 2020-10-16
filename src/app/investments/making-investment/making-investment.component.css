@@ -1,105 +1,105 @@
-.making-investment{
-  max-width: 760px;
-  margin: 52px auto 15px;
-  width: 100%;
-text-align: center;
+.making-investment {
+    max-width: 760px;
+    margin: 52px auto 15px;
+    width: 100%;
+    text-align: center;
 }
 .making-investment .brand-box:first-of-type {
-  border: 1px solid #96d3bd;
+    border: 1px solid #96d3bd;
 }
 .making-investment .brand-box:first-of-type .time-box {
-  background: #96d3bd;
+    background: #96d3bd;
 }
 .making-investment .brand-box:nth-of-type(2) {
-  border: 1px solid #778fa8;
+    border: 1px solid #778fa8;
 }
 .making-investment .brand-box:nth-of-type(2) .time-box {
-  background: #778fa8;
+    background: #778fa8;
 }
 .making-investment .brand-box:last-of-type {
-  border: 1px solid #b7de8c;
+    border: 1px solid #b7de8c;
 }
 .making-investment .brand-box:last-of-type .time-box {
-  background: #b7de8c;
+    background: #b7de8c;
 }
 /* copied utilities css for getting correct size*/
 .Utilitie,
 .insurance-sec {
-  max-width: 760px;
-  margin: auto;
-  width: 100%;
-  text-align: center;
+    max-width: 760px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
 }
 .row.justify-content-between.px-1 {
     margin: 0;
     padding: 0 !important;
 }
 .Utilitie-search-box {
-  border: 1px solid grey;
-  border-radius: 20px;
-  box-shadow: none;
-  outline: none;
-  background: #efefef url(src/assets/images/search-icon.png) no-repeat scroll right center;
-  background-size: 30px;
-  cursor: pointer;
-  width: 70%;
-  padding: 2px 30px 2px 10px;
-  margin-top: 20px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: none;
+    outline: none;
+    background: #efefef url(src/assets/images/search-icon.png) no-repeat scroll right center;
+    background-size: 30px;
+    cursor: pointer;
+    width: 70%;
+    padding: 2px 30px 2px 10px;
+    margin-top: 20px;
 }
 .time-box {
-  padding: 5px 15px;
-  border-radius: 20px;
-  max-width: 120px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ccc;
-  height:34px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    max-width: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ccc;
+    height: 34px;
 }
 .brand-box {
-  padding: 10px 25px;
-  margin: 20px 0px;
-  border: 1px solid gray;
-  border-radius: 20px;
+    padding: 10px 25px;
+    margin: 20px 0px;
+    border: 1px solid gray;
+    border-radius: 20px;
 }
 .time-box img {
-  width: 20px;
+    width: 20px;
 }
 .time-box p {
-  margin: 0;
-  color: #fff;
-  font-size: 14px;
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
 }
 .logo-box {
-  width: 100px;
-  text-align: left;
+    width: 100px;
+    text-align: left;
 }
 .utilitie-dis {
-  width: 100%;
-  max-width: 520px;
-  text-align: left;
-  font-size: 14px;
-  text-transform: capitalize;
-  margin: 5px 0 0;
+    width: 100%;
+    max-width: 520px;
+    text-align: left;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin: 5px 0 0;
 }
 .Utilitie .brand-box:nth-of-type(2) {
-  border: 1px solid #93d8d5;
+    border: 1px solid #93d8d5;
 }
 .Utilitie .brand-box:first-of-type {
-  border: 1px solid #8d2fb9;
+    border: 1px solid #8d2fb9;
 }
 .Utilitie .brand-box:last-of-type {
-  border: 1px solid #8af181;
+    border: 1px solid #8af181;
 }
 
 .Utilitie .brand-box:nth-of-type(2) .time-box {
-  background-color: #93d8d5;
+    background-color: #93d8d5;
 }
 .Utilitie .brand-box:first-of-type .time-box {
-  background-color: #8d2fb9;
+    background-color: #8d2fb9;
 }
 .Utilitie .brand-box:last-of-type .time-box {
-  background-color: #8af181;
+    background-color: #8af181;
 }
 

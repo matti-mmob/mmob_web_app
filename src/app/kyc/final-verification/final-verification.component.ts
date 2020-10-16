@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-final-verification',
@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
 })
 export class FinalVerificationComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router) {
+  }
 
   ngOnInit(): void {
   }
 //this function validate form and redirect to next step
-onNext() {
-  this.route.navigate(['/dashboard']);
-}
+  onNext() {
+    this.route.navigate(['/dashboard']);
+  }
 }

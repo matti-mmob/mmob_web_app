@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ExploringMarketPlaceComponent } from './exploring-market-place/exploring-market-place.component';
-import { SharedModule } from '../shared/shared.module';
-import { LayoutModule } from '../layout/layout.module';
-import { MarketPlaceRoutingModule } from './market-place-routing.module';
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ExploringMarketPlaceComponent} from './exploring-market-place/exploring-market-place.component';
+import {SharedModule} from '../shared/shared.module';
+import {LayoutModule} from '../layout/layout.module';
+import {MarketPlaceRoutingModule} from './market-place-routing.module';
 
 
 @NgModule({
@@ -16,4 +15,5 @@ import { MarketPlaceRoutingModule } from './market-place-routing.module';
     MarketPlaceRoutingModule
   ]
 })
-export class MarketPlaceModule { }
+export class MarketPlaceModule {
+}

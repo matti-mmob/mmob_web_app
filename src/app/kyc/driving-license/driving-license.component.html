@@ -1,19 +1,18 @@
-
-    <div class="upload-id-submit">
-      <figure><img src="{{'images/identity.png' | assetsPath}}" alt="identity icon"></figure>
-      <h5><strong>Driving license</strong></h5>
-      <p>united kingdom</p>
-      <div class="row justify-content-around py-4">
-        <div class="col-md align-self-center">
-          <h5><strong>Front</strong></h5> <img src="{{'images/driving-license.png' | assetsPath}}"
-            alt="driving license">
-        </div>
-        <div class="col-md align-self-center">
-          <h5><strong>Back</strong></h5><img src="{{'images/driving-license-1.png' | assetsPath}}"
-            alt="driving license">
-        </div>
-      </div>
-      <form>
-        <button class="file-upload-btn" type="submit" (click)="onNext()">Submit</button>
-      </form>
+<div class="upload-id-submit">
+  <figure><img alt="identity icon" src="{{'images/identity.png' | assetsPath}}"></figure>
+  <h5><strong>Driving license</strong></h5>
+  <p>united kingdom</p>
+  <div class="row justify-content-around py-4">
+    <div class="col-md align-self-center">
+      <h5><strong>Front</strong></h5> <img alt="driving license"
+                                           src="{{'images/driving-license.png' | assetsPath}}">
     </div>
+    <div class="col-md align-self-center">
+      <h5><strong>Back</strong></h5><img alt="driving license"
+                                         src="{{'images/driving-license-1.png' | assetsPath}}">
+    </div>
+  </div>
+  <form>
+    <button (click)="onNext()" class="file-upload-btn" type="submit">Submit</button>
+  </form>
+</div>

@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { AssetsPathPipe } from 'src/app/shared/pipes/assets-path.pipe';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { FieldsValidateService } from 'src/app/service/fields-validate.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
-import { CustomValidators } from 'src/app/shared/validators/custom-validators';
-import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Constant } from 'src/app/shared/constant/constant';
+import {Component, OnInit} from '@angular/core';
+import {AssetsPathPipe} from 'src/app/shared/pipes/assets-path.pipe';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {FieldsValidateService} from 'src/app/service/fields-validate.service';
+import {Router} from '@angular/router';
+import {NavigationUrl} from 'src/app/shared/constant/navigation-url.constant';
+import {ConfirmationPopupComponent} from 'src/app/shared/confirmation-popup/confirmation-popup.component';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {Constant} from 'src/app/shared/constant/constant';
 
 @Component({
   selector: 'app-insurance-home',
@@ -23,7 +22,8 @@ export class InsuranceHomeComponent implements OnInit {
     private formBuilder: FormBuilder,
     private fieldsValidateService: FieldsValidateService,
     private route: Router,
-    private modalService: NgbModal) { }
+    private modalService: NgbModal) {
+  }
 
   ngOnInit() {
     this.initializeForm();
@@ -33,8 +33,7 @@ export class InsuranceHomeComponent implements OnInit {
    *  This function will used to Prepare Form Fields.
    */
   initializeForm() {
-    this.insurance = this.formBuilder.group({
-    });
+    this.insurance = this.formBuilder.group({});
   }
   //this function validate form and redirect to next step
   onNext() {

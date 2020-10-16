@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import {Component, Input, OnInit} from '@angular/core';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-iframe',
@@ -12,7 +11,8 @@ export class IframeComponent implements OnInit {
   @Input() public url: string = "set default url";
   @Input() public urlSafe: SafeResourceUrl;
 
-  constructor(public sanitizer: DomSanitizer) { }
+  constructor(public sanitizer: DomSanitizer) {
+  }
 
   ngOnInit() {
     this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);

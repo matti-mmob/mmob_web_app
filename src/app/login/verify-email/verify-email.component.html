@@ -1,17 +1,17 @@
 <div class="align-center login forgot verify">
-	<a href="reset-password.html" class="back-btn"><</a>
-  <div class="site-logo"><img src="{{'images/logo.png' | assetsPath}}" alt="logo"></div>
-	  <h3>Verify Your Email</h3>
-      <form [formGroup]="verifyEmailForm">
-	  <h5>Enter the 4 digit code sent to your <br>email</h5>
-		<div class="form-group">
-			<input id="first" class="form-control" type="text" onkeyup="movetoNext(this, 'second')" maxlength="1">
-			<input id="second" class="form-control" type="text" onkeyup="movetoNext(this, 'third')" maxlength="1">
-			<input id="third" class="form-control" type="text" onkeyup="movetoNext(this, 'last')" maxlength="1">
-			<input id="last" class="form-control" type="text" maxlength = "1">
-		</div>
-		<p><a class="resend" href="#">resend code</a></p>
-		<input type="button" value="confirm"  (click)="onNext()">
-	  </form>
+  <a class="back-btn" href="reset-password.html"><</a>
+  <div class="site-logo"><img alt="logo" src="{{'images/logo.png' | assetsPath}}"></div>
+  <h3>Verify Your Email</h3>
+  <form [formGroup]="verifyEmailForm">
+    <h5>Enter the 4 digit code sent to your <br>email</h5>
+    <div class="form-group">
+      <input class="form-control" id="first" maxlength="1" onkeyup="movetoNext(this, 'second')" type="text">
+      <input class="form-control" id="second" maxlength="1" onkeyup="movetoNext(this, 'third')" type="text">
+      <input class="form-control" id="third" maxlength="1" onkeyup="movetoNext(this, 'last')" type="text">
+      <input class="form-control" id="last" maxlength="1" type="text">
+    </div>
+    <p><a class="resend" href="#">resend code</a></p>
+    <input (click)="onNext()" type="button" value="confirm">
+  </form>
 </div>
 

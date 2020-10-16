@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Constant } from 'src/app/shared/constant/constant';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Constant} from 'src/app/shared/constant/constant';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -15,9 +15,11 @@ export class SidebarComponent implements OnInit {
   menuToggleClass: any = '';
   menuToggle: boolean = false;
   menuToggleIconClass: any = '';
-  constructor(private route: Router) { }
+  constructor(private route: Router) {
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
 
   /*  This function is used to show/hide More menu.
    */

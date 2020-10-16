@@ -1,12 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { AssetsPathPipe } from 'src/app/shared/pipes/assets-path.pipe';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { FieldsValidateService } from 'src/app/service/fields-validate.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
-import { Constant } from 'src/app/shared/constant/constant';
-import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {Component, OnInit} from '@angular/core';
+import {AssetsPathPipe} from 'src/app/shared/pipes/assets-path.pipe';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FieldsValidateService} from 'src/app/service/fields-validate.service';
+import {Router} from '@angular/router';
+import {NavigationUrl} from 'src/app/shared/constant/navigation-url.constant';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-terms-and-conditions',
@@ -15,14 +13,15 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class TermsAndConditionsComponent implements OnInit {
   termConditionForm: FormGroup;
-  //Navigation Url Constanst
+  //Navigation Url Constants
   navigationUrl = NavigationUrl;
   constructor(
     private assetsPipe: AssetsPathPipe,
     private formBuilder: FormBuilder,
     private fieldsValidateService: FieldsValidateService,
     private route: Router,
-    private modalService: NgbModal) { }
+    private modalService: NgbModal) {
+  }
 
   ngOnInit() {
     this.initializeForm();
@@ -42,11 +41,9 @@ export class TermsAndConditionsComponent implements OnInit {
     if (this.termConditionForm.invalid) {
       alert("Both checboxes are requried");
       return this.fieldsValidateService.validateAllFormFields(this.termConditionForm);
-     
-    }
-    else {
-      this.route.navigate([ '/getting-setup/banks']);
+
+    } else {
+      this.route.navigate(['/getting-setup/banks']);
     }
   }
-
 }

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import * as tutorialImages from '../../shared/localData/tutorialImages.json';
 
 @Injectable({
@@ -6,7 +6,8 @@ import * as tutorialImages from '../../shared/localData/tutorialImages.json';
 })
 export class LocalDataService {
   public images = [];
-  constructor() { }
+  constructor() {
+  }
 
   // this function is use to get all images of tutorial page
   getTutorialImages() {

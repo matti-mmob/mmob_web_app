@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AddressProofComponent } from './address-proof.component';
+import {AddressProofComponent} from './address-proof.component';
 
 describe('AddressProofComponent', () => {
   let component: AddressProofComponent;
@@ -8,9 +8,9 @@ describe('AddressProofComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddressProofComponent ]
+      declarations: [AddressProofComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

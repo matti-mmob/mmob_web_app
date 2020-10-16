@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { AssetsPathPipe } from 'src/app/shared/pipes/assets-path.pipe';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { FieldsValidateService } from 'src/app/service/fields-validate.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
+import {Component, OnInit} from '@angular/core';
+import {AssetsPathPipe} from 'src/app/shared/pipes/assets-path.pipe';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FieldsValidateService} from 'src/app/service/fields-validate.service';
+import {Router} from '@angular/router';
+import {NavigationUrl} from 'src/app/shared/constant/navigation-url.constant';
 
 
 @Component({
@@ -19,7 +19,8 @@ export class TwoFactorAuthenticationComponent implements OnInit {
     private assetsPipe: AssetsPathPipe,
     private formBuilder: FormBuilder,
     private fieldsValidateService: FieldsValidateService,
-    private route: Router) { }
+    private route: Router) {
+  }
 
   ngOnInit() {
     this.initializeForm();
@@ -37,8 +38,7 @@ export class TwoFactorAuthenticationComponent implements OnInit {
   onNext() {
     if (this.twoFactorForm.invalid) {
       return this.fieldsValidateService.validateAllFormFields(this.twoFactorForm);
-    }
-    else {
+    } else {
       this.route.navigate(['/' + NavigationUrl.GETTING_SETUP_TREMS_AND_CONDITION]);
     }
   }

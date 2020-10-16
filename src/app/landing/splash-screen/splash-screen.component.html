@@ -1,8 +1,8 @@
 <div class="join-memebers">
-  <div class="site-logo"><img src="{{ 'images/logo.png' | assetsPath}}" alt="logo"></div>
+  <div class="site-logo"><img alt="logo" src="{{ 'images/logo.png' | assetsPath}}"></div>
   <h3>The one-stop shop for your Finances.</h3>
   <div class="button-set">
-    <a href="javascript:void(0)" class="click-button" (click)="joinMmob()">Join the mmob</a>
-    <a href="javascript:void(0)" class="click-button bg-alt" (click)="alreadyMember()">Already a member</a>
+    <a (click)="joinMmob()" class="click-button" href="javascript:void(0)">Join the mmob</a>
+    <a (click)="alreadyMember()" class="click-button bg-alt" href="javascript:void(0)">Already a member</a>
   </div>
 </div>

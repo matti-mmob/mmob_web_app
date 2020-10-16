@@ -1,16 +1,14 @@
-<!--Starts mobile window-->
 <div class="align-center setup-section">
-  <figure><img src="{{'images/kyc.png' | assetsPath}}" alt="kyc-img"></figure>
+  <figure><img alt="kyc-img" src="{{'images/kyc.png' | assetsPath}}"></figure>
   <h5><strong>Enter your Mobile Number</strong></h5>
   <div class="setup-box">
-  <p>Please enter your phone number for <span>two factor authentication.</span></p>
-  <form [formGroup]="mobileForm">
+    <p>Please enter your phone number for <span>two factor authentication.</span></p>
+    <form [formGroup]="mobileForm">
       <div class="form-group">
-        <input type="text" formControlName="mobile" class="form-control">
+        <input class="form-control" formControlName="mobile" type="text">
         <app-show-errors [control]="mobileForm.controls.mobile"></app-show-errors>
       </div>
-      <input type="button" class="next-btn" value="Confirm" (click)="onNext()">
-  </form>
+      <input (click)="onNext()" class="next-btn" type="button" value="Confirm">
+    </form>
   </div>
 </div>
-<!--End-->

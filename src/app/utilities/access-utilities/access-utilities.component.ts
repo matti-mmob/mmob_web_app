@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Router } from '@angular/router';
-import { PreviousRouteService } from 'src/app/service/previous-route.service';
-import { Constant } from 'src/app/shared/constant/constant';
+import {Component, OnInit} from '@angular/core';
+import {ConfirmationPopupComponent} from 'src/app/shared/confirmation-popup/confirmation-popup.component';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {Router} from '@angular/router';
+import {PreviousRouteService} from 'src/app/service/previous-route.service';
+import {Constant} from 'src/app/shared/constant/constant';
 
 
 @Component({
@@ -12,8 +12,8 @@ import { Constant } from 'src/app/shared/constant/constant';
   styleUrls: ['./access-utilities.component.css']
 })
 export class AccessUtilitiesComponent implements OnInit {
-  private previousUrl: string = undefined;
   constant = Constant;
+  private previousUrl: string = undefined;
   constructor(private modalService: NgbModal, private previousRouteService: PreviousRouteService, private route: Router) {
   }
 

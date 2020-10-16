@@ -1,56 +1,54 @@
-/************************************* AML Onboarding D 01 starts here ***********************************************/
-
 .aml-form {
-	max-width: 500px;
-	width: 100%;
-	margin: auto;
-	text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
 }
 
 .aml-form input {
-	width: 100%;
-	border: 1px solid #c697dc;
-	padding: 10px;
-	text-align: center;
-	border-radius: 10px;
+    width: 100%;
+    border: 1px solid #c697dc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .aml-form select {
-	border: 1px solid #c697dc;
+    border: 1px solid #c697dc;
 }
 
 .aml-form button {
-	background: #00008b;
-	color: white;
-	padding: 15px;
-	width: 70%;
-	margin: 10px auto;
-	border: none;
-	border-radius: 5px;
+    background: #00008b;
+    color: white;
+    padding: 15px;
+    width: 70%;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
 }
 
 .aml-form button:hover {
-	background: #b5b5ff;
-	color: #ffffff;
-	cursor: pointer;
+    background: #b5b5ff;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 .aml-form form .add {
-	height: 100px;
-	background: none;
+    height: 100px;
+    background: none;
 }
 
 .back-butn {
-	padding: 4px 15px;
-	color: black;
-	font-size: 32px;
+    padding: 4px 15px;
+    color: black;
+    font-size: 32px;
 }
 
 .back-butn:hover {
-	background: #00008b;
-	color: white;
+    background: #00008b;
+    color: white;
 }
 select.custom-select {
     width: auto;
-	box-shadow: none;
+    box-shadow: none;
 }

@@ -1,19 +1,20 @@
-    <div class="upload-address">
-      <figure><img src="{{'images/backup.png' | assetsPath}}" alt="backup icon"></figure>
-      <h5><strong>Upload a photo of your proof of address</strong></h5>
-      <form>
-        <div class="image-upload-wrap">
-          <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-          <div class="drag-text">
-            <p>Please upload a photo of your proof of address ensuring</p>
-            <p>the name and address are visible (e.g Bank Statement, Utility bill)</p>
-          </div>
-        </div>
-        <div class="file-upload-content">
-          <img class="file-upload-image" src="#" alt="your image" />
-        </div>
-        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Choose a file
-          to upload</button>
-        <button class="file-upload-btn" type="submit" (click)="onNext()">Submit</button>
-      </form>
+<div class="upload-address">
+  <figure><img alt="backup icon" src="{{'images/backup.png' | assetsPath}}"></figure>
+  <h5><strong>Upload a photo of your proof of address</strong></h5>
+  <form>
+    <div class="image-upload-wrap">
+      <input accept="image/*" class="file-upload-input" onchange="readURL(this);" type='file'/>
+      <div class="drag-text">
+        <p>Please upload a photo of your proof of address ensuring</p>
+        <p>the name and address are visible (e.g Bank Statement, Utility bill)</p>
+      </div>
     </div>
+    <div class="file-upload-content">
+      <img alt="your image" class="file-upload-image" src="#"/>
+    </div>
+    <button class="file-upload-btn" onclick="$('.file-upload-input').trigger( 'click' )" type="button">Choose a file
+      to upload
+    </button>
+    <button (click)="onNext()" class="file-upload-btn" type="submit">Submit</button>
+  </form>
+</div>

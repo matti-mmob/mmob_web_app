@@ -1,27 +1,27 @@
-.upload-form-done{
-	text-align:center;
-	width:100%;
-	max-width:400px;
-	margin:auto;
+.upload-form-done {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
 }
 .upload-form-done p {
-	margin:50px 0px;
+    margin: 50px 0px;
 }
 .file-upload-btn {
-	width: 100%;
-	margin: 0;
-	color: #fff;
-	background: #00008b;
-	border: none;
-	padding: 10px;
-	border-radius: 5px;
-	margin: 20px 0px;
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #00008b;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0px;
 }
 
 .file-upload-btn:hover {
-	background: #b5b5ff;
-	color: #ffffff;
-	cursor: pointer;
+    background: #b5b5ff;
+    color: #ffffff;
+    cursor: pointer;
 }
 .align-center {
     display: flex;
@@ -32,8 +32,8 @@
     width: 100%;
     padding: 15px;
 }
-@media screen and (max-height: 600px){
-.align-center {
-    height: auto;
-}
+@media screen and (max-height: 600px) {
+    .align-center {
+        height: auto;
+    }
 }

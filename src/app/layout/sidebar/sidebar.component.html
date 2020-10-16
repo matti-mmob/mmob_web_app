@@ -1,7 +1,7 @@
 <nav class="sidebar" data-toggle="pill">
   <div class="logo">
-    <a href="javascript:;"><img src="{{'images/logo-alt.png' | assetsPath}}" alt="logo"></a>
-    <div class="rmm-button {{menuToggleIconClass}}" (click)="mobileToggleMenu()">
+    <a href="javascript:;"><img alt="logo" src="{{'images/logo-alt.png' | assetsPath}}"></a>
+    <div (click)="mobileToggleMenu()" class="rmm-button {{menuToggleIconClass}}">
       <span>&nbsp;</span>
       <span>&nbsp;</span>
       <span>&nbsp;</span>
@@ -10,44 +10,51 @@
   <ul class="nav flex-column {{menuToggleClass}}">
     <li class="nav-header active">Menu</li>
     <li class="nav-item">
-      <a class="nav-link active"  (click)="highLightClickedElement($event)"  [routerLink]="['/dashboard']" >
-        <figure><img src="{{'images/star.svg' | assetsPath}}" alt="nav-icon"></figure>Home
+      <a (click)="highLightClickedElement($event)" [routerLink]="['/dashboard']" class="nav-link active">
+        <figure><img alt="nav-icon" src="{{'images/star.svg' | assetsPath}}"></figure>
+        Home
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" (click)="highLightClickedElement($event)" [routerLink]="['/dashboard']">
-        <figure><img src="{{'images/spending.svg' | assetsPath}}" alt="nav-icon"></figure>Spending
+      <a (click)="highLightClickedElement($event)" [routerLink]="['/dashboard']" class="nav-link">
+        <figure><img alt="nav-icon" src="{{'images/spending.svg' | assetsPath}}"></figure>
+        Spending
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" (click)="highLightClickedElement($event)" [routerLink]="['/dashboard']">
-        <figure><img src="{{'images/accounts.svg' | assetsPath}}" alt="nav-icon"></figure>Accounts
+      <a (click)="highLightClickedElement($event)" [routerLink]="['/dashboard']" class="nav-link">
+        <figure><img alt="nav-icon" src="{{'images/accounts.svg' | assetsPath}}"></figure>
+        Accounts
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link"  (click)="highLightClickedElement($event)" [routerLink]="['/marketPlace']">
-        <figure><img src="{{'images/marketplace.svg' | assetsPath}}" alt="nav-icon"></figure>Market Place
+      <a (click)="highLightClickedElement($event)" [routerLink]="['/marketPlace']" class="nav-link">
+        <figure><img alt="nav-icon" src="{{'images/marketplace.svg' | assetsPath}}"></figure>
+        Market Place
       </a>
     </li>
     <div [ngClass]="{'more-items' : !showMoreMenu}">
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <figure><img src="{{'images/accounts.svg' | assetsPath}}" alt="nav-icon"></figure>Lorem Ipsum
+          <figure><img alt="nav-icon" src="{{'images/accounts.svg' | assetsPath}}"></figure>
+          Lorem Ipsum
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <figure><img src="{{'images/marketplace.svg' | assetsPath}}" alt="nav-icon"></figure>Lorem Ipsum
+          <figure><img alt="nav-icon" src="{{'images/marketplace.svg' | assetsPath}}"></figure>
+          Lorem Ipsum
         </a>
       </li>
     </div>
     <li class="nav-item">
       <a (click)="toggleMenu()" class="nav-link show-hide-btn" href="javascript:void(0)">
-        <figure><img src="{{'images/more.svg' | assetsPath}}" alt="nav-icon"></figure>{{buttonLabel}}
+        <figure><img alt="nav-icon" src="{{'images/more.svg' | assetsPath}}"></figure>
+        {{buttonLabel}}
       </a>
     </li>
   </ul>
-  <span class="setting-button" [routerLink]="['../dashboard/consentManagementPortal']">
-    <img src="{{'images/settings.png' | assetsPath}}" alt="settings-icon">
+  <span [routerLink]="['../dashboard/consentManagementPortal']" class="setting-button">
+    <img alt="settings-icon" src="{{'images/settings.png' | assetsPath}}">
   </span>
 </nav>

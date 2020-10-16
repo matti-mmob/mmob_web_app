@@ -1,79 +1,79 @@
 .kyc {
     margin: 58px auto 15px;
 }
-.profile{text-align:center;}
+.profile {
+    text-align: center;
+}
 .user-img {
-	width: 105px;
-	height: 105px;
-	margin: auto;
-	border: 2px solid #442f64;
-	border-radius: 50%;
-	overflow: hidden;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
+    width: 105px;
+    height: 105px;
+    margin: auto;
+    border: 2px solid #442f64;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 .consent-boxes {
     width: 80%;
     margin: 20px auto 0;
-	text-align:center;
+    text-align: center;
 }
 .card-body .spent-amount-breakdown table td {
     border-bottom: 1px solid #eceeef;
 }
 .money-analysis-widget {
-	text-align: center;
-	max-width: 500px;
-	margin: auto;
-	width: 100%;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
 }
 
 .widget-header .widget-img {
-	width: 100px;
-	margin: auto;
+    width: 100px;
+    margin: auto;
 }
 
 .widget-header h1 {
-	font-weight: 700;
-	margin: 10px 0;
+    font-weight: 700;
+    margin: 10px 0;
 }
 .spent-amount-breakdown table {
     width: 95%;
     margin: auto;
 }
 .spent-amount-breakdown table figure {
-	width: 30px;
+    width: 30px;
 }
 
 .spent-amount-breakdown table td h3 {
-	font-size: 16px;
-	text-align: left;
-	color: #000;
-	font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+    color: #000;
+    font-weight: 500;
 }
 
 .spent-amount-breakdown table td p {
-	font-size: 13px;
-	text-align: left;
-	color: #c3c0c0;
+    font-size: 13px;
+    text-align: left;
+    color: #c3c0c0;
 }
 /*****Switch button******/
 .toggle-button-cover {
     position: relative;
-	width:100px;
-	top:-14px;
-	margin:auto;
+    width: 100px;
+    top: -14px;
+    margin: auto;
 }
-.button-cover, .knobs, .layer
-{
+.button-cover, .knobs, .layer {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
 }
-.button
-{
+.button {
     position: relative;
     top: 50%;
     width: 100%;
@@ -81,11 +81,10 @@
     margin: 0px auto 0 auto;
     overflow: hidden;
 }
-.button.r, .button.r .layer
-{
+.button.r, .button.r .layer {
     border-radius: 5px;
-}.checkbox
-{
+}
+.checkbox {
     position: relative;
     width: 100%;
     height: 100%;
@@ -96,28 +95,28 @@
     z-index: 3;
 }
 
-.knobs
-{
+.knobs {
     z-index: 2;
 }
 
-.layer
-{
+.layer {
     width: 100%;
     background-color: #ededed;
     transition: 0.3s ease all;
     z-index: 1;
 }
 
-/* Button 1 */.card-body table td figure {
-    margin:0;
+/* Button 1 */
+.card-body table td figure {
+    margin: 0;
 }
 @media (max-width: 1199px) {
-	.consent-boxes {
-    width: 100%;
-}
+    .consent-boxes {
+        width: 100%;
+    }
 }
 @media (max-width: 767px) {
-.card-body table td figure {
-    width: 20px;
-}}
+    .card-body table td figure {
+        width: 20px;
+    }
+}

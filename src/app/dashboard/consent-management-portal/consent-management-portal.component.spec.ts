@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ConsentManagementPortalComponent } from './consent-management-portal.component';
+import {ConsentManagementPortalComponent} from './consent-management-portal.component';
 
 describe('ConsentManagementPortalComponent', () => {
   let component: ConsentManagementPortalComponent;
@@ -8,9 +8,9 @@ describe('ConsentManagementPortalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConsentManagementPortalComponent ]
+      declarations: [ConsentManagementPortalComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
