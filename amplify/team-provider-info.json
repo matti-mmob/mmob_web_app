@@ -1,0 +1,29 @@
+{
+  "mmobdev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mmob-mmobdev-141243-authRole",
+      "UnauthRoleArn": "arn:aws:iam::347362941137:role/amplify-mmob-mmobdev-141243-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::347362941137:role/amplify-mmob-mmobdev-141243-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-mmob-mmobdev-141243-deployment",
+      "UnauthRoleName": "amplify-mmob-mmobdev-141243-unauthRole",
+      "StackName": "amplify-mmob-mmobdev-141243",
+      "StackId": "arn:aws:cloudformation:eu-west-2:347362941137:stack/amplify-mmob-mmobdev-141243/3b49abc0-12b0-11eb-bccd-02d86b75fc8e",
+      "AmplifyAppId": "d3qvcew8ugbpxp"
+    },
+    "categories": {
+      "function": {
+        "mmobd0149d5eCustomMessage": {
+          "REDIRECTURL": "http://localhost:4200/",
+          "EMAILSUBJECT": "",
+          "EMAILMESSAGE": ""
+        }
+      },
+      "auth": {
+        "mmobd0149d5e": {
+          "hostedUIProviderCreds": "[]"
+        }
+      }
+    }
+  }
+}

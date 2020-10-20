@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {NavigationUrl} from './shared/constant/navigation-url.constant';
+import {AuthGuard} from './shared/guards/auth.guard';
 
 const routes: Routes = [
   {

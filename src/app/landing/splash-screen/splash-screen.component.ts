@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import { Auth } from 'aws-amplify';
 
 @Component({
   selector: 'app-splash-screen',
@@ -18,6 +19,6 @@ export class SplashScreenComponent implements OnInit {
   }
 
   alreadyMember() {
-    this.route.navigate(['login']);
+    Auth.federatedSignIn();
   }
 }

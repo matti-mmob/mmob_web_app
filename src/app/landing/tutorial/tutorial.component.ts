@@ -4,6 +4,7 @@ import {LocalDataService} from 'src/app/core/services/local-data.service';
 import {ConfirmationPopupComponent} from 'src/app/shared/confirmation-popup/confirmation-popup.component';
 import {Constant} from 'src/app/shared/constant/constant';
 import {Router} from '@angular/router';
+import {Auth} from 'aws-amplify';
 
 @Component({
   selector: 'app-tutorial',
@@ -13,6 +14,7 @@ import {Router} from '@angular/router';
 export class TutorialComponent implements OnInit {
   //contains tutorial images
   public images = [];
+
   constructor(private boostrapSliderConfiguration: NgbCarouselConfig,
               private localDataService: LocalDataService, private modalService: NgbModal,
               private route: Router) {
@@ -34,12 +36,14 @@ export class TutorialComponent implements OnInit {
     modalRefForFirstConfirm.componentInstance.secondButtonText = 'Okay';
     modalRefForFirstConfirm.result.then(
       data => {
+        Auth.federatedSignIn();
       },
       () => {
       }
     );
   }
+
   onSkip() {
-    this.route.navigate(['getting-setup']);
+    Auth.federatedSignIn();
   }
 }

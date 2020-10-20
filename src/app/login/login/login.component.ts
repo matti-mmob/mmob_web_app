@@ -6,6 +6,7 @@ import {Router} from '@angular/router';
 import {NavigationUrl} from 'src/app/shared/constant/navigation-url.constant';
 import {CustomValidators} from 'src/app/shared/validators/custom-validators';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { Auth } from 'aws-amplify';
 
 
 @Component({
@@ -40,11 +41,12 @@ export class LoginComponent implements OnInit {
   }
   //this function validate form and redirect to next step
   onNext() {
-    if (this.loginForm.invalid) {
-      return this.fieldsValidateService.validateAllFormFields(this.loginForm);
-    } else {
-      this.route.navigate(['dashboard']);
-    }
+    Auth.federatedSignIn();
+    // if (this.loginForm.invalid) {
+    //   return this.fieldsValidateService.validateAllFormFields(this.loginForm);
+    // } else {
+    //   this.route.navigate(['dashboard']);
+    // }
   }
 
 }

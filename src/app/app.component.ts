@@ -1,4 +1,7 @@
 import {Component} from '@angular/core';
+import {Amplify} from 'aws-amplify';
+import config from '../aws-exports';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,8 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'MMOB | Dashboard';
+
+  constructor() {
+    Amplify.configure(config);
+  }
 }
