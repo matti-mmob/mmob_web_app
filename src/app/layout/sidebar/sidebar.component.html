@@ -15,24 +15,25 @@
         Home
       </a>
     </li>
-    <li class="nav-item">
-      <a (click)="highLightClickedElement($event)" [routerLink]="['/dashboard']" class="nav-link">
-        <figure><img alt="nav-icon" src="{{'images/spending.svg' | assetsPath}}"></figure>
-        Spending
-      </a>
-    </li>
-    <li class="nav-item">
-      <a (click)="highLightClickedElement($event)" [routerLink]="['/dashboard']" class="nav-link">
-        <figure><img alt="nav-icon" src="{{'images/accounts.svg' | assetsPath}}"></figure>
-        Accounts
-      </a>
-    </li>
-    <li class="nav-item">
+	<li class="nav-item">
       <a (click)="highLightClickedElement($event)" [routerLink]="['/marketPlace']" class="nav-link">
         <figure><img alt="nav-icon" src="{{'images/marketplace.svg' | assetsPath}}"></figure>
         Market Place
       </a>
     </li>
+    <li class="nav-item">
+      <a (click)="highLightClickedElement($event)" [routerLink]="['/dashboard']" class="nav-link">
+        <figure><img alt="nav-icon" src="{{'images/spending.svg' | assetsPath}}"></figure>
+        Credit Score
+      </a>
+    </li>
+    <li class="nav-item">
+      <a (click)="highLightClickedElement($event)" [routerLink]="['/dashboard']" class="nav-link">
+        <figure><img alt="nav-icon" src="{{'images/accounts.svg' | assetsPath}}"></figure>
+        My data
+      </a>
+    </li>
+    
     <div [ngClass]="{'more-items' : !showMoreMenu}">
       <li class="nav-item">
         <a class="nav-link" href="#">
