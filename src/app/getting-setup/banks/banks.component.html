@@ -1,116 +1,17 @@
 <div class="align-center setup-section">
-  
+
   <div class="account-table">
     <table class="table">
       <tbody>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/natwest-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>Natwest</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/hsbc-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>HSBC</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/halifax-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>Halifax</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/santander-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>Santender</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/lloyd-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>Lloyds</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/royal-bank-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>Royal Bank of Scotland</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/barclays-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>Barclays</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/starling-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>Starling Bank</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/revolut-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>Revolut</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/monzo-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>Monzo</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/cimb-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>CIMB Bank</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
-      <tr>
-        <td>
-          <figure><img alt="hsbc-icon" src="{{'images/tsb-icon.png' | assetsPath}}"></figure>
-        </td>
-        <td>
-          <h3>TSB</h3>
-        </td>
-        <td><a href="#">></a></td>
-      </tr>
+        <tr *ngFor="let bank of banksArray">
+          <td>
+            <figure><img [src]="bank.image" alt="hsbc-icon"></figure>
+          </td>
+          <td>
+            <h3>{{bank.name}}</h3>
+          </td>
+          <td><a [routerLink]="'/getting-setup/request-bank-data'" (click)="setBankName(bank.name)">></a></td>
+        </tr>
       </tbody>
     </table>
   </div>

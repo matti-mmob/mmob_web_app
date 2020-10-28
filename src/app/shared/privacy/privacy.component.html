@@ -2,13 +2,14 @@
   <div class="modal-header">
     <div class="col-md-12">
       <div class="logo-img"><img alt="logo-img" src='assets/images/logo.png'></div>
+      <button class="btn btn-secondary" type="button" (click)="noPressed()">CLOSE</button>
     </div>
   </div>
   <div class="modal-content">
     <div class="modal-body popups">
       <div class="content-data">
         <div class="row">
-          <div class="col-md-12">            
+          <div class="col-md-12">
             <h3>OUR DATA & PRIVACY NOTICE</h3>
             <p>MMOB Limited (“MMOB,” “we,” “us” or “our”) are committed to protecting and
               respecting your privacy and understand how important that is for you. We collect, use
@@ -296,9 +297,7 @@
       </div>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-secondary" type="button">OK</button>
-      <!-- <button (click)="yesPressed()" class="btn btn-primary" data-dismiss="modal" -->
-      <!-- type="button">{{secondButtonText}}</button> -->
+      <button class="btn btn-secondary" type="button" (click)="yesPressed()">OK</button>
     </div>
   </div>
 </div>
