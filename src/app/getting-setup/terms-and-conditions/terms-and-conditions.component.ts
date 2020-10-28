@@ -1,13 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {AssetsPathPipe} from 'src/app/shared/pipes/assets-path.pipe';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {FieldsValidateService} from 'src/app/service/fields-validate.service';
-import {Router} from '@angular/router';
-import {NavigationUrl} from 'src/app/shared/constant/navigation-url.constant';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {ConfirmationPopupComponent} from 'src/app/shared/confirmation-popup/confirmation-popup.component';
-import {Constant} from 'src/app/shared/constant/constant';
-import {TermsConditionsComponent} from 'src/app/shared/terms-conditions/terms-conditions.component';
+import { Component, OnInit } from '@angular/core';
+import { AssetsPathPipe } from 'src/app/shared/pipes/assets-path.pipe';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FieldsValidateService } from 'src/app/service/fields-validate.service';
+import { Router } from '@angular/router';
+import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
+import { Constant } from 'src/app/shared/constant/constant';
+import { TermsConditionsComponent } from 'src/app/shared/terms-conditions/terms-conditions.component';
+import { PrivacyComponent } from 'src/app/shared/privacy/privacy.component';
 
 
 @Component({
@@ -47,18 +48,20 @@ export class TermsAndConditionsComponent implements OnInit {
       return this.fieldsValidateService.validateAllFormFields(this.termConditionForm);
 
     } else {
+      return this.modalService.open(PrivacyComponent, { backdrop: 'static', keyboard: false });
       //this.route.navigate(['/getting-setup/banks']);
-	this.showPopUp();
-		console.log('hi');
-	 // modal.componentInstance.confirmText = Constant.EMAIL_CONFIRM_TEXT;
+      //this.showPopUp();
+      //console.log('hi');
+      // modal.componentInstance.confirmText = Constant.EMAIL_CONFIRM_TEXT;
     }
   }
   showPopUp() {
     return this.modalService.open(TermsConditionsComponent, { backdrop: 'static', keyboard: false });
+
   }
-onNextprivacy(){
-	console.log('hi');
-this.showPopUp();
-	// modal.componentInstance.confirmText = Constant.EMAIL_CONFIRM_TEXT;
-	 }
+  onNextprivacy() {
+    console.log('hi');
+    this.showPopUp();
+    // modal.componentInstance.confirmText = Constant.EMAIL_CONFIRM_TEXT;
+  }
 }
