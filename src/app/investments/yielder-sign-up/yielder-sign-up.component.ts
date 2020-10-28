@@ -24,7 +24,7 @@ export class YielderSignUpComponent implements OnInit {
     this.yielderSignUpForm = this.formBuilder.group({
       firstName: ['', ValidationService.required],
       lastName: ['', ValidationService.required],
-      email: ['', ValidationService.required],
+      email: ['', ValidationService.required, ValidationService.emailValidator],
       day: ['', ValidationService.required],
       month: ['', ValidationService.required],
       year: ['', ValidationService.required],
