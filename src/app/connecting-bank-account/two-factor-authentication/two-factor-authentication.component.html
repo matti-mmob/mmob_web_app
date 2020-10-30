@@ -1,17 +1,15 @@
-<!--Starts two factor Authentication window-->
 <div class="align-center setup-section">
-  <figure><img src="{{'images/authentication.png' | assetsPath}}" alt="authentication-img"></figure>
+  <figure><img alt="authentication-img" src="{{'images/authentication.png' | assetsPath}}"></figure>
   <h5><strong>Two Factor Authentication</strong></h5>
   <div class="setup-box">
     <p>Please enter the verfication code that has been <span>sent to your device registered with your mmob
         account.</span></p>
     <form [formGroup]="twoFactorForm">
       <div class="form-group">
-        <input type="password" formControlName="twoFactorPassword" class="form-control">
+        <input class="form-control" formControlName="twoFactorPassword" type="password">
         <app-show-errors [control]="twoFactorForm.controls.twoFactorPassword"></app-show-errors>
       </div>
-      <input type="button" class="next-btn" value="Continue" (click)="onNext()">
+      <input (click)="onNext()" class="next-btn" type="button" value="Continue">
     </form>
   </div>
 </div>
-<!--End-->

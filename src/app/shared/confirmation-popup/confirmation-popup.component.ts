@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { AssetsPathPipe } from '../pipes/assets-path.pipe';
+import {Component, Input, OnInit} from '@angular/core';
+import {NgbActiveModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -9,13 +8,13 @@ import { AssetsPathPipe } from '../pipes/assets-path.pipe';
   styleUrls: ['./confirmation-popup.component.css']
 })
 export class ConfirmationPopupComponent implements OnInit {
+  public static POP_UP_DEFAULT_PROPS: NgbModalOptions = {backdrop: 'static', keyboard: false, centered: true};
   @Input() public action;
   @Input() public modalType = 'confirm'; // alert/confirm
   @Input() public confirmText = '';
   @Input() public headerText = '';
   @Input() public firstButtonText = 'NO THANKS';
   @Input() public secondButtonText = 'ALLOW';
-
   constructor(private activeModal: NgbActiveModal) {
   }
 
@@ -26,10 +25,10 @@ export class ConfirmationPopupComponent implements OnInit {
    * Method used to close the modal
    */
   noPressed() {
-    this.activeModal.close({ isYesPressed: false });
+    this.activeModal.close({isYesPressed: false});
   }
 
   yesPressed() {
-    this.activeModal.close({ isYesPressed: true });
+    this.activeModal.close({isYesPressed: true});
   }
 }

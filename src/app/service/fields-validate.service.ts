@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { FormGroup, FormControl, FormArray } from '@angular/forms';
+import {Injectable} from '@angular/core';
+import {FormArray, FormControl, FormGroup} from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,8 @@ export class FieldsValidateService {
   /**
    * Constructor
    */
-  constructor() {}
+  constructor() {
+  }
 
   /**
    * It Validate all the fields validations one by one and will display the validation message.
@@ -18,7 +19,7 @@ export class FieldsValidateService {
       const control = formGroup.get(field);
 
       if (control instanceof FormControl) {
-        control.markAsTouched({ onlySelf: true });
+        control.markAsTouched({onlySelf: true});
       } else if (control instanceof FormGroup) {
         this.validateAllFormFields(control);
       } else if (control instanceof FormArray) {
@@ -31,5 +32,5 @@ export class FieldsValidateService {
       }
     });
   }
-  
+
 }

@@ -2,21 +2,21 @@
   <div class="wrapper">
     <form [formGroup]="requestBankDataForm">
       <div class="data-request">
-        <figure><img src="{{'images/presentation.png' | assetsPath}}" alt="presentation image"></figure>
-        <h5><strong>Request data from HSBC</strong></h5><br>
+        <figure><img alt="presentation image" src="{{'images/presentation.png' | assetsPath}}"></figure>
+        <h5><strong>Request data from {{selectedBank}}</strong></h5><br>
         <p>mmob will request the following information from your bank:</p>
         <div class="consent-boxes">
           <div class="accordion" id="accordionExample">
             <div class="card">
               <div class="card-header">
                 <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link btn-block text-left collapsed"
+                          data-target="#collapseOne" data-toggle="collapse" type="button">
                     Your Account Details
                   </button>
                 </h2>
               </div>
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div aria-labelledby="headingOne" class="collapse" data-parent="#accordionExample" id="collapseOne">
                 <div class="card-body">
                   <ul>
                     <li>&#8722; Any another names by which you refer to this account</li>
@@ -29,13 +29,13 @@
             <div class="card">
               <div class="card-header">
                 <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  <button aria-controls="collapseTwo" aria-expanded="true" class="btn btn-link btn-block text-left collapsed"
+                          data-target="#collapseTwo" data-toggle="collapse" type="button">
                     Your Regular Payments
                   </button>
                 </h2>
               </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordionExample" id="collapseTwo">
                 <div class="card-body">
                   <ul>
                     <li>&#8722; Your standing orders</li>
@@ -51,13 +51,13 @@
             <div class="card">
               <div class="card-header">
                 <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                  <button aria-controls="collapseThree" aria-expanded="true" class="btn btn-link btn-block text-left collapsed"
+                          data-target="#collapseThree" data-toggle="collapse" type="button">
                     Your Transaction Details
                   </button>
                 </h2>
               </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div aria-labelledby="headingThree" class="collapse" data-parent="#accordionExample" id="collapseThree">
                 <div class="card-body">
                   <ul>
                     <li>&#8722; Your transactions</li>
@@ -69,13 +69,13 @@
             <div class="card">
               <div class="card-header">
                 <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                  <button aria-controls="collapseFour" aria-expanded="true" class="btn btn-link btn-block text-left collapsed"
+                          data-target="#collapseFour" data-toggle="collapse" type="button">
                     Your Contact Details
                   </button>
                 </h2>
               </div>
-              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div aria-labelledby="headingFour" class="collapse" data-parent="#accordionExample" id="collapseFour">
                 <div class="card-body">
                   <ul>
                     <li>&#8722; The full legal name(s) of account holder(s)</li>
@@ -107,10 +107,12 @@
 
         <div class="row justify-content-around text-center">
           <div class="col-10 col-md-4">
-            <button class="btn confirm-btn" type="button" data-toggle="modal" data-target="#allow" (click)="onConfirm()" >Confirm</button>
+            <button (click)="onConfirm()" class="btn confirm-btn" data-target="#allow" data-toggle="modal"
+                    type="button">Confirm
+            </button>
           </div>
           <div class="col-10 col-md-4">
-            <button class="btn decline-btn" type="button" (click)="onDecline()" >Decline</button>
+            <button (click)="onDecline()" class="btn decline-btn" type="button">Decline</button>
           </div>
         </div>
       </div>

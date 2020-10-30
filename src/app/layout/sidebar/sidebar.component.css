@@ -1,66 +1,66 @@
 .sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background: #00008b;
-  width: 220px;
-  font-size: 14px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #00008b;
+    width: 220px;
+    font-size: 14px;
 }
 .nav {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
 .sidebar ul.nav.flex-column {
-  overflow: auto;
-  height: calc(100% - 160px);
+    overflow: auto;
+    height: calc(100% - 160px);
 }
 .logo {
-  display: block;
-  width: 100%;
-  padding: 24px 10px;
-  border-bottom: 1px solid #fff;
-  text-align: center;
-  margin: 0 0 10px;
+    display: block;
+    width: 100%;
+    padding: 24px 10px;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    margin: 0 0 10px;
 }
 .logo a {
-  display: block;
-  width: 100px;
-  margin: auto;
+    display: block;
+    width: 100px;
+    margin: auto;
 }
 .sidebar .nav li.nav-header {
-  padding: 10px 20px;
-  line-height: 20px;
-  font-size: 16px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
+    padding: 10px 20px;
+    line-height: 20px;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 .nav-link {
-  padding: 10px 20px;
+    padding: 10px 20px;
 }
 .sidebar .nav li a {
-  color: #43439a;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+    color: #43439a;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .sidebar .nav li a:hover,
 .sidebar .nav > li > a.nav-link.active {
-  color: #fff;
+    color: #fff;
 }
 .sidebar .nav li a figure {
-  width: 24px;
-  display: inline-block;
-  margin: 0 15px 0 0;
+    width: 24px;
+    display: inline-block;
+    margin: 0 15px 0 0;
 }
 .more-items {
-  display: none;
+    display: none;
 }
 .setting-button {
- position: absolute;
+    position: absolute;
     bottom: 25px;
     left: 0;
     right: 0;
@@ -76,91 +76,103 @@
     cursor: pointer;
 }
 .setting-button svg {
-  width: 20px;
-  height: 20px;
-  fill: #fff;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 .setting-button:hover {
-  color: #fff;
-  background: #f45c50;
+    color: #fff;
+    background: #f45c50;
 }
 .setting-button:hover svg {
-  fill: #fff;
+    fill: #fff;
 }
 .rmm-button {
     display: none;
 }
 @media (max-width: 767px) {
-.sidebar {
-    width: 100%;
-	position:relative;
-}
-.logo a {
-    margin: 0 0 0 15px;
-}
-.rmm-button {
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    .logo a {
+        margin: 0 0 0 15px;
+    }
+
+    .rmm-button {
         margin-right: 30px;
     }
-.rmm-button {
-	cursor: pointer;
-	margin-right: 15px;
-	margin-top: 0;
-	position: absolute;
-	right: 0;
-	top: 22px;
-	z-index: 999;
-}
-.rmm-button {
-	display: block;
-}
-.rmm-button span {
-	background: #fff;
-	display: block;
-	height: 3px;
-	margin-top: 4px;
-	width: 24px;
-}
-ul.flex-column.nav {
-    display: none;
-	height:100%;
-	transition: all 0.5s ease 0s;
-	-webkit-transition: all 0.5s ease 0s;
-}
-ul.flex-column.nav.menu-toggle {
-    display: block;
-	transition: all 0.5s ease 0s;
-	-webkit-transition: all 0.5s ease 0s;
-}
-.setting-button{
-    top: 15px;
-    bottom: initial;
-    left: initial;
-    right: 55px;
-}
-.bt-close {
-	height: 20px;
-}
-.bt-close span:first-child {
-	background: #fff;
-	margin-bottom: -4px;
-	margin-top: 12px;
-	transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	transition: all 0.5s ease 0s;
-	-webkit-transition: all 0.5s ease 0s;
-}
-.bt-close span:nth-child(2) {
-	display: none;
-}
-.bt-close span:last-child {
-	background: #fff;
-	margin-top: 1px;
-	transform: rotate(132deg);
-	-webkit-transform: rotate(132deg);
-	-ms-transform: rotate(132deg);
-	transition: all 0.5s ease 0s;
-}
+
+    .rmm-button {
+        cursor: pointer;
+        margin-right: 15px;
+        margin-top: 0;
+        position: absolute;
+        right: 0;
+        top: 22px;
+        z-index: 999;
+    }
+
+    .rmm-button {
+        display: block;
+    }
+
+    .rmm-button span {
+        background: #fff;
+        display: block;
+        height: 3px;
+        margin-top: 4px;
+        width: 24px;
+    }
+
+    ul.flex-column.nav {
+        display: none;
+        height: 100%;
+        transition: all 0.5s ease 0s;
+        -webkit-transition: all 0.5s ease 0s;
+    }
+
+    ul.flex-column.nav.menu-toggle {
+        display: block;
+        transition: all 0.5s ease 0s;
+        -webkit-transition: all 0.5s ease 0s;
+    }
+
+    .setting-button {
+        top: 15px;
+        bottom: initial;
+        left: initial;
+        right: 55px;
+    }
+
+    .bt-close {
+        height: 20px;
+    }
+
+    .bt-close span:first-child {
+        background: #fff;
+        margin-bottom: -4px;
+        margin-top: 12px;
+        transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transition: all 0.5s ease 0s;
+        -webkit-transition: all 0.5s ease 0s;
+    }
+
+    .bt-close span:nth-child(2) {
+        display: none;
+    }
+
+    .bt-close span:last-child {
+        background: #fff;
+        margin-top: 1px;
+        transform: rotate(132deg);
+        -webkit-transform: rotate(132deg);
+        -ms-transform: rotate(132deg);
+        transition: all 0.5s ease 0s;
+    }
 }

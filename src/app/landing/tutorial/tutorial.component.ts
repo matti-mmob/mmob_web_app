@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbCarouselConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { LocalDataService } from 'src/app/core/services/local-data.service';
-import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
-import { Constant } from 'src/app/shared/constant/constant';
-import { Router } from '@angular/router';
-
+import {Component, OnInit} from '@angular/core';
+import {NgbCarouselConfig, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {LocalDataService} from 'src/app/core/services/local-data.service';
+import {ConfirmationPopupComponent} from 'src/app/shared/confirmation-popup/confirmation-popup.component';
+import {Constant} from 'src/app/shared/constant/constant';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-tutorial',
@@ -15,8 +14,8 @@ export class TutorialComponent implements OnInit {
   //contains tutorial images
   public images = [];
   constructor(private boostrapSliderConfiguration: NgbCarouselConfig,
-    private localDataService: LocalDataService, private modalService: NgbModal,
-    private route: Router) {
+              private localDataService: LocalDataService, private modalService: NgbModal,
+              private route: Router) {
   }
 
   ngOnInit(): void {
@@ -30,7 +29,7 @@ export class TutorialComponent implements OnInit {
 
   // function to open popup
   continue() {
-    const modalRefForFirstConfirm = this.modalService.open(ConfirmationPopupComponent, { backdrop: 'static', keyboard: false });
+    const modalRefForFirstConfirm = this.modalService.open(ConfirmationPopupComponent, ConfirmationPopupComponent.POP_UP_DEFAULT_PROPS);
     modalRefForFirstConfirm.componentInstance.confirmText = Constant.TUTORIAL_CONFIRMATION_TEXT;
     modalRefForFirstConfirm.componentInstance.secondButtonText = 'Okay';
     modalRefForFirstConfirm.result.then(

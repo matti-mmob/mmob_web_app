@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { AssetsPathPipe } from 'src/app/shared/pipes/assets-path.pipe';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { FieldsValidateService } from 'src/app/service/fields-validate.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
-import { CustomValidators } from 'src/app/shared/validators/custom-validators';
+import {Component, OnInit} from '@angular/core';
+import {AssetsPathPipe} from 'src/app/shared/pipes/assets-path.pipe';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FieldsValidateService} from 'src/app/service/fields-validate.service';
+import {Router} from '@angular/router';
+import {NavigationUrl} from 'src/app/shared/constant/navigation-url.constant';
+import {CustomValidators} from 'src/app/shared/validators/custom-validators';
 
 @Component({
   selector: 'app-password',
@@ -19,7 +19,8 @@ export class PasswordComponent implements OnInit {
     private assetsPipe: AssetsPathPipe,
     private formBuilder: FormBuilder,
     private fieldsValidateService: FieldsValidateService,
-    private route: Router) { }
+    private route: Router) {
+  }
 
   ngOnInit() {
     this.initializeForm();
@@ -60,15 +61,12 @@ export class PasswordComponent implements OnInit {
     });
   }
 
-
-
   //this function validate form and redirect to next step
   onNext() {
     if (this.passwordForm.invalid) {
       return this.fieldsValidateService.validateAllFormFields(this.passwordForm);
-    }
-    else {
-      this.route.navigate([ '/getting-setup/mobile']);
+    } else {
+      this.route.navigate(['/getting-setup/mobile']);
     }
   }
 }

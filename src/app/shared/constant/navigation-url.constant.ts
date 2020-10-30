@@ -12,11 +12,11 @@ export class NavigationUrl {
   // NavigationUrl.MOBILE
   public static GETTING_SETUP_MOBILE = 'mobile';
   // NavigationUrl.TWO_FACTOR_AUTHENTICATION
-  public static GETTING_SETUP_TWO_FACTOR_AUTHENTICATION =  'two-factor-authentication';
+  public static GETTING_SETUP_TWO_FACTOR_AUTHENTICATION = 'two-factor-authentication';
   // NavigationUrl.TREMS_AND_CONDITION
   public static GETTING_SETUP_TREMS_AND_CONDITION = 'terms-and-conditions';
   // NavigationUrl.BANKS
-  public static GETTING_SETUP_BANKS =  'banks';
+  public static GETTING_SETUP_BANKS = 'banks';
   // NavigationUrl.REQUEST_BANK_DATA
   public static GETTING_SETUP_REQUEST_BANK_DATA = 'request-bank-data';
 
@@ -40,14 +40,6 @@ export class NavigationUrl {
   // NavigationUrl.INVESTMENTS
   public static INVESTMENTS = 'investments';
 
-  // NavigationUrl.LENDING_MAIN_ROUTE
-  public static LENDING_ROUTE = 'lending';
-  // NavigationUrl.ACCESS_LENDING
-  public static ACCESS_LENDING = NavigationUrl.LENDING_ROUTE + '/access-lending';
-  // NavigationUrl.LOOKING_FOR
-  public static LOOKING_FOR = NavigationUrl.LENDING_ROUTE + '/looking-for';
- // NavigationUrl.LENDING_DETAIL
-  public static LENDING_DETAIL = NavigationUrl.LENDING_ROUTE + '/lending-detail';
   // NavigationUrl.TUTORIAL
   public static TUTORIALS = 'tutorial';
   // NavigationUrl.LOGIN_MAIN_ROUTE
@@ -57,7 +49,7 @@ export class NavigationUrl {
   // NavigationUrl.FORGOT_PASSWORD
   public static FORGOT_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/forgot-password';
   // NavigationUrl.RESET_PASSWORD
-  public static RESET_PASSWORD =NavigationUrl.LOGIN_ROUTE +  '/reset-password';
+  public static RESET_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/reset-password';
   // NavigationUrl.VERIFY_EMAIL
   public static VERIFY_EMAIL = NavigationUrl.LOGIN_ROUTE + '/verify-email';
 }  

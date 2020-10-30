@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { AssetsPathPipe } from 'src/app/shared/pipes/assets-path.pipe';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { FieldsValidateService } from 'src/app/service/fields-validate.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
+import {Component, OnInit} from '@angular/core';
+import {AssetsPathPipe} from 'src/app/shared/pipes/assets-path.pipe';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FieldsValidateService} from 'src/app/service/fields-validate.service';
+import {Router} from '@angular/router';
+import {NavigationUrl} from 'src/app/shared/constant/navigation-url.constant';
+
 @Component({
   selector: 'app-name',
   templateUrl: './name.component.html',
@@ -17,7 +18,8 @@ export class NameComponent implements OnInit {
     private assetsPipe: AssetsPathPipe,
     private formBuilder: FormBuilder,
     private fieldsValidateService: FieldsValidateService,
-    private route: Router) { }
+    private route: Router) {
+  }
 
   ngOnInit() {
     this.initializeForm();
@@ -35,8 +37,7 @@ export class NameComponent implements OnInit {
   onNext() {
     if (this.nameForm.invalid) {
       return this.fieldsValidateService.validateAllFormFields(this.nameForm);
-    }
-    else {
+    } else {
       this.route.navigate(['/getting-setup/email']);
     }
   }

@@ -1,18 +1,16 @@
-<!--Starts name window-->
 <div class="align-center setup-section">
-    <figure><img src="{{'images/pass.png' | assetsPath}}" alt="pass-img"></figure>
-    <h5><strong>What's your name?</strong></h5>
-	<div class="setup-box">
-	<p>This can be your real name, preferred name, nick name or alias- it doesn't need to match your ID.</p>
+  <figure><img alt="pass-img" src="{{'images/pass.png' | assetsPath}}"></figure>
+  <h5><strong>What's your name?</strong></h5>
+  <div class="setup-box">
+    <p>This can be your real name, preferred name, nick name or alias- it doesn't need to match your ID.</p>
     <form [formGroup]="nameForm">
-            <div class="form-group">
-                <i *ngIf="nameForm.controls.name.valid"><img src="{{'images/tick-icon.png' | assetsPath}}"
-                        alt="tick-icon"></i>
-                <input type="text" formControlName="name" class="form-control">
-                <app-show-errors [control]="nameForm.controls.name"></app-show-errors>
-            </div>
-            <input type="button" href="#" class="next-btn" value="Next" (click)="onNext()">
+      <div class="form-group">
+        <i *ngIf="nameForm.controls.name.valid"><img alt="tick-icon"
+                                                     src="{{'images/tick-icon.png' | assetsPath}}"></i>
+        <input class="form-control" formControlName="name" type="text">
+        <app-show-errors [control]="nameForm.controls.name"></app-show-errors>
+      </div>
+      <input (click)="onNext()" class="next-btn" href="#" type="button" value="Next">
     </form>
-	</div>
+  </div>
 </div>
-<!--End-->

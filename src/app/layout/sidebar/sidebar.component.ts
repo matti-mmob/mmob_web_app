@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Constant } from 'src/app/shared/constant/constant';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Constant} from 'src/app/shared/constant/constant';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,11 +14,12 @@ export class SidebarComponent implements OnInit {
   buttonLabel: any = Constant.TOGGLE_TEXT_MORE;
   menuToggleClass: any = '';
   menuToggle: boolean = false;
-  menuToggleIconeClass: any = '';
-  selectedItem;
-  constructor(private route: Router) { }
+  menuToggleIconClass: any = '';
+  constructor(private route: Router) {
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
 
   /*  This function is used to show/hide More menu.
    */
@@ -33,8 +34,9 @@ export class SidebarComponent implements OnInit {
   mobileToggleMenu() {
     this.menuToggle = !this.menuToggle;
     this.menuToggleClass = this.menuToggle ? Constant.MENU_TOGGLE_CLASS : '';
-    this.menuToggleIconeClass = this.menuToggle ? Constant.MENU_TOGGLE_ICONE : '';
+    this.menuToggleIconClass = this.menuToggle ? Constant.MENU_TOGGLE_ICON : '';
   }
+
   highLightClickedElement($event) {
     const highlights = document.querySelectorAll('.nav-link');
     highlights.forEach((element) => {

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
+import {Component, OnInit} from '@angular/core';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {ConfirmationPopupComponent} from 'src/app/shared/confirmation-popup/confirmation-popup.component';
 
 @Component({
   selector: 'app-consent-management-portal',
@@ -9,15 +9,16 @@ import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/co
 })
 export class ConsentManagementPortalComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal) {
+  }
 
   ngOnInit(): void {
   }
-  
+
   onClick() {
-   this.showPopup();
+    this.showPopup();
   }
   showPopup() {
-    return this.modalService.open(ConfirmationPopupComponent, {  backdrop: 'static', keyboard: false });
+    return this.modalService.open(ConfirmationPopupComponent, ConfirmationPopupComponent.POP_UP_DEFAULT_PROPS);
   }
 }

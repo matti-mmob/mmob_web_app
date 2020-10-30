@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { NavigationUrl } from './shared/constant/navigation-url.constant';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {NavigationUrl} from './shared/constant/navigation-url.constant';
 
 const routes: Routes = [
-  // DashboardModule is lazyloaded
   {
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then((routeModule) => routeModule.DashboardModule),
@@ -38,10 +37,6 @@ const routes: Routes = [
     loadChildren: () => import('./utilities/utilities.module').then((routeModule) => routeModule.UtilitiesModule),
   },
   {
-    path: 'lending',
-    loadChildren: () => import('./lending/lending.module').then((routeModule) => routeModule.LendingModule),
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then((routeModule) => routeModule.LoginModule),
   },
@@ -49,11 +44,12 @@ const routes: Routes = [
     path: 'merchants',
     loadChildren: () => import('./merchants/merchants.module').then((routeModule) => routeModule.MerchantsModule),
   },
-  
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

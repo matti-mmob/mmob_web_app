@@ -1,19 +1,22 @@
 .main {
-  position: relative;
-  margin-left: 220px;
-  height: 100%;
+    position: relative;
+    margin-left: 220px;
+    height: 100%;
 }
 .wrapper {
-  padding: 15px;
-  height: 100%;
+    padding: 15px;
+    height: 100%;
 }
-app-footer{display:none;}
-@media (max-width: 767px) {
-  .main {
-    position: relative;
-    margin-left: 0;
-  }
-  app-footer {
+app-footer {
     display: none;
-  }
+}
+@media (max-width: 767px) {
+    .main {
+        position: relative;
+        margin-left: 0;
+    }
+
+    app-footer {
+        display: none;
+    }
 }

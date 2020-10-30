@@ -1,4 +1,4 @@
-import { FormArray, FormControl, FormGroup, ValidationErrors, AbstractControl, ValidatorFn } from '@angular/forms';
+import {AbstractControl, FormControl, ValidationErrors, ValidatorFn} from '@angular/forms';
 
 export class CustomValidators {
 
@@ -9,7 +9,7 @@ export class CustomValidators {
       if (re.test(String(c.value).toLowerCase())) {
         return null;
       } else {
-        return { validateEmail: true };
+        return {validateEmail: true};
       }
     } else {
       return null;
@@ -24,7 +24,7 @@ export class CustomValidators {
       if (re.test(String(c.value))) {
         return null;
       } else {
-        return { validatePassword: true };
+        return {validatePassword: true};
       }
     } else {
       return null;

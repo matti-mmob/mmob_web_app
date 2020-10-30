@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AccessLendingComponent } from './access-lending.component';
+import { TermsConditionsComponent } from './terms-conditions.component';
 
-describe('AccessLendingComponent', () => {
-  let component: AccessLendingComponent;
-  let fixture: ComponentFixture<AccessLendingComponent>;
+describe('TermsConditionsComponent', () => {
+  let component: TermsConditionsComponent;
+  let fixture: ComponentFixture<TermsConditionsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AccessLendingComponent ]
+      declarations: [ TermsConditionsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AccessLendingComponent);
+    fixture = TestBed.createComponent(TermsConditionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

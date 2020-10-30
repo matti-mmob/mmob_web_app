@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-splash-screen',
@@ -9,7 +8,8 @@ import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
 })
 export class SplashScreenComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router) {
+  }
 
   ngOnInit(): void {
   }

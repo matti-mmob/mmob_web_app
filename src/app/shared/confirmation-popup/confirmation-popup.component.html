@@ -3,7 +3,7 @@
     <div class="modal-body">
       <div class="row">
         <div class="col-md-3">
-          <div class="logo-img"><img src="{{'images/logo.png' | assetsPath}}" alt="logo-img"></div>
+     
         </div>
         <div class="col-md-9">
           <h6>{{headerText}}</h6>
@@ -12,9 +12,9 @@
       </div>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" (click)="noPressed()">{{firstButtonText}}</button>
-      <button type="button" class="btn btn-primary" data-dismiss="modal"
-        (click)="yesPressed()">{{secondButtonText}}</button>
+      <button (click)="noPressed()" class="btn btn-secondary" type="button">{{firstButtonText}}</button>
+      <button (click)="yesPressed()" class="btn btn-primary" data-dismiss="modal"
+              type="button">{{secondButtonText}}</button>
     </div>
   </div>
 </div>

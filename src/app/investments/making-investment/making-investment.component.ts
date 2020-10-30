@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ConfirmationPopupComponent } from 'src/app/shared/confirmation-popup/confirmation-popup.component';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {ConfirmationPopupComponent} from 'src/app/shared/confirmation-popup/confirmation-popup.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-making-investment',
@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 export class MakingInvestmentComponent implements OnInit {
 
   constructor(private modalService: NgbModal,
-    private route: Router,) { }
+              private route: Router,) {
+  }
 
   ngOnInit(): void {
   }
@@ -28,6 +29,6 @@ export class MakingInvestmentComponent implements OnInit {
   }
   // shows confirmation popup
   showPopup() {
-    return this.modalService.open(ConfirmationPopupComponent, { backdrop: 'static', keyboard: false });
+    return this.modalService.open(ConfirmationPopupComponent, ConfirmationPopupComponent.POP_UP_DEFAULT_PROPS);
   }
 }

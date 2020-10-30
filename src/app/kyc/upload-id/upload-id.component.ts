@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-upload-id',
@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 })
 export class UploadIdComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router) {
+  }
 
   ngOnInit(): void {
   }

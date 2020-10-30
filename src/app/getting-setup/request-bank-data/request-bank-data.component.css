@@ -1,165 +1,105 @@
 .consent-boxes {
-	width: 80%;
-	margin: 20px auto 0;
+    width: 80%;
+    margin: 20px auto 0;
 }
 
 .card-body .spent-amount-breakdown table td {
-	border-bottom: 1px solid #eceeef;
+    border-bottom: 1px solid #eceeef;
 }
 
 .spent-amount-breakdown table {
-	width: 95%;
-	margin: auto;
+    width: 95%;
+    margin: auto;
 }
 
 .card-header {
-	padding: 4px;
-	border-radius: 0 !important;
-	background: #f6f6f6 !important;
-	border: 1px solid #ededed !important;
-	box-shadow: none !important;
-	cursor: pointer;
+    padding: 4px;
+    border-radius: 0 !important;
+    background: #f6f6f6 !important;
+    border: 1px solid #ededed !important;
+    box-shadow: none !important;
+    cursor: pointer;
 }
 
 .card-header button {
-	padding: 0;
-	display: flex;
-	align-items: center;
-	color: #000;
-	outline: none !important;
-	border: 0;
-	box-shadow: none !important;
-	cursor: pointer;
-	position: relative
+    padding: 0;
+    display: flex;
+    align-items: center;
+    color: #000;
+    outline: none !important;
+    border: 0;
+    box-shadow: none !important;
+    cursor: pointer;
+    position: relative
 }
 
 .card-header figure {
-	margin: 0 13px 0 0;
-	width: 40px;
+    margin: 0 13px 0 0;
+    width: 40px;
 }
-
-#headingOne {
-	border-right: 10px solid #000070 !important;
-	background-color: white;
-	border-radius: 0 0 6px 6px !important;
-	box-shadow: none;
-}
-
-#headingTwo {
-	border-right: 10px solid #0000e0 !important;
-	background-color: white;
-	border-radius: 0 0 6px 6px !important;
-	box-shadow: none;
-}
-
-#headingThree {
-	border-right: 10px solid #9400d3 !important;
-	background-color: white;
-	border-radius: 0 0 6px 6px !important;
-	box-shadow: none;
-}
-
-#headingFour {
-	border-right: 10px solid #ea4c89 !important;
-	background-color: white;
-	border-radius: 0 0 6px 6px !important;
-	box-shadow: none;
-}
-
-#headingFive {
-	border-right: 10px solid #ff4f00 !important;
-	background-color: white;
-	border-radius: 0 0 6px 6px !important;
-	box-shadow: none;
-}
-
 .card {
-	border-radius: 0;
-	margin-bottom: 5px;
-	border: 0;
+    border-radius: 0;
+    margin-bottom: 5px;
+    border: 0;
 }
 
 .card-body table tr {
-	border: 0;
+    border: 0;
 }
 
 .card-body table th,
 .card-body table td {
-	text-align: center;
-	font-weight: 400;
-	font-size: 15px;
-	padding: 12px 6px;
-	border: 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 12px 6px;
+    border: 0;
 }
 
 .card-body table thead th {
-	font-weight: 600;
-	border-bottom: 1px solid #eceeef;
+    font-weight: 600;
+    border-bottom: 1px solid #eceeef;
 }
-
-.card-body table thead th:first-child {
-	border-bottom: 0;
-}
-
-.card-body {
-	padding: 8px 0 0;
-}
-
-.card-header button.collapsed::before {
-	content: url(src/assets/images/add.png);
-}
-
-.card-header button::before {
-	content: url(src/assets/images/minus.png);
-	display: block;
-	right: 15px;
-	margin: 0;
-	position: absolute;
-	top: 54%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-}
-
 /************************************* data request permission page css ***********************************************/
 
 .data-request {
-	text-align: center;
-	margin: 20px 0;
+    text-align: center;
+    margin: 20px 0;
 }
 .data-request .card {
     margin-bottom: 15px;
 }
 .data-request .card:first-of-type {
-	border-right: 10px solid #0000e0;
-	border-radius: 5px;
+    border-right: 10px solid #0000e0;
+    border-radius: 5px;
 }
 
 .data-request .card:nth-of-type(2) {
-	border-right: 10px solid #00008b;
-	border-radius: 5px;
+    border-right: 10px solid #00008b;
+    border-radius: 5px;
 }
 
 .data-request .card:nth-of-type(3) {
-	border-right: 10px solid #9400d3;
-	border-radius: 5px;
+    border-right: 10px solid #9400d3;
+    border-radius: 5px;
 }
 
 .data-request .card:last-of-type {
-	border-right: 10px solid #ea4c89;
-	border-radius: 5px;
+    border-right: 10px solid #ea4c89;
+    border-radius: 5px;
 }
 
 .data-request .card .card-header .btn {
-	padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 30px;
 }
 
 .data-request .card .card-body {
-	padding: 20px 30px;
-	background: #f6f6f6;
+    padding: 20px 30px;
+    background: #f6f6f6;
 }
 
 .data-request .card .card-body ul li {
-	text-align: left;
+    text-align: left;
     font-size: 14px;
     margin: 10px 0px;
     color: #949191;
@@ -167,37 +107,37 @@
 }
 
 .data-request .row p {
-	font-size: 14px;
+    font-size: 14px;
 }
 
 .data-request .confirm-btn {
-	background: #00008b;
-	color: white;
-	padding: 15px;
-	width: 100%;
-	margin: 10px auto;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer
+    background: #00008b;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer
 }
 
 .data-request .confirm-btn:hover {
-	background: #b5b5ff;
-	color: #3e295f;
+    background: #b5b5ff;
+    color: #3e295f;
 }
 
 .data-request .decline-btn {
-	background: #e5e5e5;
-	color: #00008b;
-	padding: 15px;
-	width: 100%;
-	margin: 10px auto;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
+    background: #e5e5e5;
+    color: #00008b;
+    padding: 15px;
+    width: 100%;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .data-request .decline-btn:hover {
-	background: #fc0d1b;
-	color: #ffffff;
+    background: #fc0d1b;
+    color: #ffffff;
 }

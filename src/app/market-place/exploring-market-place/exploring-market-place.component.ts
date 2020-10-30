@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
+import {Component, OnInit} from '@angular/core';
+import {NavigationUrl} from 'src/app/shared/constant/navigation-url.constant';
 
 @Component({
   selector: 'app-exploring-market-place',
@@ -8,7 +8,8 @@ import { NavigationUrl } from 'src/app/shared/constant/navigation-url.constant';
 })
 export class ExploringMarketPlaceComponent implements OnInit {
   navigationUrlConstants = NavigationUrl;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

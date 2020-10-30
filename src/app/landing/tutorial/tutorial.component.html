@@ -1,8 +1,8 @@
 <div class="align-center">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
     <div class="carousel-inner">
       <ngb-carousel>
-        <ng-template ngbSlide *ngFor="let img of images; let i=index">
+        <ng-template *ngFor="let img of images; let i=index" ngbSlide>
           <div class="carousel-item active">
             <h5><strong>{{img.name}}</strong></h5>
             <img [src]="img.image" alt="slide-img">
@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="button-set-alt">
-    <a href="javascript:void(0)" class="click-button" (click)="continue()">Continue</a>
-    <a href="javascript:void(0)" class="skip-btn" (click)="onSkip()">Skip</a>
+    <a (click)="continue()" class="click-button" href="javascript:void(0)">Continue</a>
+    <a (click)="onSkip()" class="skip-btn" href="javascript:void(0)">Skip</a>
   </div>
 </div>

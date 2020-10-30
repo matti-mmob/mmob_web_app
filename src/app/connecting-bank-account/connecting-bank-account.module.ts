@@ -1,15 +1,20 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { ConnectingBankAccountRoutingModule } from './connecting-bank-account-routing.module';
-import { BankAddedComponent } from './bank-added/bank-added.component';
-
+import {ConnectingBankAccountRoutingModule} from './connecting-bank-account-routing.module';
+import {BankAddedComponent} from './bank-added/bank-added.component';
+import {TwoFactorAuthenticationComponent} from "./two-factor-authentication/two-factor-authentication.component";
+import {SharedModule} from "../shared/shared.module";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
-  declarations: [BankAddedComponent],
+  declarations: [BankAddedComponent, TwoFactorAuthenticationComponent],
   imports: [
     CommonModule,
-    ConnectingBankAccountRoutingModule
+    ConnectingBankAccountRoutingModule,
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
-export class ConnectingBankAccountModule { }
+export class ConnectingBankAccountModule {
+}

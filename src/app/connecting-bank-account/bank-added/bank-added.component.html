@@ -1,13 +1,13 @@
 <div class="align-center setup-section">
-    <figure><img src="{{'images/complete-icon.png' | assetsPath}}" alt="complete-img"></figure>
-    <div class="complete-added-account">
-        <h5><strong>Complete</strong></h5>
-        <p>Your HSBC account has been added.</p>
-    </div>
-    <a href="#" class="add-btn">Add another account <i><img src="{{'images/plus.svg' | assetsPath}}" alt="icon"></i></a>
-    <div class="setup-box">
-        <form>
-            <input type="button" href="#" class="next-btn" value="Continue" (click)="onNext()">
-        </form>
-    </div>
+  <figure><img alt="complete-img" src="{{'images/complete-icon.png' | assetsPath}}"></figure>
+  <div class="complete-added-account">
+    <h5><strong>Complete</strong></h5>
+    <p>Your HSBC account has been added.</p>
+  </div>
+  <a class="add-btn" href="#">Add another account <i><img alt="icon" src="{{'images/plus.svg' | assetsPath}}"></i></a>
+  <div class="setup-box">
+    <form>
+      <input (click)="onNext()" class="next-btn" href="#" type="button" value="Continue">
+    </form>
+  </div>
 </div>
