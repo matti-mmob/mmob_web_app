@@ -32,7 +32,7 @@ export class YielderSignUpComponent implements OnInit {
       address1: ['', ValidationService.required],
       address2: ['', ValidationService.required],
       city: ['', ValidationService.required],
-      state: ['', ValidationService.required],
+      state: ['', ValidationService.required],  
     });
   }
   //submit signup form
