@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Natwest",
+    "image": "assets/images/natwest-icon.png"
+  },
+  {
+    "name": "HSBC",
+    "image": "assets/images/hsbc-icon.png"
+  },
+  {
+    "name": "Halifax",
+    "image": "assets/images/halifax-icon.png"
+  },
+  {
+    "name": "Santender",
+    "image": "assets/images/santander-icon.png"
+  },
+  {
+    "name": "Lloyds",
+    "image": "assets/images/lloyd-icon.png"
+  },
+  {
+    "name": "Royal Bank of Scotland",
+    "image": "assets/images/royal-bank-icon.png"
+  },
+  {
+    "name": "Barclays",
+    "image": "assets/images/barclays-icon.png"
+  },
+  {
+    "name": "Starling Bank",
+    "image": "assets/images/starling-icon.png"
+  },
+  {
+    "name": "Revolut",
+    "image": "assets/images/revolut-icon.png"
+  },
+  {
+    "name": "Monzo",
+    "image": "assets/images/monzo-icon.png"
+  },
+  {
+    "name": "CIMB Bank",
+    "image": "assets/images/cimb-icon.png"
+  },
+  {
+    "name": "TSB",
+    "image": "assets/images/tsb-icon.png"
+  }
+]

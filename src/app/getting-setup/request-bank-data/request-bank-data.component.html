@@ -3,7 +3,7 @@
     <form [formGroup]="requestBankDataForm">
       <div class="data-request">
         <figure><img alt="presentation image" src="{{'images/presentation.png' | assetsPath}}"></figure>
-        <h5><strong>Request data from HSBC</strong></h5><br>
+        <h5><strong>Request data from {{selectedBank}}</strong></h5><br>
         <p>mmob will request the following information from your bank:</p>
         <div class="consent-boxes">
           <div class="accordion" id="accordionExample">
