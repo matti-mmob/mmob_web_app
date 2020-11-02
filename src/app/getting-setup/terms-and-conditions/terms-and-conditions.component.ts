@@ -44,7 +44,7 @@ export class TermsAndConditionsComponent implements OnInit {
   //this function validate form and redirect to next step
   onNext() {
     if (this.termConditionForm.invalid) {
-      alert("Both checboxes are requried");
+      alert("Both check boxes are required");
       return this.fieldsValidateService.validateAllFormFields(this.termConditionForm);
 
     } else {
@@ -64,7 +64,7 @@ export class TermsAndConditionsComponent implements OnInit {
   }
   continue() {
     if (this.termConditionForm.invalid) {
-      alert("Both checboxes are requried");
+       alert("Both check boxes are required");
       return this.fieldsValidateService.validateAllFormFields(this.termConditionForm);
     } else {
       this.route.navigate(['/getting-setup/banks']);
