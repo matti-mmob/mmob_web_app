@@ -11,11 +11,9 @@ export class TermsConditionsComponent implements OnInit {
   public static POP_UP_DEFAULT_PROPS: NgbModalOptions = {backdrop: 'static', keyboard: false, centered: true};
  
   constructor(private activeModal: NgbActiveModal) {
-    document.addEventListener('keydown',this.scroll);
   }
 
   ngOnInit() {
-    this.scroll();
   }
 
   /**
@@ -28,10 +26,4 @@ export class TermsConditionsComponent implements OnInit {
   yesPressed() {
     this.activeModal.close({isYesPressed: true});
   }
-  scroll(){
-    console.log('2')
-    let x=document.getElementsByClassName('col-md-12');
-    console.log(x)
-  }
-
 }

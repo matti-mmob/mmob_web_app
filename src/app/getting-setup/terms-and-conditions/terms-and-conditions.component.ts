@@ -54,6 +54,7 @@ export class TermsAndConditionsComponent implements OnInit {
   }
   continue() {
     if (this.termConditionForm.invalid) {
+       alert("Both check boxes are required");
       return this.fieldsValidateService.validateAllFormFields(this.termConditionForm);
     } else {
       this.route.navigate(['/getting-setup/banks']);
