@@ -15,8 +15,9 @@
     font-weight: 500;
 }
 .modal-body p {
-    font-size: 13px;
-    font-weight: 500;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
 }
 .modal-footer button {
     cursor: pointer;
@@ -29,16 +30,35 @@ button.btn.btn-primary {
     font-weight: 500;
 }
 button.btn.btn-secondary {
-    color: #0275d8;
+    color: #fff;
     text-transform: uppercase;
-    border: 0;
+    border: 0px;
     padding: 10px 30px;
     font-weight: 500;
+    background: #fe5863 !important;
+}
+button.btn.btn-secondary:hover {
+    background: #ed6b70 !important;
 }
 button.btn.btn-primary:hover, button.btn.btn-secondary:hover, button.btn.btn-secondary:focus {
     background: #00008b;
     color: #fff;
 }
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+    box-shadow: none !Important;
+}
+.btn-secondary.focus, .btn-secondary:focus {
+    box-shadow: none;
+}
 .modal-footer {
     border: 0;
+}
+.logo-img {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    padding-bottom: 24px;
+}
+.modal-footer {
+    justify-content: center;
 }
