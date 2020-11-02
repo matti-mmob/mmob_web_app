@@ -820,3 +820,6 @@ ul.error-list li {
     box-shadow: none !important;
     cursor: pointer;
 }
+.read-doc a {
+    cursor: pointer;
+}
