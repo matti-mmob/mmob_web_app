@@ -22,10 +22,10 @@
 .modal-dialog {
     margin: 0px auto;
 }
-.content-data {
+.modal-body.popups {
     height: 450px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+}
+.content-data {
     padding: 10px 20px;
     text-align: justify;
 }
