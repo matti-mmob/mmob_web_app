@@ -37,26 +37,16 @@ export class TermsAndConditionsComponent implements OnInit {
    */
   initializeForm() {
     this.termConditionForm = this.formBuilder.group({
-      age: ['', Validators.required],
-      termAndCondition: ['', Validators.required],
+      age: [''],
+      termAndCondition: [''],
     });
   }
   //this function validate form and redirect to next step
   onNext() {
-    if (this.termConditionForm.invalid) {
-      alert("Both check boxes are required");
-      return this.fieldsValidateService.validateAllFormFields(this.termConditionForm);
-
-    } else {
-      return this.modalService.open(PrivacyComponent, { backdrop: 'static', keyboard: false });
-      //this.route.navigate(['/getting-setup/banks']);
-      //this.showPopUp();
-      //console.log('hi');
-      // modal.componentInstance.confirmText = Constant.EMAIL_CONFIRM_TEXT;
-    }
+    return this.modalService.open(PrivacyComponent, { backdrop: 'static', keyboard: false,scrollable: true });
   }
   showPopUp() {
-    return this.modalService.open(TermsConditionsComponent, { backdrop: 'static', keyboard: false });
+    return this.modalService.open(TermsConditionsComponent, { backdrop: 'static', keyboard: false,scrollable: true });
 
   }
   onNextprivacy() {
