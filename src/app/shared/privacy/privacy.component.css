@@ -50,7 +50,7 @@ ul {
     padding-left: 15px;
 }
 ol { counter-reset: item }
-li{ display: block }
+li{ display: block;margin-top: 8px; }
 li:before { 
 	content: counters(item, ".") " "; 
 	counter-increment: item;
@@ -60,5 +60,5 @@ table td {
     width: 60%;
 }
 table {
-    font-size: 13px;
+    font-size: 15px;
 }

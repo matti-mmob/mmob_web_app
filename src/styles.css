@@ -803,13 +803,13 @@ ul.error-list li {
     box-shadow: none;
 }
 #headingThree {
-    border-right: 10px solid #9400d3 !important;
+    border-right: 10px solid #ea4c89 !important;
     background-color: white;
     border-radius: 0 0 6px 6px !important;
     box-shadow: none;
 }
 #headingFour {
-    border-right: 10px solid #ea4c89 !important;
+    border-right: 10px solid #9400d3 !important;
     background-color: white;
     border-radius: 0 0 6px 6px !important;
     box-shadow: none;
@@ -833,4 +833,10 @@ ul.error-list li {
 }
 .read-doc a {
     cursor: pointer;
+}
+.modal-body {
+    text-align: center;
+}
+.modal-body h6 {
+    margin-bottom: 0px !important;
 }
