@@ -45,9 +45,15 @@
 .check-box {
     background: #b3b3dc;
     text-align: left;
-    padding: 8px 20px 8px 30px;
+    padding: 12px 20px 12px 30px;
+	position:relative;
 }
 
 .check-box + .check-box {
     border-top: 1px solid #8f8fb0;
+}
+.error-list {
+    position: absolute;
+    left: 27px;
+    bottom: -3px;
 }
