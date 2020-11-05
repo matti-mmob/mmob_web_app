@@ -60,8 +60,15 @@ export class TermsAndConditionsComponent implements OnInit {
 
   }
   onNextprivacy() {
-    console.log('hi');
     this.showPopUp();
-    // modal.componentInstance.confirmText = Constant.EMAIL_CONFIRM_TEXT;
+  }
+  continue() {
+    if (this.termConditionForm.invalid) {
+      alert("Both checboxes are requried");
+      return this.fieldsValidateService.validateAllFormFields(this.termConditionForm);
+    } else {
+      this.route.navigate(['/getting-setup/banks']);
+    }
   }
 }
+

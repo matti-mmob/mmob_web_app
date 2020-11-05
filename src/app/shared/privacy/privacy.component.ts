@@ -1,18 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbActiveModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-privacy',
   templateUrl: './privacy.component.html',
   styleUrls: ['./privacy.component.css']
 })
 export class PrivacyComponent implements OnInit {
-  public static POP_UP_DEFAULT_PROPS: NgbModalOptions = { backdrop: 'static', keyboard: false, centered: true };
   constructor(private activeModal: NgbActiveModal) { }
 
   ngOnInit(): void {
   }
+ /**
+   * Method used to close the modal
+   */
+  noPressed() {
+    this.activeModal.close({isYesPressed: false});
+  }
+
   yesPressed() {
-    console.log('2s')
-    this.activeModal.close({ isYesPressed: true });
+    this.activeModal.close({isYesPressed: true});
   }
 }

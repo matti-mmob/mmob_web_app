@@ -35,5 +35,5 @@ export class Constant {
   public static TUTORIAL_CONFIRMATION_TEXT = 'We would like to show you notifications for spending and product renewal reminders.';
   public static MERCHANTS_CONFIRM_TEXT = 'Allow mmob to pull your jd sports basket into our app';
   public static TERMS_CONDITION_VALIDATION_TEXT = 'Both checkbox are required.';
-
+  public static BANK_NAME = 'bankName';
 }
