@@ -7,9 +7,10 @@ import { SharedModule } from '../shared/shared.module';
 import { YielderLoginComponent } from './yielder-login/yielder-login.component';
 import { YielderSignUpComponent } from './yielder-sign-up/yielder-sign-up.component';
 import { YielderFooterComponent } from './yielder-footer/yielder-footer.component';
+import { YieldersInvestmentsComponent } from './yielders-investments/yielders-investments.component';
 
 @NgModule({
-  declarations: [MakingInvestmentComponent, YielderLoginComponent, YielderSignUpComponent, YielderFooterComponent],
+  declarations: [MakingInvestmentComponent, YielderLoginComponent, YielderSignUpComponent, YielderFooterComponent, YieldersInvestmentsComponent],
   imports: [
     CommonModule,
     InvestmentsRoutingModule,

@@ -31,6 +31,7 @@ export class YielderLoginComponent implements OnInit {
     if (this.yielderLoginForm.invalid) {
       return this.fieldsValidateService.validateAllFormFields(this.yielderLoginForm);
     } else {
+      this.router.navigate(["/investments/yielder-investment"]);
     }
   }
   //function to redirect to sign-up

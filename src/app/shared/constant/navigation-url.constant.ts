@@ -56,6 +56,8 @@ export class NavigationUrl {
   public static YIELDER_LOGIN = 'login';
   // NavigationUrl.YIELDER_SIGNUP
   public static YIELDER_SIGNUP = 'sign-up';
+   // NavigationUrl.YIELDER_INVESTMENT
+   public static YIELDER_INVESTMENT = 'yielder-investment';
 }
 
 
