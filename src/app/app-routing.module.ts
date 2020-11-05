@@ -6,6 +6,7 @@ import {AuthGuard} from './shared/guards/auth.guard';
 const routes: Routes = [
   {
     path: 'dashboard',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./dashboard/dashboard.module').then((routeModule) => routeModule.DashboardModule),
   },
   {

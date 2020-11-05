@@ -2,7 +2,7 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {AssetsPathPipe} from 'src/app/shared/pipes/assets-path.pipe';
 import * as Highcharts from 'highcharts';
 import {ChartLabels} from 'src/app/shared/enum/chart-labels.enum';
-import { Auth } from 'aws-amplify';
+import {Auth} from 'aws-amplify';
 
 @Component({
   selector: 'app-home',
@@ -14,10 +14,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
   chartLabelEnum = ChartLabels;
 
   constructor(private assetsPipe: AssetsPathPipe) {
+    Auth.currentAuthenticatedUser().then((u) => {
+      console.log('The user is : ', u);
+    }).catch(e => {
+      console.log('NOT AUTHENTICATED YET');
+    });
   }
 
   ngOnInit(): void {
-    Auth.currentUserInfo().then(result => console.log(result));
+    Auth.currentAuthenticatedUser().then((u) => {
+      console.log('The user is : ', u);
+    }).catch(e => {
+      console.log('NOT AUTHENTICATED YET');
+    });
+    // Auth.currentUserInfo().then(result => console.log(result));
   }
 
   /*

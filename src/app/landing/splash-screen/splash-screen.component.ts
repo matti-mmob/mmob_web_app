@@ -19,6 +19,6 @@ export class SplashScreenComponent implements OnInit {
   }
 
   alreadyMember() {
-    Auth.federatedSignIn();
+    Auth.federatedSignIn().then(value => console.log(value));
   }
 }

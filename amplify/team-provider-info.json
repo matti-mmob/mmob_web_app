@@ -1,26 +1,19 @@
 {
   "mmobdev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-mmob-mmobdev-141243-authRole",
-      "UnauthRoleArn": "arn:aws:iam::347362941137:role/amplify-mmob-mmobdev-141243-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::347362941137:role/amplify-mmob-mmobdev-141243-authRole",
+      "AuthRoleName": "amplify-mmob-mmobdev-154141-authRole",
+      "UnauthRoleArn": "arn:aws:iam::061273246643:role/amplify-mmob-mmobdev-154141-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::061273246643:role/amplify-mmob-mmobdev-154141-authRole",
       "Region": "eu-west-2",
-      "DeploymentBucketName": "amplify-mmob-mmobdev-141243-deployment",
-      "UnauthRoleName": "amplify-mmob-mmobdev-141243-unauthRole",
-      "StackName": "amplify-mmob-mmobdev-141243",
-      "StackId": "arn:aws:cloudformation:eu-west-2:347362941137:stack/amplify-mmob-mmobdev-141243/3b49abc0-12b0-11eb-bccd-02d86b75fc8e",
-      "AmplifyAppId": "d3qvcew8ugbpxp"
+      "DeploymentBucketName": "amplify-mmob-mmobdev-154141-deployment",
+      "UnauthRoleName": "amplify-mmob-mmobdev-154141-unauthRole",
+      "StackName": "amplify-mmob-mmobdev-154141",
+      "StackId": "arn:aws:cloudformation:eu-west-2:061273246643:stack/amplify-mmob-mmobdev-154141/291f2f00-1518-11eb-a49e-02727b7ff4ba",
+      "AmplifyAppId": "d1m8p7mr11kb81"
     },
     "categories": {
-      "function": {
-        "mmobd0149d5eCustomMessage": {
-          "REDIRECTURL": "http://localhost:4200/",
-          "EMAILSUBJECT": "",
-          "EMAILMESSAGE": ""
-        }
-      },
       "auth": {
-        "mmobd0149d5e": {
+        "mmob1c9544a5": {
           "hostedUIProviderCreds": "[]"
         }
       }
