@@ -15,6 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'kyc',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./kyc/kyc.module').then((routeModule) => routeModule.KycModule)
   },
   {
@@ -23,19 +24,22 @@ const routes: Routes = [
   },
   {
     path: 'insurance',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./insurance/insurance.module').then((routeModule) => routeModule.InsuranceModule),
-
   },
   {
     path: NavigationUrl.MARKETPLACE,
+    canActivate: [AuthGuard],
     loadChildren: () => import('./market-place/market-place.module').then((routeModule) => routeModule.MarketPlaceModule),
   },
   {
     path: NavigationUrl.INVESTMENTS,
+    canActivate: [AuthGuard],
     loadChildren: () => import('./investments/investments.module').then((routeModule) => routeModule.InvestmentsModule),
   },
   {
     path: 'utilities',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./utilities/utilities.module').then((routeModule) => routeModule.UtilitiesModule),
   },
   {
@@ -44,6 +48,7 @@ const routes: Routes = [
   },
   {
     path: 'merchants',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./merchants/merchants.module').then((routeModule) => routeModule.MerchantsModule),
   },
 

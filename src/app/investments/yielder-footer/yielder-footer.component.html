@@ -1,0 +1,27 @@
+<footer>
+  <div class="wrapper">
+    <p><strong>RISK WARNING:</strong> Investments in property and unlisted shares carry risk and you may not receive the
+      anticipated returns and your capital may be at risk. Yielders Limited is directly authorised and regulated by the
+      Financial Consult Authority(745636) Yielders Ltd. Company Number: 09757611 'Yielders
+      <a class="link" (click)="alterDescriptionText()"> {{ showShortDesciption ? 'Read More..': 'Read Less' }}</a> </p>
+    <div *ngIf="!showShortDesciption">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+      <!-- Your Text Here -->
+    </div>
+    <p>To sign in to your Yielders account via yielders.co.uk, you must generate a new password by clicking on “Forgot
+      password?” on their website.</p>
+  </div>
+  <div class="copyright">
+    <ul class="social-icons">
+      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    </ul>
+    <p>&copy; Copyright 2020 Yielders 2.5.3.2</p>
+    <ul class="menu-links">
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+  </div>
+</footer>

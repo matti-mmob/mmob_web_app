@@ -1,0 +1,51 @@
+.logo-img {
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 15px 0px;
+}
+.modal-body h5 {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.modal-body h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 10px 10px 0px;
+}
+.modal-dialog {
+    margin: 0px auto;
+}
+.modal-body.popups {
+    height: 450px;
+}
+.content-data {
+    padding: 10px 20px;
+    text-align: justify;
+}
+.modal-content {
+    border: 0px;
+}
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+button.btn.btn-secondary {
+    background: black;
+    margin: 0 auto;
+    padding: 7px 36px;
+    color: #fff;
+}
+li {
+    list-style: circle;
+}
+ul {
+    padding-left: 15px;
+}
