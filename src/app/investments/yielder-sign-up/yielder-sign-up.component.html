@@ -1,0 +1,105 @@
+
+  <div class="head-section">
+    <a href="#" class="back-btn">
+      < </a>
+        <figure><img src="{{'images/yielders-logo.png' | assetsPath}}" alt="yielders-logo-img"></figure>
+  </div>
+  <div class="wrapper">
+    <div class="property-platform">
+      <div class="invest-box left-content">
+        <div class="heading">
+          <h4>New User On-boarding</h4>
+          <a class="btn-sign" (click)="onClickLogin()">Log-in</a>
+        </div>
+        <form [formGroup]="yielderSignUpForm">
+          <div class="form-group">
+            <div class="row">
+              <div class="col"><label>First Name</label>
+                <input class="form-control" type="text" placeholder="" formControlName="firstName">
+              <control-messages [control]="yielderSignUpForm.controls.firstName"
+                [inputElmControl]="inputControls.yielderSignUpForm.firstName">
+              </control-messages>
+			  </div>
+              <div class="col"><label>Sur Name</label>
+                <input class="form-control" type="text" placeholder="" formControlName="lastName">
+              <control-messages [control]="yielderSignUpForm.controls.lastName"
+                [inputElmControl]="inputControls.yielderSignUpForm.lastName">
+              </control-messages>
+			  </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>E-mail Address</label>
+            <input class="form-control" type="text" placeholder="" formControlName="email">
+            <control-messages [control]="yielderSignUpForm.controls.email"
+              [inputElmControl]="inputControls.yielderSignUpForm.email">
+            </control-messages>
+          </div>
+          <div class="form-group date-field">
+            <label>DOB</label>
+			<div class="row">
+			<div class="col-2">
+            <input class="form-control" type="text" placeholder="" formControlName="day">
+            <control-messages [control]="yielderSignUpForm.controls.day"
+              [inputElmControl]="inputControls.yielderSignUpForm.day">
+            </control-messages>
+			</div>
+			<div class="col-2">
+            <input class="form-control" type="text" placeholder="" formControlName="month">
+            <control-messages [control]="yielderSignUpForm.controls.month"
+              [inputElmControl]="inputControls.yielderSignUpForm.month">
+            </control-messages>
+			</div>
+			<div class="col-2">
+            <input class="form-control" type="text" placeholder="" formControlName="year">
+            <control-messages [control]="yielderSignUpForm.controls.year"
+              [inputElmControl]="inputControls.yielderSignUpForm.year">
+            </control-messages>
+			</div>
+          </div>
+		  </div>
+          <div class="form-group">
+            <label>Postcode</label>
+            <input class="form-control" type="password" placeholder="" formControlName="postcode">
+            <control-messages [control]="yielderSignUpForm.controls.postcode"
+              [inputElmControl]="inputControls.yielderSignUpForm.postcode">
+            </control-messages>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col"><label>Address Line1</label>
+                <input class="form-control" type="text" placeholder="" formControlName="address1">
+              <control-messages [control]="yielderSignUpForm.controls.address1"
+                [inputElmControl]="inputControls.yielderSignUpForm.address1">
+              </control-messages>
+			  </div>
+              <div class="col"><label>City</label>
+                <input class="form-control" type="text" placeholder="" formControlName="city">
+              <control-messages [control]="yielderSignUpForm.controls.city"
+                [inputElmControl]="inputControls.yielderSignUpForm.city">
+              </control-messages>
+			  </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col"><label>Address Line2</label>
+                <input class="form-control" type="text" placeholder="" formControlName="address2">
+              <control-messages [control]="yielderSignUpForm.controls.address2"
+                [inputElmControl]="inputControls.yielderSignUpForm.address2">
+              </control-messages>
+			  </div>
+              <div class="col"><label>State/province/Region</label>
+                <input class="form-control" type="text" placeholder="" formControlName="state">
+              <control-messages [control]="yielderSignUpForm.controls.state"
+                [inputElmControl]="inputControls.yielderSignUpForm.state">
+              </control-messages>
+			  </div>
+            </div>
+          </div>
+          <input type="button" value="Sign up" (click)="submitForm()">
+        </form>
+      </div>
+    </div>
+  </div>
+  <app-yielder-footer></app-yielder-footer>

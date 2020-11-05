@@ -7,7 +7,6 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./privacy.component.css']
 })
 export class PrivacyComponent implements OnInit {
-
   constructor(private activeModal: NgbActiveModal) { }
 
   ngOnInit(): void {

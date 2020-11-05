@@ -52,6 +52,12 @@ export class NavigationUrl {
   public static RESET_PASSWORD = NavigationUrl.LOGIN_ROUTE + '/reset-password';
   // NavigationUrl.VERIFY_EMAIL
   public static VERIFY_EMAIL = NavigationUrl.LOGIN_ROUTE + '/verify-email';
-}  
+  // NavigationUrl.YIELDER_LOGIN
+  public static YIELDER_LOGIN = 'login';
+  // NavigationUrl.YIELDER_SIGNUP
+  public static YIELDER_SIGNUP = 'sign-up';
+   // NavigationUrl.YIELDER_INVESTMENT
+   public static YIELDER_INVESTMENT = 'yielder-investment';
+}
 
-  
+
