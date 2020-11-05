@@ -461,14 +461,16 @@ ol.carousel-indicators {
 }
 
 .carousel-indicators li {
-	background: #869791;
-	width: 12px;
-	height: 12px;
-	margin: 5px 16px;
-	border-radius: 20px;
-	max-width: none;
-	display: block;
-	flex: inherit;
+    background: #869791;
+    width: 12px;
+    height: 12px;
+    margin: 5px 16px;
+    border-radius: 20px;
+    max-width: none;
+    display: block;
+    flex: inherit;
+    border: 0;
+    padding: 0;
 }
 
 .carousel-indicators li.active {
@@ -3763,5 +3765,14 @@ input.form-con {
     font-size: 14px;
 }
 .read-doc a {
+    cursor: pointer;
+}
+.carousel-item.active {
+    display: block;
+}
+a.btn-sign {
+    cursor: pointer;
+}
+a.link {
     cursor: pointer;
 }
