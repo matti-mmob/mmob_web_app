@@ -854,7 +854,19 @@ p.note-text {
 .id-table {
 	text-align: left;
 	width: 80%;
-	margin: 40px auto 0;
+  margin: 40px auto 0;
+}
+#headingThree {
+    border-right: 10px solid #ea4c89 !important;
+    background-color: white;
+    border-radius: 0 0 6px 6px !important;
+    box-shadow: none;
+}
+#headingFour {
+    border-right: 10px solid #9400d3 !important;
+    background-color: white;
+    border-radius: 0 0 6px 6px !important;
+    box-shadow: none;
 }
 
 .id-table tr td:nth-child(2) {
@@ -3764,4 +3776,10 @@ input.form-con {
 }
 .read-doc a {
     cursor: pointer;
+}
+.modal-body {
+    text-align: center;
+}
+.modal-body h6 {
+    margin-bottom: 0px !important;
 }
