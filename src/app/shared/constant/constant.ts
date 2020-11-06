@@ -36,4 +36,5 @@ export class Constant {
   public static MERCHANTS_CONFIRM_TEXT = 'Allow mmob to pull your jd sports basket into our app';
   public static TERMS_CONDITION_VALIDATION_TEXT = 'Both checkbox are required.';
   public static BANK_NAME = 'bankName';
+  public static CONTACT_NUMBER = 'mobileNumber';
 }

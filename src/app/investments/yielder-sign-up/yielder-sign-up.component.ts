@@ -37,7 +37,7 @@ export class YielderSignUpComponent implements OnInit {
       state: ['', ValidationService.required],
       country: ['', ValidationService.required],
       phone: ['', ValidationService.required],
-      mobileNumber: ['', ValidationService.required],
+      mobileNumber: ['', [ValidationService.required,ValidationService.allowNumberOnly]],
       address3: ['', ValidationService.required],
       investors: ['', ValidationService.required],
       marketingPreference: this.formBuilder.array([])
