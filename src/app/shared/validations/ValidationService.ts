@@ -45,7 +45,7 @@ export class ValidationService {
     }
   }
  
-  /**
+    /**
    * email validation
    * @param control
    * @returns {any}

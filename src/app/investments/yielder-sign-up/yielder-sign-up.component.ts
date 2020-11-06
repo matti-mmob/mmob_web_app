@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FieldsValidateService } from 'src/app/service/fields-validate.service';
 import { InputControls } from 'src/app/shared/validations/InputControls';
@@ -14,6 +14,8 @@ import { CustomValidators } from 'src/app/shared/validators/custom-validators';
 export class YielderSignUpComponent implements OnInit {
   yielderSignUpForm: FormGroup;
   public inputControls = InputControls;
+  preferenceList = [{ id: 1, name: "SMS" }, { id: 2, name: "Phone" }, { id: 3, name: "E-mail" }];
+  showValidation = false;
   constructor(private formBuilder: FormBuilder, private fieldsValidateService: FieldsValidateService, private router: Router) { }
 
   ngOnInit(): void {
@@ -32,12 +34,19 @@ export class YielderSignUpComponent implements OnInit {
       address1: ['', ValidationService.required],
       address2: ['', ValidationService.required],
       city: ['', ValidationService.required],
-      state: ['', ValidationService.required],  
+      state: ['', ValidationService.required],
+      country: ['', ValidationService.required],
+      phone: ['', ValidationService.required],
+      mobileNumber: ['', ValidationService.required],
+      address3: ['', ValidationService.required],
+      investors: ['', ValidationService.required],
+      marketingPreference: this.formBuilder.array([])
     });
   }
   //submit signup form
   submitForm() {
-    if (this.yielderSignUpForm.invalid) {
+    this.checkValidation();
+    if (this.yielderSignUpForm.invalid || !this.yielderSignUpForm.value.marketingPreference.length) {
       return this.fieldsValidateService.validateAllFormFields(this.yielderSignUpForm);
     } else {
       this.router.navigate(["/investments/login"]);
@@ -46,5 +55,28 @@ export class YielderSignUpComponent implements OnInit {
   // function to navidate to login screen
   onClickLogin() {
     this.router.navigate(["/investments/login"]);
+  }
+  onCheckboxChange(e) {
+    const checkArray: FormArray = this.yielderSignUpForm.get('marketingPreference') as FormArray;
+    if (e.target.checked) {
+      checkArray.push(new FormControl(e.target.value));
+    } else {
+      let i: number = 0;
+      checkArray.controls.forEach((item: FormControl) => {
+        if (item.value == e.target.value) {
+          checkArray.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
+    this.checkValidation();
+  }
+  checkValidation() {
+    if (this.yielderSignUpForm.value.marketingPreference.length) {
+      this.showValidation = false
+    } else {
+      this.showValidation = true;
+    }
   }
 }

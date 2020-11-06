@@ -67,6 +67,36 @@ export let InputControls = {
       type: 'text',
       label: 'Enter state',
       value: 'State'
+    },
+    country: {
+      type: 'text',
+      label: 'Enter country',
+      value: 'Country of Residence'
+    },
+    phone: {
+      type: 'text',
+      label: 'Enter home phone number',
+      value: 'Home Phone Number'
+    },
+    mobileNumber: {
+      type: 'text',
+      label: 'Enter mobileNumber',
+      value: 'Mobile Number'
+    },
+    address3: {
+      type: 'text',
+      label: 'Enter address3',
+      value: 'Address Line 3'
+    },
+    investors: {
+      type: 'text',
+      label: 'Enter investors',
+      value: 'Type of Investor'
+    },
+    marketingPreference: {
+      type: 'checkbox',
+      label: 'Enter marketing preference',
+      value: 'Marketing Preference'
     }
   }
 };
