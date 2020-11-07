@@ -1,6 +1,7 @@
 import { ErrorMessage } from './ErrorMessage';
 import { AbstractControl, FormGroup, ValidationErrors } from '@angular/forms';
 import { CustomRegex } from './CustomRegex';
+import { Constant } from '../constant/constant';
 
 
 export class ValidationService {
@@ -23,6 +24,7 @@ export class ValidationService {
     const config = {
       required: inputElmControl.value + ' is ' + ErrorMessage.required,
       invalidEmailAddress: ErrorMessage.invalidEmail,
+      invalidPhoneNumber: ErrorMessage.invalidPhoneNumber,
     };
     return config[validatorName];
   }
@@ -44,12 +46,12 @@ export class ValidationService {
       return null;
     }
   }
- 
+
   /**
-   * email validation
-   * @param control
-   * @returns {any}
-   */
+ * email validation
+ * @param control
+ * @returns {any}
+ */
   public static emailValidator(control, isEmailRecipient = false) {
     // RFC 2822 compliant regex
     let emailValue;
@@ -66,6 +68,36 @@ export class ValidationService {
       };
     }
   }
+  /**
+    * This function is useed to check number values in input field.
+    * @param control
+    */
+  public static allowNumberOnly(control) {
+    let mobileNumber;
+    mobileNumber = control.value;
+    if (mobileNumber === undefined || mobileNumber === '' || (mobileNumber && mobileNumber.match(CustomRegex.allowNumberOnly))) {
+      return null;
+    } else {
+      const controlName = ValidationService.getControlName(control);
+      let errorString = null;
+      if (controlName === Constant.CONTACT_NUMBER) {
+        errorString = 'invalidPhoneNumber';
+      } else {
+        errorString = 'invalidNumber';
+      }
+      return { [errorString]: true };
+    }
+  }
+  /**
+    * get control name
+    * @param control: AbstractControl
+    */
 
+  public static getControlName(control: AbstractControl): string | null {
+    if (control) {
+      const formGroup = control.parent.controls;
+      return Object.keys(formGroup).find((name) => control === formGroup[name]) || null;
+    }
+  }
 }
 
