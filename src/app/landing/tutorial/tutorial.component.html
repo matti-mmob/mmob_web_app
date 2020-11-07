@@ -1,19 +1,19 @@
 <div class="align-center">
-  <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
-    <div class="carousel-inner">
-      <ngb-carousel>
-        <ng-template *ngFor="let img of images; let i=index" ngbSlide>
-          <div class="carousel-item active">
-            <h5><strong>{{img.name}}</strong></h5>
-            <img [src]="img.image" alt="slide-img">
-            <p>{{img.data}}</p>
-          </div>
-        </ng-template>
-      </ngb-carousel>
+    <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
+        <div class="carousel-inner">
+            <ngb-carousel>
+                <ng-template *ngFor="let img of images; let i=index" ngbSlide>
+                    <div class="carousel-item active">
+                        <h5><strong>{{img.name}}</strong></h5>
+                        <img [src]="img.image" alt="slide-img">
+                        <p>{{img.data}}</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
     </div>
-  </div>
-  <div class="button-set-alt">
-    <a (click)="continue()" class="click-button" href="javascript:void(0)">Continue</a>
-    <a (click)="onSkip()" class="skip-btn" href="javascript:void(0)">Skip</a>
-  </div>
+    <div class="button-set-alt">
+        <a (click)="continue()" class="click-button" href="javascript:void(0)">Continue</a>
+        <a (click)="onSkip()" class="skip-btn" href="javascript:void(0)">Skip</a>
+    </div>
 </div>

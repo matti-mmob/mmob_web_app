@@ -1,0 +1,22 @@
+{
+  "mmobdev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mmob-mmobdev-154141-authRole",
+      "UnauthRoleArn": "arn:aws:iam::061273246643:role/amplify-mmob-mmobdev-154141-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::061273246643:role/amplify-mmob-mmobdev-154141-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-mmob-mmobdev-154141-deployment",
+      "UnauthRoleName": "amplify-mmob-mmobdev-154141-unauthRole",
+      "StackName": "amplify-mmob-mmobdev-154141",
+      "StackId": "arn:aws:cloudformation:eu-west-2:061273246643:stack/amplify-mmob-mmobdev-154141/291f2f00-1518-11eb-a49e-02727b7ff4ba",
+      "AmplifyAppId": "d1m8p7mr11kb81"
+    },
+    "categories": {
+      "auth": {
+        "mmob1c9544a5": {
+          "hostedUIProviderCreds": "[]"
+        }
+      }
+    }
+  }
+}

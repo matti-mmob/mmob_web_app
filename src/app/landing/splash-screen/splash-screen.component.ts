@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {Auth} from 'aws-amplify';
 
 @Component({
   selector: 'app-splash-screen',
@@ -13,11 +14,12 @@ export class SplashScreenComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   joinMmob() {
     this.route.navigate(['tutorial']);
   }
 
   alreadyMember() {
-    this.route.navigate(['login']);
+    Auth.federatedSignIn().then(value => console.log(value));
   }
 }

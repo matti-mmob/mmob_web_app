@@ -2,6 +2,7 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {AssetsPathPipe} from 'src/app/shared/pipes/assets-path.pipe';
 import * as Highcharts from 'highcharts';
 import {ChartLabels} from 'src/app/shared/enum/chart-labels.enum';
+import {Auth} from 'aws-amplify';
 
 @Component({
   selector: 'app-home',
@@ -13,9 +14,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
   chartLabelEnum = ChartLabels;
 
   constructor(private assetsPipe: AssetsPathPipe) {
+    Auth.currentAuthenticatedUser().then((u) => {
+      console.log('The user is : ', u);
+    }).catch(e => {
+      console.log('NOT AUTHENTICATED YET');
+    });
   }
 
   ngOnInit(): void {
+    Auth.currentAuthenticatedUser().then((u) => {
+      console.log('The user is : ', u);
+    }).catch(e => {
+      console.log('NOT AUTHENTICATED YET');
+    });
+    // Auth.currentUserInfo().then(result => console.log(result));
   }
 
   /*
@@ -34,10 +46,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
       },
       tooltip: {
         animation: false,
-        formatter: function () {
+        formatter: function() {
           return this.point.name + '<br>£' + this.y;
         },
-        positioner: function () {
+        positioner: () => {
           return {x: 80, y: 50};
         },
       },
@@ -47,7 +59,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
           dataLabels: {
             enabled: true,
             useHTML: true,
-            formatter: function (this) {
+            formatter: function(this) {
               if (this.key) {
                 return _this.createIconImages(this.key);
               }

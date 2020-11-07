@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
 import {SelectIdComponent} from './select-id/select-id.component';
 import {KycRoutingModule} from './kyc-routing.module';
 import {SharedModule} from '../shared/shared.module';
@@ -14,7 +13,6 @@ import {KycFormComponent} from './kyc-form/kyc-form.component';
 @NgModule({
   declarations: [SelectIdComponent, IssuingCountryComponent, UploadIdComponent, AddressProofComponent, UploadAddressProofComponent, FinalVerificationComponent, DrivingLicenseComponent, KycFormComponent],
   imports: [
-    CommonModule,
     KycRoutingModule,
     SharedModule
   ]

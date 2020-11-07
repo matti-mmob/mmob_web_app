@@ -55,7 +55,7 @@
       </a>
     </li>
   </ul>
-  <span [routerLink]="['../dashboard/consentManagementPortal']" class="setting-button">
+  <span (click)="logout()" class="setting-button">
     <img alt="settings-icon" src="{{'images/settings.png' | assetsPath}}">
   </span>
 </nav>

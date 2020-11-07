@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Constant} from 'src/app/shared/constant/constant';
 import {Router} from '@angular/router';
+import {Auth} from 'aws-amplify';
 
 @Component({
   selector: 'app-sidebar',
@@ -15,6 +16,7 @@ export class SidebarComponent implements OnInit {
   menuToggleClass: any = '';
   menuToggle: boolean = false;
   menuToggleIconClass: any = '';
+
   constructor(private route: Router) {
   }
 
@@ -43,5 +45,9 @@ export class SidebarComponent implements OnInit {
       element.classList.remove('active');
     });
     $event.target.classList.add('active');
+  }
+
+  logout() {
+    Auth.signOut();
   }
 }
