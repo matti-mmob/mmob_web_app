@@ -4,21 +4,21 @@ import {Observable} from 'rxjs';
 import {Auth} from 'aws-amplify';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private router: Router) {
-  }
+    constructor(private router: Router) {
+    }
 
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    /*return Auth.currentAuthenticatedUser().then(() => {
-      return true;
-    }).catch(() => {
-      this.router.navigate(['/']);
-      return false;
-    });*/
-    return true;
-  }
+    canActivate(
+        next: ActivatedRouteSnapshot,
+        state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+        return Auth.currentAuthenticatedUser().then(() => {
+            return true;
+        }).catch(() => {
+            this.router.navigate(['/']);
+            return false;
+        });
+        return true;
+    }
 }

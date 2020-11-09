@@ -8,9 +8,10 @@ import {YielderLoginComponent} from './yielder-login/yielder-login.component';
 import {YielderSignUpComponent} from './yielder-sign-up/yielder-sign-up.component';
 import {YielderFooterComponent} from './yielder-footer/yielder-footer.component';
 import {YieldersInvestmentsComponent} from './yielders-investments/yielders-investments.component';
+import {YieldersAssetDetailsComponent} from './yielders-asset-details/yielders-asset-details.component';
 
 @NgModule({
-  declarations: [MakingInvestmentComponent, YielderLoginComponent, YielderSignUpComponent, YielderFooterComponent, YieldersInvestmentsComponent],
+  declarations: [MakingInvestmentComponent, YielderLoginComponent, YielderSignUpComponent, YielderFooterComponent, YieldersInvestmentsComponent, YieldersAssetDetailsComponent],
   imports: [
     CommonModule,
     InvestmentsRoutingModule,
