@@ -83,3 +83,6 @@ p.error {
 .form-check.form-check-inline {
     margin-bottom: 0px;
 }
+a.btn-sign {
+    color: #000 !important;
+}
