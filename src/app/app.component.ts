@@ -12,6 +12,6 @@ export class AppComponent {
   title = 'MMOB | Dashboard';
 
   constructor() {
-    Amplify.configure(config);
+    //Amplify.configure(config);
   }
 }

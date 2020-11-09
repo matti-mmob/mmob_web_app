@@ -7,10 +7,10 @@
   <div class="sign-up-form">
     <div class="invest-box left-content">
       <div class="heading">
-        <h4>New User On-boarding</h4>
+        <h4><b>New User On-boarding</b></h4>
         <a class="btn-sign" (click)="onClickLogin()">Log-in</a>
       </div>
-      <form [formGroup]="yielderSignUpForm">
+      <form [formGroup]="yielderSignUpForm" class="yielderform">
         <div class="form-group">
           <div class="row">
             <div class="col"><label>First Name</label>
@@ -19,7 +19,7 @@
                 [inputElmControl]="inputControls.yielderSignUpForm.firstName">
               </control-messages>
             </div>
-            <div class="col"><label>Sur Name</label>
+            <div class="col"><label>Surname</label>
               <input class="form-control" type="text" placeholder="" formControlName="lastName">
               <control-messages [control]="yielderSignUpForm.controls.lastName"
                 [inputElmControl]="inputControls.yielderSignUpForm.lastName">
@@ -35,27 +35,29 @@
           </control-messages>
         </div>
         <div class="form-group date-field">
-          <label>DOB</label>
+          <label>Date of Birth</label>
           <div class="row">
-            <div class="col-2">
+		   <div class="col">
+            <div class="input-box day">
               <input class="form-control day-width" type="text" placeholder="" formControlName="day">
               <control-messages [control]="yielderSignUpForm.controls.day"
                 [inputElmControl]="inputControls.yielderSignUpForm.day">
               </control-messages>
             </div>
-            <div class="col-2">
+            <div class="input-box">
               <input class="form-control" type="text" placeholder="" formControlName="month">
               <control-messages [control]="yielderSignUpForm.controls.month"
                 [inputElmControl]="inputControls.yielderSignUpForm.month">
               </control-messages>
             </div>
-            <div class="col-2">
+            <div class="input-box">
               <input class="form-control" type="text" placeholder="" formControlName="year">
               <control-messages [control]="yielderSignUpForm.controls.year"
                 [inputElmControl]="inputControls.yielderSignUpForm.year">
               </control-messages>
             </div>
           </div>
+		  </div>
         </div>
         <div class="form-group">
           <label>Postcode</label>
@@ -66,7 +68,7 @@
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col"><label>Address Line1</label>
+            <div class="col"><label>Address Line 1</label>
               <input class="form-control" type="text" placeholder="" formControlName="address1">
               <control-messages [control]="yielderSignUpForm.controls.address1"
                 [inputElmControl]="inputControls.yielderSignUpForm.address1">
@@ -82,7 +84,7 @@
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col"><label>Address Line2</label>
+            <div class="col"><label>Address Line 2</label>
               <input class="form-control" type="text" placeholder="" formControlName="address2">
               <control-messages [control]="yielderSignUpForm.controls.address2"
                 [inputElmControl]="inputControls.yielderSignUpForm.address2">
@@ -98,7 +100,7 @@
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col"><label>Address Line3</label>
+            <div class="col"><label>Address Line 3</label>
               <input class="form-control" type="text" placeholder="" formControlName="address3">
               <control-messages [control]="yielderSignUpForm.controls.address3"
                 [inputElmControl]="inputControls.yielderSignUpForm.address3">
@@ -141,9 +143,10 @@
         <div class="form-group">
           <label>Marketing Preferences</label>
           <div class="form-check form-check-inline" *ngFor="let data of preferenceList; let i=index">
-            <label>
+            <label class="container-checkbox">
               <input type="checkbox" [value]="data.id" (change)="onCheckboxChange($event)">
               {{data.name}}
+			    <span class="checkmark"></span>
             </label>
           </div>
           <p class="error" *ngIf="showValidation">
