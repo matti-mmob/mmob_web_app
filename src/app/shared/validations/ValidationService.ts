@@ -48,10 +48,10 @@ export class ValidationService {
   }
 
   /**
- * email validation
- * @param control
- * @returns {any}
- */
+   * email validation
+   * @param control
+   * @returns {any}
+   */
   public static emailValidator(control, isEmailRecipient = false) {
     // RFC 2822 compliant regex
     let emailValue;
@@ -98,6 +98,6 @@ export class ValidationService {
       const formGroup = control.parent.controls;
       return Object.keys(formGroup).find((name) => control === formGroup[name]) || null;
     }
-  }
+  } 
 }
 

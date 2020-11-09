@@ -22,7 +22,7 @@ export class YielderLoginComponent implements OnInit {
   //function to initialize form
   initializeForm() {
     this.yielderLoginForm = this.formBuilder.group({
-      email: ['', ValidationService.required, ValidationService.emailValidator],
+      email: ['', [ValidationService.required,ValidationService.emailValidator]],
       password: ['', ValidationService.required]
     });
   }
