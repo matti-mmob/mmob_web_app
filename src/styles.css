@@ -1452,7 +1452,7 @@ a.back-btn:hover {
 }
 
 .invest-box {
-	margin: 20px auto;
+	margin: 40px auto;
 	width: 100%;
 	max-width: 532px;
 	box-shadow: 0 0 8px rgba(162, 160, 160, 0.51);
@@ -1550,7 +1550,7 @@ input#number {
 }
 
 .invest-box input[type="button"] {
-	background: #6bbcb5;
+	background: #92d1cd;
 	border: 0;
 	border-radius: 20px;
 	height: 27px;
@@ -1780,7 +1780,7 @@ footer .wrapper {
 }
 
 .link {
-	color: #6cbcb6;
+	color: #6cbcb6 !important;
 	position: relative;
 	display: inline-block;
 }
@@ -3659,10 +3659,11 @@ a.btn-sign {
 }
 .invest-box.left-content input[type="button"] {
     width: 460px !important;
-    padding: 10px;
+    padding: 13px;
     margin-top: 35px !important;
     height: auto !important;
-    font-size: 18px !important;
+    font-size: 20px !important;
+	border-radius: 50px !important;
 }
 .invest-box.left-content .form-control {
     text-align: left;
@@ -3679,11 +3680,11 @@ a.btn-sign {
 }
 a.btn-sign {
     background: #e0e3e3;
-    border-radius: 20px;
-    font-size: 14px;
-    color: #5a5959;
+    border-radius: 50px;
+    font-size: 18px;
+    color: #5a5959 !important;
     line-height: 47px;
-    width: 115px;
+    width: 150px;
     text-align: center;
     font-weight: 600;
 }
