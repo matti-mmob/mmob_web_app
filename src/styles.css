@@ -172,13 +172,13 @@ body {
 }
 
 .setting-button {
-	position: absolute;
+/* 	position: absolute;
 	bottom: 25px;
 	left: 0;
 	right: 0;
-	margin: auto;
+	margin: auto;*/
 	width: 40px;
-	height: 40px;
+	height: 40px; 
 	border: 1px solid #ffffff;
 	display: flex;
 	align-items: center;
@@ -187,6 +187,7 @@ body {
 	border-radius: 3px;
 	cursor: pointer;
 	color: #fff;
+	margin-right: 10px;
 }
 
 .setting-button svg {
@@ -1444,11 +1445,12 @@ a.back-btn {
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
+	cursor:pointer;
 }
 
 a.back-btn:hover {
 	background: #00008b;
-	color: #fff;
+	color: #fff !important;
 }
 
 .invest-box {
