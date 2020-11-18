@@ -15,14 +15,16 @@ const routes: Routes = [
   {
     path: '',
     component: MainContentComponent,
-    children: [{path: '', component: KycFormComponent},
+    children: [
+      {path: '', component: KycFormComponent},
       {path: 'selectId', component: SelectIdComponent},
       {path: 'issuingCountry', component: IssuingCountryComponent},
       {path: 'uploadId', component: UploadIdComponent},
+      {path: 'drivingLicense', component: DrivingLicenseComponent},
       {path: 'uploadAddressProof', component: UploadAddressProofComponent},
       {path: 'addressProof', component: AddressProofComponent},
-      {path: 'finalVerification', component: FinalVerificationComponent},
-      {path: 'drivingLicense', component: DrivingLicenseComponent}],
+      {path: 'finalVerification', component: FinalVerificationComponent}
+    ]
   },
 ];
 

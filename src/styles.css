@@ -712,6 +712,7 @@ p.note-text {
     left: 0;
     top: 0;
     margin-top: 50px !important;
+	 margin-left: 20px;
 } 
 .termcond .error-list {
     position: absolute;

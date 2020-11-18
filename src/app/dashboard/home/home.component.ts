@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }).catch(e => {
       console.log('NOT AUTHENTICATED YET');
     });
+
     // Auth.currentUserInfo().then(result => console.log(result));
   }
 

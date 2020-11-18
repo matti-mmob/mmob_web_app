@@ -4,12 +4,10 @@
   <p>united kingdom</p>
   <div class="row justify-content-around py-4">
     <div class="col-md align-self-center">
-      <h5><strong>Front</strong></h5> <img alt="driving license"
-                                           src="{{'images/driving-license.png' | assetsPath}}">
+      <h5><strong>Front</strong></h5> <img alt="driving license" [src]="idProofBase64Str">
     </div>
     <div class="col-md align-self-center">
-      <h5><strong>Back</strong></h5><img alt="driving license"
-                                         src="{{'images/driving-license-1.png' | assetsPath}}">
+      <h5><strong>Back</strong></h5><img alt="driving license" [src]="additionalIdProofBase64Str">
     </div>
   </div>
   <form>

@@ -2,7 +2,7 @@
   <figure><img alt="cottage icon" src="{{'images/cottage.png' | assetsPath}}"></figure>
   <h5><strong>Proof of Address</strong></h5>
   <p>united kingdom</p>
-  <figure><img src="{{'images/address-image.png' | assetsPath}}"></figure>
+  <figure><img [src]="addressProofBase64Str"></figure>
   <form>
     <button (click)="onNext()" class="file-upload-btn" type="submit">Submit</button>
   </form>

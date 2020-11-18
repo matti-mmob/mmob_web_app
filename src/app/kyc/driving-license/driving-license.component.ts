@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {KycFormService} from '../kyc-form-service/kyc-form.service';
+import {KycVerificationService} from '../../shared/services/kyc-verification-service/kyc-verification.service';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-driving-license',
@@ -8,13 +11,67 @@ import {Router} from '@angular/router';
 })
 export class DrivingLicenseComponent implements OnInit {
 
-  constructor(private route: Router) {
+  public idProofBase64Str;
+  public additionalIdProofBase64Str;
+
+  constructor(private route: Router, private kycFormService: KycFormService,
+              private kycVerificationService: KycVerificationService,
+              private spinner: NgxSpinnerService) {
   }
 
   ngOnInit(): void {
+    if (this.kycFormService.idProofFile) {
+      this.spinner.show();
+      // tslint:disable-next-line:no-unused-expression
+      new Promise((resolve, reject) => {
+        const idProofFr = new FileReader();
+        idProofFr.addEventListener('load', (e) => {
+          this.idProofBase64Str = e.target.result;
+          this.spinner.hide();
+          resolve({});
+        });
+        idProofFr.readAsDataURL(this.kycFormService.idProofFile);
+      });
+    }
+    if (this.kycFormService.additionalProofFile) {
+      this.spinner.show();
+      // tslint:disable-next-line:no-unused-expression
+      new Promise((resolve, reject) => {
+        const additionalIdProofFr = new FileReader();
+        additionalIdProofFr.addEventListener('load', (e) => {
+          this.additionalIdProofBase64Str = e.target.result;
+          this.spinner.hide();
+          resolve({});
+        });
+        additionalIdProofFr.readAsDataURL(this.kycFormService.additionalProofFile);
+      });
+    }
   }
-  //this function validate form and redirect to next step
+
+  // this function validate form and redirect to next step
   onNext() {
-    this.route.navigate(['kyc/uploadAddressProof']);
+    const verificationData = {
+      proof: this.idProofBase64Str,
+      additional_proof: this.additionalIdProofBase64Str,
+      email_address: 'gaurav.kumar@ficode.com',
+    };
+    this.spinner.show();
+    this.kycVerificationService.verifyIdProof(verificationData)
+      .subscribe(response => {
+        this.spinner.hide();
+        console.log(response);
+        if (response.statusCode === 200 && response.verification_status === 'accepted') {
+          this.route.navigate(['kyc/uploadAddressProof']);
+        } else if (response.statusCode === 200 && response.verification_status === 'declined') {
+          console.log('ERROR!', response);
+        } else {
+          console.log('ERROR!', response);
+        }
+        // TODO: Remove it on final submit
+        this.route.navigate(['kyc/uploadAddressProof']);
+      }, error => {
+        console.log(error);
+        this.spinner.hide();
+      });
   }
 }

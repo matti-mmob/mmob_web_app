@@ -1,9 +1,12 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {environment} from 'src/environments/environment';
 
 @Injectable()
 export class ApiService {
+
+  apiBaseUrl = environment.API_BASE_URL;
 
   constructor(private http: HttpClient) {
   }
@@ -13,7 +16,7 @@ export class ApiService {
    * @param path
    */
   get(path: string): Observable<any> {
-    return this.http.get(path, {headers: this.setHeaders()});
+    return this.http.get(this.apiBaseUrl + path, {headers: this.setHeaders()});
   }
 
   /**
@@ -22,9 +25,9 @@ export class ApiService {
    */
   post(path: string, body: any): Observable<any> {
     if (path.indexOf('login') > 0 || path.indexOf('forgotPassword') > 0) {
-      return this.http.post(path, body);
+      return this.http.post(this.apiBaseUrl + path, body);
     }
-    return this.http.post(path, body, {headers: this.setHeaders()});
+    return this.http.post(this.apiBaseUrl + path, body, {headers: this.setHeaders()});
   }
 
   /**
@@ -32,7 +35,7 @@ export class ApiService {
    * @param path
    */
   put(path: string, body: any): Observable<any> {
-    return this.http.put(path, body, {headers: this.setHeaders()});
+    return this.http.put(this.apiBaseUrl + path, body, {headers: this.setHeaders()});
   }
 
   /**

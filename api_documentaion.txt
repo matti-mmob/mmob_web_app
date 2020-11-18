@@ -1,0 +1,185 @@
+
+
+1. https://cva32pwuib.execute-api.eu-west-2.amazonaws.com/dev/get-user/
+    Request: GET
+
+    payload = {"email_address": "gaurav@ficode.com"}
+    OR
+    payload = {id: 37}
+
+    Response:
+    `````````
+    success:
+        {
+        'statusCode': 200,
+        'message': 'Get Data successfully from RDS',
+        'data': <models.user.User object at 0x7fc1a633a8d0>
+        }
+
+2. https://cva32pwuib.execute-api.eu-west-2.amazonaws.com/dev/register-user/
+    Request: POST
+
+    payload = {
+            'email_address': 'gaurav1006@ficode.com',
+            'first_name': 'gaurav',
+            'surname': 'dhiman',
+            'address_1': 'Roorkee',
+            'dob': '1992-12-12',
+            'mobile_number': '8218867658'
+        }
+
+    Response:
+    `````````
+    success:
+        {
+        'statusCode': 200,
+        'message': 'User created successfully in RDS'
+        }
+
+3. {host}/update-user/
+    Request: POST
+
+    payload = {
+        'id': 37,
+        'first_name': 'gaurav',
+        'surname': 'dhiman',
+        'address_1': 'Roorkee',
+        'dob': '1992-12-12',
+        'mobile_number': '8218867658'
+        }
+    OR
+
+    payload = {
+        'email_address': 'gaurav1006@ficode.com',
+        'first_name': 'gaurav',
+        'surname': 'dhiman',
+        'address_1': 'Roorkee',
+        'dob': '1992-12-12',
+        'mobile_number': '8218867658'
+        }
+
+    Response:
+    `````````
+    success:
+        {
+        'statusCode': 200,
+        'message': 'User Updated successfully in RDS'
+        }
+
+4. https://cva32pwuib.execute-api.eu-west-2.amazonaws.com/dev/upload-image-s3/
+    Request: POST
+
+    payload = {
+        'name': 'image.png',
+        'file': '/home/gaurav/Pictures/Screenshot.png'
+        }
+
+    Response:
+    `````````
+    success:
+        {
+        'statusCode': 200,
+        'message': 'Successful lambda function call and upload image on S3'
+        }
+
+5. https://cva32pwuib.execute-api.eu-west-2.amazonaws.com/dev/address-proof-verification/
+    Request: POST
+
+    payload = {
+        'image_url': 'https://raw.githubusercontent.com/shuftipro/RESTful-API-v1.3/master/assets/real-id-card.jpg'
+        }
+
+    Response:
+    `````````
+    success:
+        {
+        'statusCode': 200,
+        'message': 'Verification accepted',
+        'data': content
+        }
+
+6. https://cva32pwuib.execute-api.eu-west-2.amazonaws.com/dev/basic-auth/
+    Request: POST
+
+    payload = {
+        'image_url': 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhIVFRUVGBUXFRgVFRUVFRUVFRgXFhYVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDg0NDisZHxkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIARMAtwMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAABAgMEBQYHAAj/xAA9EAABAwEFBQYFAgQFBQAAAAABAAIRAwQFEiExBkFRYYEicZGhsfAHEzLB0ULhI1Jy8RViorLCFCQzgpL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMPQhAhRC1CliICsFku6Iyz5fdNbls8dojhHMnRWVjcDcbu/9lRH3nVFFsDUqul+I5yeqG87WXvJmfshsVME9onogc2WkZgSrBd13udkRJ46I102SnIhp9Vf7iuSRMd25BXbHsu58ZexqpWlscRJjvEK/XdYg0KUbZxwQZnT2Phk4cyTu0HsKPt+xAEmOEQFroswXVLEDMhBhNt2YwkNa3U5mOphKU9g3OH08ZMLYnXM0vxxnEDkE7bd4AhBgN47FuZoJ1juGpVYvO6H09QRAXp+vdzCIgKobVbONLCWtQefWGCrg0ipSiM3CD/Vq0jzVfvyxmnVIjepew1IazmP9pn0LvBBXphxB696Fzd3v3+U4velFU8HZjrr5pGiQW4TqMx3fsgtuyFtx0zSce1T05t3KwfLWe3PazRrtdzwu7jqtMaAQCN4lAzLEKdOpoEGNpazUsRASSmbqskkDj9Sgnbmsk9rc3JvfvKabTXmP/G057ypS8LULPQy+p2TQqLUkkl2pVAh3AflT9xXeXEcVBUW55rTtibE3CHESUFlui4A0AnvVrsVIACEnRYIHd7Cd0wge0U9pqPpFPaTkC7EpCSaUo0oODUVyOk3FAlUUfbaYcE+rJrWCDEfiNdbWvlrYMqt2tuCnSjSXCfL0JWjfEChMn+UOPkqHfTP+3aQPpqDwcHIIe19prTvI8xn+VHNdod4UkwE0v6cx0JB8io+uIMhApVaDmNDn3FaHsna/mUADq2FnNN27cZjv4K07BWj+I5nET+ffNBdHBcjOXIMbslKTPh3q5XJZMMT3kqGumyaKctdb5VEne7T0QQO01ux1IH0tyAUPG89Alarc5cZKRdmgUs4lw71sexdLstGSx+wCXtHMLc9iaHZBhBcKNEQEoKaJaLbTpj+I9rf6iAiUL7s7shVaeqB7TppzTCToVmu0IPVOQEAtRggCMgFEcjSioEnpvUanbmpN7UGafEOn2HRqQfss8vFuKyVB/KZ6swn0xLSPiKMj73z9gs+qUw6jWbzf/qbkgg7qzpPy0JPSc/JRtYCMtCMvt91I7PVOyR3+Y/ZR9RureBJHdvHlKBppl1H2KmNmLX8u00yTAJwnrl6woioPfJcDv8Acjeg2SohUfdNt+bQp1N5aMX9QyPmuQVmw0uOSir5vbG6G6DIRyRr1vCAWM13n7KDag51U+/yky5BCVFFA92fp4qzBzWgVdo61MCz2UHH+pwEwOAVO2RoYrQ0citSuGm2k5zsIz4hBVRsneFpOJ2N073H0lHPw+vBglrSeQePRaLa9s6NBvaIngNfBQds+KLWzIY3XJ7u1l/laDHVBTf8SvCxuwuZUbHEEjxVu2a+INR2VQcjyKa1PihRqMaalL6t8GJ3/UAD4qSs1gsdobjY0BxHajsOHRBersvdtXkVJh6oWz9mFJ+VRxG4OjfzV0okkIHDnqv3xtVSokCZJ5xkpG8cWBwBgkHPgs1r7NMc8/MrvdJ0aI80EhefxMa3JseKq14be2qsYpPOeUAZ+ACkLbdN12YTWBcRqMRJ6gZDqnFg+IV3UQGULM1omP0iecoKPfBteCapqTOeKdDGs8gPFBd9SW1ZOuHzYFYNqtqqdoBhmHFmNDlkNRkdPNVe7XyX8CGT0MFBGXI7DUcOE5d3ZHqES1fUeRI6g5e+YQUThru5gnwg/wDFGtwipycAeuiBjWb75H+xSQKdETI3x5hNCEF12CtksfSJ+k4m9xyPmPNcqzcV4fIrB+6CDzBH5hcgQiddTmUvTsc5uMDnklaFKDPhw95I1qquIjdOkDx8UCTqTAOyR0M+uaXs1EOmJyGc8VGVnFSezlPEXtLoJbLecHv5oLBsFZP+6OWjVrNW5i6n2dcv3Wc7AMw1zi1IM9Dl5Qtpsf0IMY242VqtiqHug7gMx3GfLTJJXDspZK9neGmbSIOGo4tc4A5tE5CRI8FsVru8VJDxITR2zrCQcLTGkt0QZdcew9WoRRqBgY14IJp4XBsODi98Cc3HLPRvBXq9tnGUcH/RMcS0tBYJwx+p2J305ZxMHzVlsd0hgAGQGeQjOZlSIoQEFQtNidTqtc3MfqV0uxsgdyjbSySpWwBAzvrJphU203a8U3va1zn7gNc8sldbzEptQpoKHeew1G0WYlrsdcEPgy0xvAYd/mYVHq7HOrGnTDGsLC9riGuZDBhDX1XOynC0k7yXFbla7Ji3/f1UPeOzrKgIeA4agEkAE8tEGF35dbaNQ06VT5jBlOWRniO9JWCRrrhPl2lol87KtpyWtAjOB91TrXZsLtNT7+6Cv29uGsD/AJo8f7o1ubLGneB5jX1Sl80t/IeLcj6JPHNI8nB3Rwz9QgZh2/ofsUWu2cx1H3XOEe9QgDtyBLBw9+KBGqNXIJqnSy7hHXVEtFM59PKU4YJHh/tCLa8iR3/kIIqs2Gk8xHmZSlw2jBWaT+oFviMvMBFdp1E+BH4SbrOQct0EEeIIQa18mmyrSrUyBIaHbpkawtLuqrLQsTuTaKlWphtRzadUCO1k10aFpO/ktX2dteKm08ggs4ZKUbTTejVTtj0AtYk7QYCcAJvbfpJQRmOSpexZBVy7Jc8k79O5WizNyQMLwTWzvUjbaeRUJZKhDyDxyQTLWoH0UrSCM8IK3etixArMNp7BgmOMjv4LYraFn211GZHHNBl1505aTwM9DkffNRthbIc3kR78lN2pkEtPPqNPHeoaxnDV6j7/AJCBkToffJJ1RvS9pbDnDgTHdMhI8kADMLkUZIEFiZAkdR4T9/RN7Sd/vLJDTdnrocPnkffBJVzqgaHePeWac2c4hG8A+WfoEzJzSlCpB8/HIoGlZmvets+H95YqFKTmWNnvAg+axiqz1Wg/Di0n5UfyOcOh7X/I+CDabPUyT6k5QN21paFM0HIH7HJveH0O7ilaZXVmyIQUm031So4aj6rGNIyxHUD0HNW+6rza9gM66cxyVIv3ZcufipgQSZa76c+A3I91Wa0UGfLDAWj6RMYRwHJBadoL6p0my97GDSXuDR4lRlmtDXYS1wdicC0ggg9xGqjL12fqVyH1A0kDsg5tbx680/2Z2f8AkHE7N2cQIa2eA+6Cz0jCO5yKUm96BC06Ko7TUgWFWm0vyVR2orDCUGSX5Vh4A1kn35KJtOrXjQkHujcUptJWIrjkM+pSNOrjYRv16/vqgJegioTxAPvwTI6qRvYTgdxaPUqMcgE6e/e9cgxZdT6D8IED+zVoeODo5ZmCPwndpbIE5ZR3FQ7X6eH4+6sEY6YI3iev95QQlZhlEYfunuGeZ8iN/UJrh7QQLVBOHmSffgrPsDagy1PpE/U1pH9TNesOPgq9SjGzkJjjJJ/5BEo2p1Gu2sNWvnvE9odRIQegrA6I4FWGzPyVUui1ipTY9pkOAIPIiQrFZX5IJVlRD81R1SqWiVVr22mq034RQrSfpwskHuKC9YQdYQ1rKCBELJX7XW3ESLHaIHFhM92GU+ff1oc2ZewxP/hrHONPp6a7kGoHCBBIlJuhZpaL5tQH8Ok+q6Jj5VRonLIuflxSdhv68v1WKo0/1sLfWUGl/NCSq1FVruvC11fqofLAyJc8GT/lDZy5qwhpjNAha62Spd+1MQcrZbRkqLthbRRovedQCG83HJo8UGSX3WxWiodwdA/9cvsUjZnlrsvcZpItJPMozPqkdEEvecOo0nji8d2Yy9VEceqsBDTZ2jdicR4gfnwUHVpwSgbhcjlua5ARmhU1dFYFjgZykiOvpM9VCMPv31Ty7amF8Tln5/2CBzVbnI3mRxBSbjLmnLXPvSr2QDyzHT2PFI1CMTY3uB9P3QL2Mdsn+QR4Zj7JK3UDE+/e/qnVnb2nc3H9kW9HYoaNB580Fq+GO0mAiy1TAcf4RPHU0z36jqOC2KxuXmGsII3EaRqOcrXPhxtqazflWjJ7YDamgfwDuDvIoNSLZCjrwokjs6jMJ9QqylnUgUFdsl64D/Fad2ZzU623USIgacvVIWi58WijX7N1f0vI6BBMvvCiBqMvsom1Wn5h7Ex4Dx6LqGzlX9TyegUpQukN1koG9kZAATwmAlCwBM7RWAlAwvCqACsK2+2gFprYKZmnTJgjR7t57hoOqsvxL2vdBoUDk6Q+oOG9rPuVmLUC7m5I9io4u/IIlPSE6uxwDjPT+o5IJV1KKQbvJcPUT/qHgoiq3IH3lknlptJDo/S2B4gAnyQ1KQlw3EYh19lBFO4e4XI9amQcggQNE8u1suHL7Zj1TVwUhcbZqabvUgfdBIVqZDwNxkHuLVGU2mW+Pi734qdv2q2mRBzwjLgSN/PMKKsdFzjiiJgcgBuQOKpgyNTIHTKUq6hhZiObiJE896LWtFOkcTpc4zA3D86qLtl6OeZPvvQI2k75/dWrYez9kuI+o+QyVXsdnfWeGjfryC0m5bFgAaBkICC33Ver6cB0ubx3j8hW+xW1rhIMhUqjTyS9nqvpnEzqDofwg0CjUTgOVVu+/WHInCd4OXgdFKf4i2PqHiEEtiSNd6jXXm0fqHiEwtl+sGhxHl+UD622wNBJOSod+Xo+pLWnC0+JTy22p9Q9rTcOH5KirQzNBQdrbH2JH6TPRVJglaVfNAOxNOhCzi1UTTeWncUB2SEvR1HeESzvlKYYkjLLpnkgFxxBx4geIP7lPaLsdMH9TNeY4pg3KSBx+2Y8k4stXA6RvkEbjyQK2ilibI3+R3hcgqtiTTlzDnG9p5rkEOAto2Z+E+Ggx1ptD6daqAcFNrD8ucw0ucD2s8/2lZdszdz61poUmNxPqVGNA5TLieQAJPIL1haCMYcdx8kGUt+DLJxG0Pef84HfnCfWT4Zsae0C6N8yVqeDeNEUtHcgyfaTYqk+g6k9gaWjFTfwjXPhHosVtF0n5pZTOIAxO5ejvifRcbE/DIMs+ngXAEd2az+47gDQHEaIIrZy4RRYCR2jmVaruseSO+hJA9FMWazwECLKUI4oSnnyMkenRyQRLrFJQuswG5S/ykPyuSCGbZp3JRlkhSXyV3yEERWYo2u2Cp6tRUfWo6oK1ejMwVUNorqxHENVe7xoyFF1KWIQgy99NzDBTuhaOzB3/b+6tN6XOHfpkeir9S43Co1u4xHHPcgJV1McHeYn8IKL8QB3jI96vtHY1rqQ7JxRmRrMR91V7fsxWoOJALhvEZoIy1y0y3KUCdQCMLgQRpPBcg9CbI7EWS7GB8h9YNIfXqQIn6vljRjfPiSnTb7FcxQzZpj3Hm3j3o9p2VpV3B1oxVY3Pc7B/wDA7PkpazXVTpiGNDQNANAga0rQ+zs0NQbwT2s/5T9lJ2W206zZY7vBycO8JCtSkKKr2Qh2NvZcNCEEre1kFSi+m79TSB3xl9lQrNR7MaLQLvtPzGw+A4ZGNDzCrl5XcaVRxjsuJIPAnUIIuyWKDJUgygjNhOaQQJilkuosSznBdR1QFdTRQxOHomFAiKSF9JLtajYEEZUpJnWs+qmXUkjVpIKzarDMqEr2PCVd6tJRFusgMoICtTYGc0vsXdDa1Z9QiRSIw8MRH49UH+F1KrxSpiSdTuaN5K0u5LmZZ6QpsHMneTvJQNaVkaN2qY3pcjXAy2VZfkJanRB1QYtfWxpqZ02OyK5bQ6xjdCBA9AXFq5CgRLUlUogpw5AgjRRLXSPfNOq1NtZhY7WPZCXqU0lRpx4+CCt/9C5pLTuSgs5U3bqP6vHu4psM0EeLKUvTsyeBqUaxBF1GIWhPalJJGmgTAQvad3VKNYlA1Aye1NqpO4KUfTRDTCCCtFJx3KOr2GsdFbvljgup0wXhvE+iANnrnFGmJze7Nx58O5S2FKAI0ICBiCIKUagIQGhCiOqQEKAEYIAhKAjkCFcQgMElUdCOjObKBGnUxDmEwq08LuR0/CeVKRaZCB4D2+8igbtSjUi0RkUoCgOQiFqMChhAnhQQlUBCBMhEeEo5JOQJOKWuunLi7oPum1U5KVu+lhYB1PVA6AXFCgIzQBC5x3oxTOo7EYGg80BhU3rlwahQOAgKEopQAhKAISgKlGpPejNQGcJTcsgpyFzmoGNopzmNfUJBpT9zU1rMzkdeRQFCOihGQcikoYQEICOKTcEoQk3IE2U8TwOvgppoUfdzJJd0CkoQc1CuST37h1QFqvnIdT+EDGIwCEIAhchC5AYoChQFBzUJRQhQFRkDkKAQUcIiM1BxCSqM/dLIGoI+IyRgj2xkZpIFAYopQyikoCOSTxJAG9Ge5OrBQ/Ud+iB1ZqWEAJRCERx3ICvduQOaiPpkaeaI5tQ7m+aBVcFHWwVW54Z7k6sNpLmB3QjmEC4K5KBwQoCoEKAoAK4IpQhAZcEIQBBxQygXBAclACgC5uY0QdaKeJqjGu3KXUZa24X96ACUm9yK5yRq1MkCtCljdG4aqYa1Mbqb/Dn+bPonVeuGAk9AgO9+4armiEjZQYxO1OZSwQKIUErkApu+nrG/1S6BwQNmu4rkdzUCBQIHLlyAhQtQLkBwuXLkHIAuXIDNRwgXIBTG9P0965cgj3lNbSckC5BYaLYAA0Cb2rN2aBcgehCNVy5AcrggXIBQrlyAj0K5cg//2Q=='
+        }
+
+    Response:
+    `````````
+    success:
+        {
+        'statusCode': 200,
+        'message': 'Verified signature',
+        'data': 'content'
+        }
+
+
+# document_verification response
+json_response = {
+    'reference': 'ref-61122892',
+    'event': 'verification.accepted',
+    'email': 'ashwani@ficode.in',
+    'country': None,
+    'verification_data': {
+        'document': {
+            'gender': 'M',
+            'document_number': 'A123456',
+            'issue_date': '2001-05-22',
+            'expiry_date': '2025-09-13',
+            'dob': '1989-09-06',
+            'name': {
+                'first_name': None,
+                'last_name': None,
+                'full_name': 'JOHN LIVONE'
+            },
+            'selected_type': ['id_card'],
+            'supported_types': ['id_card', 'driving_license', 'passport']
+        }
+    },
+    'verification_result': {
+        'document': {
+            'document_must_not_be_expired': 1,
+            'gender': 1,
+            'document_number': 1,
+            'expiry_date': 1,
+            'issue_date': 1,
+            'dob': 1,
+            'name': 1,
+            'document_proof': 1,
+            'document_visibility': 1,
+            'document': 1,
+            'document_country': 1,
+            'selected_type': 1
+        }
+    },
+    'info': {
+        'agent': {
+            'is_desktop': False,
+            'is_phone': False,
+            'useragent': 'python-requests/2.24.0',
+            'device_name': '0',
+            'browser_name': '',
+            'platform_name': ''
+        },
+        'geolocation': {
+            'host': '2409:4053:895:bc44:bdc8:626f:a51a:b514',
+            'ip': '2409:4053:895:bc44:bdc8:626f:a51a:b514',
+            'rdns': '2409:4053:895:bc44:bdc8:626f:a51a:b514',
+            'asn': '55836',
+            'isp': 'Reliance Jio Infocomm Limited',
+            'country_name': 'India',
+            'country_code': 'IN',
+            'region_name': 'National Capital Territory of Delhi',
+            'region_code': 'DL',
+            'city': 'New Delhi',
+            'postal_code': '110001',
+            'continent_name': 'Asia',
+            'continent_code': 'AS',
+            'latitude': '28.6327',
+            'longitude': '77.2198',
+            'metro_code': '',
+            'timezone': 'Asia/Kolkata'
+        }
+    }
+}

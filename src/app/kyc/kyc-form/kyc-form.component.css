@@ -52,3 +52,10 @@ select.custom-select {
     width: auto;
     box-shadow: none;
 }
+.kyc-select{
+    text-align: left;
+    max-height: 150px;
+    min-height: 150px;
+    overflow-y: scroll;
+    border: 1px solid #c697dc;
+}

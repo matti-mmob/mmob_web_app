@@ -7,10 +7,11 @@
       <h5><strong>Front</strong></h5>
       <form>
         <div class="image-upload-wrap">
-          <input accept="image/*" class="file-upload-input" type='file'/>
+          <input accept=".png, .jpg, .jpeg" class="file-upload-input" type='file'
+                 (change)="uploadProofEvent($event)"/>
         </div>
         <div class="file-upload-content">
-          <img alt="your image" class="file-upload-image" src="#"/>
+          <img class="file-upload-image" [src]="idProofBase64Str"/>
         </div>
         <button class="file-upload-btn" onclick="$('.file-upload-input').trigger( 'click' )" type="button">Choose a
           file to upload
@@ -22,15 +23,19 @@
       <h5><strong>Back</strong></h5>
       <form>
         <div class="image-upload-wrap-1">
-          <input (change)="onNext($event)" accept="image/*" class="file-upload-input-1" type='file'/>
+          <input (change)="uploadAdditionalProofEvent($event)" accept="image/*" class="file-upload-input-1"
+                 type='file'/>
         </div>
         <div class="file-upload-content-1">
-          <img alt="your image" class="file-upload-image-1" src="#"/>
+          <img class="file-upload-image-1" [src]="additionalIdProofBase64Str"/>
         </div>
         <button class="file-upload-btn" onclick="$('.file-upload-input-1').trigger( 'click' )" type="button">Choose
           a file to upload
         </button>
       </form>
     </div>
+  </div>
+  <div class="upload-id-submit">
+    <button (click)="onNext()" *ngIf="showButton()" class="file-upload-btn" type="submit">Next</button>
   </div>
 </div>
