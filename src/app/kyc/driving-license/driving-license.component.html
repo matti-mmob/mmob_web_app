@@ -1,13 +1,15 @@
-<div class="upload-id-submit">
+<div class="upload-id upload-id-submit">
   <figure><img alt="identity icon" src="{{'images/identity.png' | assetsPath}}"></figure>
   <h5><strong>Driving license</strong></h5>
   <p>united kingdom</p>
-  <div class="row justify-content-around py-4">
-    <div class="col-md align-self-center">
-      <h5><strong>Front</strong></h5> <img alt="driving license" [src]="idProofBase64Str">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <h5><strong>Front</strong></h5> 
+      <div class="img-upload-sec"><img alt="driving license" [src]="idProofBase64Str"></div>
     </div>
-    <div class="col-md align-self-center">
-      <h5><strong>Back</strong></h5><img alt="driving license" [src]="additionalIdProofBase64Str">
+    <div class="col-md-5">
+      <h5><strong>Back</strong></h5>
+     <div class="img-upload-sec"><img alt="driving license" [src]="additionalIdProofBase64Str"></div>
     </div>
   </div>
   <form>

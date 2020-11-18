@@ -64,8 +64,11 @@
 }
 
 .file-upload-content {
-    display: block;
+    display: flex;
     text-align: center;
+    width: 250px;
+    height: 250px;
+    justify-content: center;
 }
 
 .file-upload-input {
@@ -96,12 +99,11 @@
 }
 
 .file-upload-image {
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 250px;
+    max-width: 250px;
     margin: auto;
     padding: 20px;
 }
-
 .align-center {
     display: flex;
     flex-direction: column;
