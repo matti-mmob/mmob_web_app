@@ -114,6 +114,9 @@ export class KycFormComponent implements OnInit {
         } else {
           this.spinner.hide();
         }
+      }, error => {
+        console.log(error);
+        this.spinner.hide();
       });
   }
 }
