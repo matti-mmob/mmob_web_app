@@ -14,11 +14,13 @@ import {GetAddressService} from './services/get-address-io/get-address.service';
 import {UserService} from './services/user/user.service';
 import {HeadersInterceptor} from './interceptors/headers.interceptor';
 import {KycVerificationService} from './services/kyc-verification-service/kyc-verification.service';
+import {InformationPopupComponent} from './information-popup/information-popup.component';
 
 
 @NgModule({
   declarations: [AssetsPathPipe,
     ConfirmationPopupComponent,
+    InformationPopupComponent,
     ShowErrorsComponent,
     IframeComponent,
     TermsConditionsComponent,
@@ -42,6 +44,7 @@ import {KycVerificationService} from './services/kyc-verification-service/kyc-ve
     {provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true},
     AssetsPathPipe,
     ConfirmationPopupComponent,
+    InformationPopupComponent,
     IframeComponent,
     TermsConditionsComponent,
     PrivacyComponent,

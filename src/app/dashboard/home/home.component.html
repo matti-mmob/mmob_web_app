@@ -1,8 +1,8 @@
 <div class="kyc">
   <div class="profile">
     <div class="user-img"><img alt="user" src="{{'images/user-farah.png' | assetsPath}}"></div>
-    <p><strong>Farah</strong></p>
-    <p>Farah@gmail.com</p>
+    <p><strong>{{firstName + ' ' + lastName}}</strong></p>
+    <p>{{email}}</p>
   </div>
   <div class="consent-boxes">
     <div class="accordion" id="accordionExample">
@@ -164,7 +164,8 @@
       <div class="card">
         <div class="card-header" id="headingThree">
           <h2 class="mb-0">
-            <button aria-controls="collapseThree" aria-expanded="true" class="btn btn-link btn-block text-left collapsed"
+            <button aria-controls="collapseThree" aria-expanded="true"
+                    class="btn btn-link btn-block text-left collapsed"
                     data-target="#collapseThree" data-toggle="collapse" type="button">
               <figure><img alt="consent-img" src="{{'images/my-family.png' | assetsPath}}"></figure>
               My Family

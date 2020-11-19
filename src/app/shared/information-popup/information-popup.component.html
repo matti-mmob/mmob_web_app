@@ -1,0 +1,20 @@
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-body">
+      <div class="row">
+         <div class="col-md-12">
+      <div class="logo-img"><img alt="logo-img" src='assets/images/logo.png'></div>
+    </div>
+        <div class="col-md-12">
+          <h6>{{headerText}}</h6>
+          <p> {{confirmText}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+<!--      <button (click)="noPressed()" class="btn btn-secondary" type="button">{{firstButtonText}}</button>-->
+      <button (click)="yesPressed()" class="btn btn-primary" data-dismiss="modal"
+              type="button">{{secondButtonText}}</button>
+    </div>
+  </div>
+</div>

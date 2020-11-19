@@ -1,0 +1,64 @@
+.modal-dialog-centered {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+    margin: 0 auto;
+}
+.modal-content {
+    width: 100%;
+}
+.modal-body h6 {
+    margin: 0 0 14px;
+    color: #000;
+    font-weight: 500;
+}
+.modal-body p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+}
+.modal-footer button {
+    cursor: pointer;
+}
+button.btn.btn-primary {
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    font-weight: 500;
+}
+button.btn.btn-secondary {
+    color: #fff;
+    text-transform: uppercase;
+    border: 0px;
+    padding: 10px 30px;
+    font-weight: 500;
+    background: #fe5863 !important;
+}
+button.btn.btn-secondary:hover {
+    background: #ed6b70 !important;
+}
+button.btn.btn-primary:hover, button.btn.btn-secondary:hover, button.btn.btn-secondary:focus {
+    background: #00008b;
+    color: #fff;
+}
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+    box-shadow: none !Important;
+}
+.btn-secondary.focus, .btn-secondary:focus {
+    box-shadow: none;
+}
+.modal-footer {
+    border: 0;
+}
+.logo-img {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    padding-bottom: 24px;
+}
+.modal-footer {
+    justify-content: center;
+}

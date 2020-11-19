@@ -16,7 +16,6 @@ export class UserService {
   }
 
   public updateUser(user): Observable<any> {
-    user.email_address = 'gaurav.kumar@ficode.com';
     return this.apiService.post('user', user);
   }
 }

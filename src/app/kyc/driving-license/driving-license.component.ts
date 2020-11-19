@@ -3,6 +3,9 @@ import {Router} from '@angular/router';
 import {KycFormService} from '../kyc-form-service/kyc-form.service';
 import {KycVerificationService} from '../../shared/services/kyc-verification-service/kyc-verification.service';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {CommonService} from '../../shared/services/helper-services/common.service';
+import {InformationPopupComponent} from '../../shared/information-popup/information-popup.component';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-driving-license',
@@ -16,7 +19,9 @@ export class DrivingLicenseComponent implements OnInit {
 
   constructor(private route: Router, private kycFormService: KycFormService,
               private kycVerificationService: KycVerificationService,
-              private spinner: NgxSpinnerService) {
+              private spinner: NgxSpinnerService,
+              private commonService: CommonService,
+              private modalService: NgbModal) {
   }
 
   ngOnInit(): void {
@@ -53,7 +58,7 @@ export class DrivingLicenseComponent implements OnInit {
     const verificationData = {
       proof: this.idProofBase64Str,
       additional_proof: this.additionalIdProofBase64Str,
-      email_address: 'gaurav.kumar@ficode.com',
+      email_address: this.commonService.getEmailAddress(),
     };
     this.spinner.show();
     this.kycVerificationService.verifyIdProof(verificationData)
@@ -63,15 +68,28 @@ export class DrivingLicenseComponent implements OnInit {
         if (response.statusCode === 200 && response.verification_status === 'accepted') {
           this.route.navigate(['kyc/uploadAddressProof']);
         } else if (response.statusCode === 200 && response.verification_status === 'declined') {
+          this.showInfoPopup(response.message);
           console.log('ERROR!', response);
         } else {
+          this.showInfoPopup(response.message);
           console.log('ERROR!', response);
         }
-        // TODO: Remove it on final submit
-        this.route.navigate(['kyc/uploadAddressProof']);
       }, error => {
         console.log(error);
         this.spinner.hide();
+        this.showInfoPopup(error.message);
       });
+  }
+
+  private showInfoPopup(msg) {
+    const modal = this.modalService.open(InformationPopupComponent, InformationPopupComponent.POP_UP_DEFAULT_PROPS);
+    modal.componentInstance.confirmText = msg;
+    modal.componentInstance.headerText = 'ERROR!';
+    modal.result.then((data) => {
+      if (data.isYesPressed) {
+        // TODO: Remove it on final submit
+        this.route.navigate(['kyc/uploadAddressProof']);
+      }
+    });
   }
 }

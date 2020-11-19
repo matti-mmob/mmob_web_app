@@ -3,6 +3,7 @@ import {AssetsPathPipe} from 'src/app/shared/pipes/assets-path.pipe';
 import * as Highcharts from 'highcharts';
 import {ChartLabels} from 'src/app/shared/enum/chart-labels.enum';
 import {Auth} from 'aws-amplify';
+import {CommonService} from '../../shared/services/helper-services/common.service';
 
 @Component({
   selector: 'app-home',
@@ -12,22 +13,23 @@ import {Auth} from 'aws-amplify';
 export class HomeComponent implements OnInit, AfterViewInit {
   // Chart Enum Label
   chartLabelEnum = ChartLabels;
+  firstName: string;
+  lastName: string;
+  email: string;
 
-  constructor(private assetsPipe: AssetsPathPipe) {
-    Auth.currentAuthenticatedUser().then((u) => {
-      console.log('The user is : ', u);
-    }).catch(e => {
-      console.log('NOT AUTHENTICATED YET');
-    });
+  constructor(private assetsPipe: AssetsPathPipe, private commonService: CommonService) {
   }
 
   ngOnInit(): void {
     Auth.currentAuthenticatedUser().then((u) => {
+      this.firstName = u.attributes.name;
+      this.lastName = u.attributes.family_name;
+      this.email = u.attributes.email;
+      this.commonService.setEmailAddress(this.email);
       console.log('The user is : ', u);
     }).catch(e => {
       console.log('NOT AUTHENTICATED YET');
     });
-
     // Auth.currentUserInfo().then(result => console.log(result));
   }
 

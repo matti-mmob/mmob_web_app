@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
-import {StorageConstants} from "../../constant/storage-constants";
+import {StorageConstants} from '../../constant/storage-constants';
+import {Auth} from 'aws-amplify';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +31,13 @@ export class CommonService {
   /*Clear Local storage for logout*/
   clearLocalStorage() {
     this.storage.removeItem(StorageConstants.X_ACCESS_TOKEN);
+  }
+
+  setEmailAddress(email: string) {
+    this.storage.setItem(StorageConstants.X_EMAIL, email);
+  }
+
+  getEmailAddress(): string {
+    return this.storage.getItem(StorageConstants.X_EMAIL);
   }
 }

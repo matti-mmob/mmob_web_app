@@ -30,9 +30,9 @@ export class SidebarComponent implements OnInit {
     this.buttonLabel = this.showMoreMenu ? Constant.TOGGLE_TEXT_LESS : Constant.TOGGLE_TEXT_MORE;
   }
 
-  /* 
-  * This function is used to show/hide More menu for mobile
-  */
+  /**
+   * This function is used to show/hide More menu for mobile
+   */
   mobileToggleMenu() {
     this.menuToggle = !this.menuToggle;
     this.menuToggleClass = this.menuToggle ? Constant.MENU_TOGGLE_CLASS : '';
