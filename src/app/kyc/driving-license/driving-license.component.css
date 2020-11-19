@@ -1,10 +1,26 @@
 .upload-id-submit {
-    text-align: center;
+   text-align: center;
     width: 100%;
-    margin: 60px 0 0 15px;
+    margin: 58px auto 15px;
+    max-width: 680px;
 }
 .upload-id-submit h5 {
     margin: 20px 0px;
+}
+.img-upload-sec img
+{
+    max-height: 250px;
+    max-width: 250px;
+    margin: auto;
+    padding: 20px;
+}
+.img-upload-sec
+{
+    display: flex;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    justify-content: center;
 }
 .upload-id-submit p,
 .upload-id-submith5 {
